@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-EDCBO CEC2017完整实验结果可视化分析
+LSCBO CEC2017完整实验结果可视化分析
 生成发表级图表（300 DPI）
 
 生成图表：
 1. 算法获胜次数柱状图
-2. EDCBO-Fixed在30个函数上的排名热力图
-3. EDCBO-Fixed vs 最优算法对比（获胜的2个函数）
+2. LSCBO-Fixed在30个函数上的排名热力图
+3. LSCBO-Fixed vs 最优算法对比（获胜的2个函数）
 4. 函数类型性能雷达图
 5. CloudSim + CEC2017双数据集对比
 
-作者：EDCBO Research Team
+作者：LSCBO Research Team
 日期：2025-12-13
 """
 
@@ -42,12 +42,12 @@ algorithm_wins = {
     'ICBO-Enhanced': 6,
     'GWO': 3,
     'PSO': 2,
-    'EDCBO-Fixed': 2,
+    'LSCBO-Fixed': 2,
     'ICBO': 1,
     'Random': 0
 }
 
-# EDCBO-Fixed在30个函数上的性能排名（手工整理）
+# LSCBO-Fixed在30个函数上的性能排名（手工整理）
 function_rankings = {
     'Sphere': 7,  # 接近完美但不如CBO/ICBO-E
     'Sum Squares': 7,
@@ -81,17 +81,17 @@ function_rankings = {
     'Hybrid Function 2': 6
 }
 
-# EDCBO-Fixed夺冠的2个函数详细数据
+# LSCBO-Fixed夺冠的2个函数详细数据
 winning_functions = {
     'Dixon-Price': {
-        'EDCBO-Fixed': 0.5112,
+        'LSCBO-Fixed': 0.5112,
         'GWO': 0.6667,
         'WOA': 0.6668,
         'CBO': 0.9928,
         'PSO': 40.97
     },
     'HappyCat': {
-        'EDCBO-Fixed': 0.3704,
+        'LSCBO-Fixed': 0.3704,
         'PSO': 0.4814,
         'WOA': 0.5168,
         'GWO': 0.6942,
@@ -119,7 +119,7 @@ def plot_algorithm_wins():
 
     bars = ax.bar(algorithms, wins, color=colors, alpha=0.8, edgecolor='black', linewidth=1.2)
 
-    # 高亮EDCBO-Fixed
+    # 高亮LSCBO-Fixed
     bars[5].set_color('#e74c3c')
     bars[5].set_alpha(1.0)
     bars[5].set_edgecolor('red')
@@ -141,7 +141,7 @@ def plot_algorithm_wins():
     ax.set_axisbelow(True)
 
     # 添加说明
-    ax.text(0.98, 0.97, 'EDCBO-Fixed: 2/30 wins (6.7%)\nRanked 4th (tied with PSO)',
+    ax.text(0.98, 0.97, 'LSCBO-Fixed: 2/30 wins (6.7%)\nRanked 4th (tied with PSO)',
             transform=ax.transAxes, fontsize=11,
             verticalalignment='top', horizontalalignment='right',
             bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
@@ -152,7 +152,7 @@ def plot_algorithm_wins():
     print(f'[OK] 图1已保存: {output_dir}/fig1_algorithm_wins.png')
     plt.close()
 
-# ==================== 图2：EDCBO-Fixed排名热力图 ====================
+# ==================== 图2：LSCBO-Fixed排名热力图 ====================
 
 def plot_ranking_heatmap():
     # 按函数类型组织数据
@@ -177,7 +177,7 @@ def plot_ranking_heatmap():
     ax.set_yticks(np.arange(len(sorted_functions)))
     ax.set_yticklabels(sorted_functions, fontsize=9)
     ax.set_xticks([0])
-    ax.set_xticklabels(['EDCBO-Fixed\nRanking'], fontsize=11, fontweight='bold')
+    ax.set_xticklabels(['LSCBO-Fixed\nRanking'], fontsize=11, fontweight='bold')
 
     # 添加排名数值
     for i, rank in enumerate(rankings):
@@ -190,7 +190,7 @@ def plot_ranking_heatmap():
     cbar.set_label('Ranking (1=Best, 8=Worst)', fontsize=10, fontweight='bold')
     cbar.set_ticks([1, 2, 3, 4, 5, 6, 7, 8])
 
-    ax.set_title('EDCBO-Fixed Performance Ranking\nAcross 30 CEC2017 Functions',
+    ax.set_title('LSCBO-Fixed Performance Ranking\nAcross 30 CEC2017 Functions',
                  fontsize=13, fontweight='bold', pad=15)
 
     # 添加分类分隔线
@@ -206,7 +206,7 @@ def plot_ranking_heatmap():
     print(f'[OK] 图2已保存: {output_dir}/fig2_ranking_heatmap.png')
     plt.close()
 
-# ==================== 图3：EDCBO-Fixed获胜函数对比 ====================
+# ==================== 图3：LSCBO-Fixed获胜函数对比 ====================
 
 def plot_winning_functions():
     fig, axes = plt.subplots(1, 2, figsize=(14, 6))
@@ -216,12 +216,12 @@ def plot_winning_functions():
         algorithms = list(data.keys())
         values = list(data.values())
 
-        # 设置颜色（EDCBO-Fixed用红色高亮）
-        colors = ['#e74c3c' if alg == 'EDCBO-Fixed' else '#3498db' for alg in algorithms]
+        # 设置颜色（LSCBO-Fixed用红色高亮）
+        colors = ['#e74c3c' if alg == 'LSCBO-Fixed' else '#3498db' for alg in algorithms]
 
         bars = ax.bar(algorithms, values, color=colors, alpha=0.8, edgecolor='black', linewidth=1.2)
 
-        # EDCBO-Fixed加粗边框
+        # LSCBO-Fixed加粗边框
         bars[0].set_edgecolor('red')
         bars[0].set_linewidth(2.5)
 
@@ -233,13 +233,13 @@ def plot_winning_functions():
                     ha='center', va='bottom', fontsize=10, fontweight='bold')
 
         ax.set_ylabel('Fitness Value (Lower is Better)', fontsize=12, fontweight='bold')
-        ax.set_title(f'{func_name} Function\n(EDCBO-Fixed WINS 🏆)',
+        ax.set_title(f'{func_name} Function\n(LSCBO-Fixed WINS 🏆)',
                      fontsize=13, fontweight='bold', color='red')
         ax.grid(axis='y', alpha=0.3, linestyle='--')
         ax.set_axisbelow(True)
         plt.setp(ax.xaxis.get_majorticklabels(), rotation=20, ha='right')
 
-    plt.suptitle('EDCBO-Fixed Winning Functions: Detailed Comparison',
+    plt.suptitle('LSCBO-Fixed Winning Functions: Detailed Comparison',
                  fontsize=16, fontweight='bold', y=1.02)
     plt.tight_layout()
     plt.savefig(f'{output_dir}/fig3_winning_functions.png', dpi=300, bbox_inches='tight')
@@ -267,7 +267,7 @@ def plot_function_type_radar():
     angles = np.linspace(0, 2 * np.pi, len(function_types), endpoint=False).tolist()
     angles += angles[:1]
 
-    ax.plot(angles, values, 'o-', linewidth=2, color='#e74c3c', label='EDCBO-Fixed')
+    ax.plot(angles, values, 'o-', linewidth=2, color='#e74c3c', label='LSCBO-Fixed')
     ax.fill(angles, values, alpha=0.25, color='#e74c3c')
 
     ax.set_xticks(angles[:-1])
@@ -281,7 +281,7 @@ def plot_function_type_radar():
     ax.set_theta_offset(np.pi / 2)
     ax.set_theta_direction(-1)
 
-    ax.set_title('EDCBO-Fixed Performance by Function Type\n(Lower is Better)',
+    ax.set_title('LSCBO-Fixed Performance by Function Type\n(Lower is Better)',
                  fontsize=14, fontweight='bold', pad=30)
 
     # 添加图例说明
@@ -302,7 +302,7 @@ def plot_dual_dataset_comparison():
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))
 
     # 子图1：CloudSim任务调度结果
-    algorithms_cs = ['CBO\n(Baseline)', 'EDCBO\n(Old)', 'EDCBO-Fixed\n(New)']
+    algorithms_cs = ['CBO\n(Baseline)', 'LSCBO\n(Old)', 'LSCBO-Fixed\n(New)']
     makespans = [925.64, 961.13, 718.14]
     colors_cs = ['#3498db', '#e67e22', '#e74c3c']
 
@@ -356,40 +356,40 @@ def plot_dual_dataset_comparison():
     ax2.grid(axis='y', alpha=0.3, linestyle='--')
     ax2.set_axisbelow(True)
 
-    plt.suptitle('EDCBO-Fixed: Dual Dataset Validation Results',
+    plt.suptitle('LSCBO-Fixed: Dual Dataset Validation Results',
                  fontsize=16, fontweight='bold', y=0.98)
     plt.tight_layout()
     plt.savefig(f'{output_dir}/fig5_dual_dataset_comparison.png', dpi=300, bbox_inches='tight')
     print(f'[OK] 图5已保存: {output_dir}/fig5_dual_dataset_comparison.png')
     plt.close()
 
-# ==================== 图6：EDCBO-Fixed失败案例分析 ====================
+# ==================== 图6：LSCBO-Fixed失败案例分析 ====================
 
 def plot_failure_analysis():
     # 失败的5个函数（排名8）
     failures = {
         'Ackley': {
-            'EDCBO-Fixed': 18.22,
+            'LSCBO-Fixed': 18.22,
             'CBO': 2.34e-15,
             'Issue': 'Local Optimum Trap'
         },
         'Salomon': {
-            'EDCBO-Fixed': 17.82,
+            'LSCBO-Fixed': 17.82,
             'ICBO-Enhanced': 3.95e-109,
             'Issue': 'Insufficient Exploration'
         },
         'Levy': {
-            'EDCBO-Fixed': 43.06,
+            'LSCBO-Fixed': 43.06,
             'WOA': 0.22,
             'Issue': 'Exploration-Exploitation Imbalance'
         },
         'Step': {
-            'EDCBO-Fixed': 1799,
+            'LSCBO-Fixed': 1799,
             'CBO': 0.0,
             'Issue': 'Discrete Optimization Failure'
         },
         'High Conditioned Elliptic': {
-            'EDCBO-Fixed': 11210,
+            'LSCBO-Fixed': 11210,
             'CBO': 0.0,
             'Issue': 'Numerical Instability'
         }
@@ -400,17 +400,17 @@ def plot_failure_analysis():
     x = np.arange(len(failures))
     width = 0.35
 
-    edcbo_values = [data['EDCBO-Fixed'] for data in failures.values()]
+    edcbo_values = [data['LSCBO-Fixed'] for data in failures.values()]
     best_algo_names = [list(data.keys())[1] for data in failures.values()]
     best_values = [list(data.values())[1] for data in failures.values()]
 
-    bars1 = ax.bar(x - width/2, edcbo_values, width, label='EDCBO-Fixed (Failed)',
+    bars1 = ax.bar(x - width/2, edcbo_values, width, label='LSCBO-Fixed (Failed)',
                    color='#e74c3c', alpha=0.8, edgecolor='black', linewidth=1.2)
     bars2 = ax.bar(x + width/2, best_values, width, label='Best Algorithm',
                    color='#2ecc71', alpha=0.8, edgecolor='black', linewidth=1.2)
 
     ax.set_ylabel('Fitness Value (Log Scale)', fontsize=12, fontweight='bold')
-    ax.set_title('EDCBO-Fixed Failure Cases: Root Cause Analysis\n(5 Functions with Ranking = 8)',
+    ax.set_title('LSCBO-Fixed Failure Cases: Root Cause Analysis\n(5 Functions with Ranking = 8)',
                  fontsize=14, fontweight='bold', pad=20)
     ax.set_xticks(x)
     ax.set_xticklabels(failures.keys(), rotation=20, ha='right', fontsize=10)
@@ -441,7 +441,7 @@ def plot_failure_analysis():
 
 def main():
     print('\n' + '='*60)
-    print('开始生成EDCBO CEC2017完整实验可视化分析图表')
+    print('开始生成LSCBO CEC2017完整实验可视化分析图表')
     print('='*60 + '\n')
 
     print('生成图表中...')
@@ -458,7 +458,7 @@ def main():
     print('='*60)
     print('\n生成的图表清单：')
     print('  1. fig1_algorithm_wins.png - 算法获胜次数柱状图')
-    print('  2. fig2_ranking_heatmap.png - EDCBO-Fixed排名热力图')
+    print('  2. fig2_ranking_heatmap.png - LSCBO-Fixed排名热力图')
     print('  3. fig3_winning_functions.png - 获胜函数详细对比')
     print('  4. fig4_function_type_radar.png - 函数类型性能雷达图')
     print('  5. fig5_dual_dataset_comparison.png - 双数据集对比')

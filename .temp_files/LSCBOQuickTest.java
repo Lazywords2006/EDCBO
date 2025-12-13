@@ -5,19 +5,19 @@ import com.edcbo.research.benchmark.functions.Rastrigin;
 import com.edcbo.research.benchmark.functions.Ackley;
 
 /**
- * EDCBO-Fixed快速验证测试
+ * LSCBO-Fixed快速验证测试
  *
- * 验证EDCBO-Fixed在CEC2017基准函数上的表现
- * 对比CBO和EDCBO-Fixed的性能
+ * 验证LSCBO-Fixed在CEC2017基准函数上的表现
+ * 对比CBO和LSCBO-Fixed的性能
  *
  * @author ICBO Research Team
  * @date 2025-12-13
  */
-public class EDCBOQuickTest {
+public class LSCBOQuickTest {
 
     public static void main(String[] args) {
         System.out.println("\n╔════════════════════════════════════════════════════════════════╗");
-        System.out.println("║   EDCBO-Fixed CEC2017快速验证测试                              ║");
+        System.out.println("║   LSCBO-Fixed CEC2017快速验证测试                              ║");
         System.out.println("╚════════════════════════════════════════════════════════════════╝\n");
 
         // 测试配置
@@ -31,14 +31,14 @@ public class EDCBOQuickTest {
             new Ackley()
         };
 
-        // 测试CBO和EDCBO-Fixed
+        // 测试CBO和LSCBO-Fixed
         BenchmarkRunner.BenchmarkOptimizer[] algorithms = {
             new CBO_Lite(42L),
-            new EDCBO_Fixed_Lite(42L)
+            new LSCBO_Fixed_Lite(42L)
         };
 
         System.out.println("测试配置：");
-        System.out.println("  - 算法：CBO, EDCBO-Fixed");
+        System.out.println("  - 算法：CBO, LSCBO-Fixed");
         System.out.println("  - 函数：Sphere, Rastrigin, Ackley");
         System.out.println("  - 运行次数：" + numRuns);
         System.out.println("  - 迭代次数：" + maxIterations);
@@ -69,7 +69,7 @@ public class EDCBOQuickTest {
         System.out.println("\n\n╔════════════════════════════════════════════════════════════════╗");
         System.out.println("║   测试完成！                                                    ║");
         System.out.println("╚════════════════════════════════════════════════════════════════╝");
-        System.out.println("\n✅ EDCBO-Fixed已成功在CEC2017基准函数上运行！");
+        System.out.println("\n✅ LSCBO-Fixed已成功在CEC2017基准函数上运行！");
         System.out.println("📊 可以开始完整实验：BenchmarkCompareExample");
     }
 }

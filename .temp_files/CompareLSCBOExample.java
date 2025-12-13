@@ -16,10 +16,10 @@ import org.cloudsimplus.utilizationmodels.UtilizationModelFull;
 import java.util.*;
 
 /**
- * EDCBO性能对比测试程序
- * 在相同环境下对比 CBO、EDCBO、EDCBO-Fixed 三个算法
+ * LSCBO性能对比测试程序
+ * 在相同环境下对比 CBO、LSCBO、LSCBO-Fixed 三个算法
  */
-public class CompareEDCBOExample {
+public class CompareLSCBOExample {
 
     private static final int NUM_VMS = 20;
     private static final int NUM_CLOUDLETS = 100;
@@ -35,7 +35,7 @@ public class CompareEDCBOExample {
 
     public static void main(String[] args) {
         System.out.println("======================================");
-        System.out.println("   EDCBO性能对比测试程序");
+        System.out.println("   LSCBO性能对比测试程序");
         System.out.println("======================================\n");
 
         Random random = new Random(SEED);
@@ -73,17 +73,17 @@ public class CompareEDCBOExample {
         System.out.println("========================================");
         results.put("CBO", runAlgorithm("CBO", vmMips, cloudletLengths));
 
-        // 测试2: EDCBO（旧版）
+        // 测试2: LSCBO（旧版）
         System.out.println("\n========================================");
-        System.out.println("测试 2/3: EDCBO算法（旧版）");
+        System.out.println("测试 2/3: LSCBO算法（旧版）");
         System.out.println("========================================");
-        results.put("EDCBO", runAlgorithm("EDCBO", vmMips, cloudletLengths));
+        results.put("LSCBO", runAlgorithm("LSCBO", vmMips, cloudletLengths));
 
-        // 测试3: EDCBO-Fixed（新版）
+        // 测试3: LSCBO-Fixed（新版）
         System.out.println("\n========================================");
-        System.out.println("测试 3/3: EDCBO-Fixed算法（优化版）");
+        System.out.println("测试 3/3: LSCBO-Fixed算法（优化版）");
         System.out.println("========================================");
-        results.put("EDCBO-Fixed", runAlgorithm("EDCBO-Fixed", vmMips, cloudletLengths));
+        results.put("LSCBO-Fixed", runAlgorithm("LSCBO-Fixed", vmMips, cloudletLengths));
 
         // 输出对比结果
         printComparisonResults(results);
@@ -99,10 +99,10 @@ public class CompareEDCBOExample {
         Object broker;
         if (algorithmName.equals("CBO")) {
             broker = new CBO_Broker(simulation, SEED);
-        } else if (algorithmName.equals("EDCBO")) {
-            broker = new EDCBO_Broker(simulation, SEED);
-        } else if (algorithmName.equals("EDCBO-Fixed")) {
-            broker = new EDCBO_Broker_Fixed(simulation, SEED);
+        } else if (algorithmName.equals("LSCBO")) {
+            broker = new LSCBO_Broker(simulation, SEED);
+        } else if (algorithmName.equals("LSCBO-Fixed")) {
+            broker = new LSCBO_Broker_Fixed(simulation, SEED);
         } else {
             throw new IllegalArgumentException("Unknown algorithm: " + algorithmName);
         }
@@ -128,12 +128,12 @@ public class CompareEDCBOExample {
         if (broker instanceof CBO_Broker) {
             ((CBO_Broker) broker).submitVmList(vmList);
             ((CBO_Broker) broker).submitCloudletList(cloudletList);
-        } else if (broker instanceof EDCBO_Broker) {
-            ((EDCBO_Broker) broker).submitVmList(vmList);
-            ((EDCBO_Broker) broker).submitCloudletList(cloudletList);
-        } else if (broker instanceof EDCBO_Broker_Fixed) {
-            ((EDCBO_Broker_Fixed) broker).submitVmList(vmList);
-            ((EDCBO_Broker_Fixed) broker).submitCloudletList(cloudletList);
+        } else if (broker instanceof LSCBO_Broker) {
+            ((LSCBO_Broker) broker).submitVmList(vmList);
+            ((LSCBO_Broker) broker).submitCloudletList(cloudletList);
+        } else if (broker instanceof LSCBO_Broker_Fixed) {
+            ((LSCBO_Broker_Fixed) broker).submitVmList(vmList);
+            ((LSCBO_Broker_Fixed) broker).submitCloudletList(cloudletList);
         }
 
         simulation.start();
@@ -154,10 +154,10 @@ public class CompareEDCBOExample {
         List<Double> convergenceCurve = new ArrayList<>();
         if (broker instanceof CBO_Broker) {
             convergenceCurve = ((CBO_Broker) broker).getConvergenceRecord().getIterationBestFitness();
-        } else if (broker instanceof EDCBO_Broker) {
-            convergenceCurve = ((EDCBO_Broker) broker).getConvergenceRecord().getIterationBestFitness();
-        } else if (broker instanceof EDCBO_Broker_Fixed) {
-            convergenceCurve = ((EDCBO_Broker_Fixed) broker).getConvergenceRecord().getIterationBestFitness();
+        } else if (broker instanceof LSCBO_Broker) {
+            convergenceCurve = ((LSCBO_Broker) broker).getConvergenceRecord().getIterationBestFitness();
+        } else if (broker instanceof LSCBO_Broker_Fixed) {
+            convergenceCurve = ((LSCBO_Broker_Fixed) broker).getConvergenceRecord().getIterationBestFitness();
         }
 
         System.out.println("\n结果:");
@@ -217,12 +217,12 @@ public class CompareEDCBOExample {
 
         System.out.println("\n收敛速度对比（前10次迭代）:");
         System.out.println("┌─────┬──────────┬──────────┬──────────────┐");
-        System.out.println("│ 迭代│   CBO    │  EDCBO   │ EDCBO-Fixed  │");
+        System.out.println("│ 迭代│   CBO    │  LSCBO   │ LSCBO-Fixed  │");
         System.out.println("├─────┼──────────┼──────────┼──────────────┤");
 
         for (int i = 0; i <= 10; i++) {
             System.out.printf("│ %3d │", i);
-            for (String algorithm : Arrays.asList("CBO", "EDCBO", "EDCBO-Fixed")) {
+            for (String algorithm : Arrays.asList("CBO", "LSCBO", "LSCBO-Fixed")) {
                 TestResult result = results.get(algorithm);
                 if (result != null && result.convergenceCurve.size() > i) {
                     System.out.printf(" %8.2f │", result.convergenceCurve.get(i));
@@ -252,11 +252,11 @@ public class CompareEDCBOExample {
         System.out.println("✅ 最优算法: " + bestAlgorithm);
         System.out.println("✅ 最优Makespan: " + String.format("%.2f", bestMakespan) + " 秒");
 
-        double edcboImprovement = ((cboMakespan - results.get("EDCBO").makespan) / cboMakespan) * 100;
+        double edcboImprovement = ((cboMakespan - results.get("LSCBO").makespan) / cboMakespan) * 100;
         if (edcboImprovement > 0) {
-            System.out.println("✅ EDCBO相对CBO改进: " + String.format("%.2f%%", edcboImprovement));
+            System.out.println("✅ LSCBO相对CBO改进: " + String.format("%.2f%%", edcboImprovement));
         } else {
-            System.out.println("⚠️ EDCBO相对CBO退化: " + String.format("%.2f%%", Math.abs(edcboImprovement)));
+            System.out.println("⚠️ LSCBO相对CBO退化: " + String.format("%.2f%%", Math.abs(edcboImprovement)));
         }
 
         System.out.println("========================================\n");

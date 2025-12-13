@@ -3,9 +3,9 @@ package com.edcbo.research.benchmark;
 import java.util.Random;
 
 /**
- * EDCBO-Fixed轻量级版本 - 专用于CEC2017基准测试
+ * LSCBO-Fixed轻量级版本 - 专用于CEC2017基准测试
  *
- * 基于EDCBO_Broker_Fixed的核心算法，移除CloudSim依赖
+ * 基于LSCBO_Broker_Fixed的核心算法，移除CloudSim依赖
  * 实现BenchmarkOptimizer接口，直接优化数学函数
  *
  * 核心改进（基于参数调优验证的最优算法）：
@@ -22,13 +22,13 @@ import java.util.Random;
  *
  * 性能基准（CloudSim M=100, N=20，异构环境）：
  * - CBO基准: 925.64秒
- * - 优化EDCBO: 718.14秒（改进22.42%）🏆
+ * - 优化LSCBO: 718.14秒（改进22.42%）🏆
  *
  * @author ICBO Research Team
  * @date 2025-12-13
  * @version 3.0-fixed
  */
-public class EDCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
+public class LSCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
 
     // ==================== 算法参数 ====================
     private static final int POPULATION_SIZE = 30;      // 种群大小
@@ -65,7 +65,7 @@ public class EDCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
      * 构造函数（带随机种子）
      * @param seed 随机种子
      */
-    public EDCBO_Fixed_Lite(long seed) {
+    public LSCBO_Fixed_Lite(long seed) {
         this.seed = seed;
         this.random = new Random(seed);
         calculateLevySigmaU();
@@ -74,7 +74,7 @@ public class EDCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
     /**
      * 构造函数（向后兼容，使用默认种子42）
      */
-    public EDCBO_Fixed_Lite() {
+    public LSCBO_Fixed_Lite() {
         this(42L);
     }
 
@@ -85,7 +85,7 @@ public class EDCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
         // 初始化种群
         initializePopulation(function);
 
-        // EDCBO-Fixed迭代
+        // LSCBO-Fixed迭代
         for (int t = 0; t < maxIterations; t++) {
             double w = calculateAdaptiveWeight(t, maxIterations);
             double sigma = calculateSigma(t, maxIterations);
@@ -140,7 +140,7 @@ public class EDCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
 
             // 打印进度（每100次迭代）
             if ((t + 1) % 100 == 0 || t == 0) {
-                System.out.println(String.format("  [EDCBO-Fixed Iter %4d/%d] Best=%.6e",
+                System.out.println(String.format("  [LSCBO-Fixed Iter %4d/%d] Best=%.6e",
                     t + 1, maxIterations, bestFitness));
             }
         }
@@ -150,7 +150,7 @@ public class EDCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
 
     @Override
     public String getName() {
-        return "EDCBO-Fixed";
+        return "LSCBO-Fixed";
     }
 
     // ==================== 初始化 ====================

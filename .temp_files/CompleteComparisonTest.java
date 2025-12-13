@@ -16,7 +16,7 @@ import org.cloudsimplus.utilizationmodels.UtilizationModelFull;
 import java.util.*;
 
 /**
- * 完整对比测试：CBO vs EDCBO vs EDCBO-Fixed
+ * 完整对比测试：CBO vs LSCBO vs LSCBO-Fixed
  * 在两个数据集上测试：固定参数 + 异构参数
  */
 public class CompleteComparisonTest {
@@ -39,10 +39,10 @@ public class CompleteComparisonTest {
 
     public static void main(String[] args) {
         System.out.println("╔════════════════════════════════════════════════════════════════╗");
-        System.out.println("║   EDCBO完整对比测试：两个数据集                                 ║");
+        System.out.println("║   LSCBO完整对比测试：两个数据集                                 ║");
         System.out.println("╚════════════════════════════════════════════════════════════════╝");
         System.out.println("\n测试配置：");
-        System.out.println("  - 算法数量: 3 (CBO, EDCBO, EDCBO-Fixed)");
+        System.out.println("  - 算法数量: 3 (CBO, LSCBO, LSCBO-Fixed)");
         System.out.println("  - 数据集: 2 (固定参数 + 异构参数)");
         System.out.println("  - 每个配置运行次数: " + NUM_RUNS);
         System.out.println("  - VM数量: " + NUM_VMS);
@@ -93,8 +93,8 @@ public class CompleteComparisonTest {
 
         // 测试三个算法
         results.put("CBO", runMultipleTests("CBO", vmMips, cloudletLengths, "固定参数"));
-        results.put("EDCBO", runMultipleTests("EDCBO", vmMips, cloudletLengths, "固定参数"));
-        results.put("EDCBO-Fixed", runMultipleTests("EDCBO-Fixed", vmMips, cloudletLengths, "固定参数"));
+        results.put("LSCBO", runMultipleTests("LSCBO", vmMips, cloudletLengths, "固定参数"));
+        results.put("LSCBO-Fixed", runMultipleTests("LSCBO-Fixed", vmMips, cloudletLengths, "固定参数"));
 
         printDatasetSummary("固定参数", results);
         return results;
@@ -126,8 +126,8 @@ public class CompleteComparisonTest {
 
         // 测试三个算法
         results.put("CBO", runMultipleTests("CBO", vmMips, cloudletLengths, "异构参数"));
-        results.put("EDCBO", runMultipleTests("EDCBO", vmMips, cloudletLengths, "异构参数"));
-        results.put("EDCBO-Fixed", runMultipleTests("EDCBO-Fixed", vmMips, cloudletLengths, "异构参数"));
+        results.put("LSCBO", runMultipleTests("LSCBO", vmMips, cloudletLengths, "异构参数"));
+        results.put("LSCBO-Fixed", runMultipleTests("LSCBO-Fixed", vmMips, cloudletLengths, "异构参数"));
 
         printDatasetSummary("异构参数", results);
         return results;
@@ -181,10 +181,10 @@ public class CompleteComparisonTest {
         Object broker;
         if (algorithm.equals("CBO")) {
             broker = new CBO_Broker(simulation, SEED);
-        } else if (algorithm.equals("EDCBO")) {
-            broker = new EDCBO_Broker(simulation, SEED);
-        } else if (algorithm.equals("EDCBO-Fixed")) {
-            broker = new EDCBO_Broker_Fixed(simulation, SEED);
+        } else if (algorithm.equals("LSCBO")) {
+            broker = new LSCBO_Broker(simulation, SEED);
+        } else if (algorithm.equals("LSCBO-Fixed")) {
+            broker = new LSCBO_Broker_Fixed(simulation, SEED);
         } else {
             throw new IllegalArgumentException("Unknown algorithm: " + algorithm);
         }
@@ -207,12 +207,12 @@ public class CompleteComparisonTest {
         if (broker instanceof CBO_Broker) {
             ((CBO_Broker) broker).submitVmList(vmList);
             ((CBO_Broker) broker).submitCloudletList(cloudletList);
-        } else if (broker instanceof EDCBO_Broker) {
-            ((EDCBO_Broker) broker).submitVmList(vmList);
-            ((EDCBO_Broker) broker).submitCloudletList(cloudletList);
-        } else if (broker instanceof EDCBO_Broker_Fixed) {
-            ((EDCBO_Broker_Fixed) broker).submitVmList(vmList);
-            ((EDCBO_Broker_Fixed) broker).submitCloudletList(cloudletList);
+        } else if (broker instanceof LSCBO_Broker) {
+            ((LSCBO_Broker) broker).submitVmList(vmList);
+            ((LSCBO_Broker) broker).submitCloudletList(cloudletList);
+        } else if (broker instanceof LSCBO_Broker_Fixed) {
+            ((LSCBO_Broker_Fixed) broker).submitVmList(vmList);
+            ((LSCBO_Broker_Fixed) broker).submitCloudletList(cloudletList);
         }
 
         simulation.start();
@@ -300,7 +300,7 @@ public class CompleteComparisonTest {
         System.out.println("│ 算法             │ 固定参数 Makespan(秒) │ 异构参数 Makespan(秒) │");
         System.out.println("├──────────────────┼────────────────────────┼────────────────────────┤");
 
-        for (String algorithm : Arrays.asList("CBO", "EDCBO", "EDCBO-Fixed")) {
+        for (String algorithm : Arrays.asList("CBO", "LSCBO", "LSCBO-Fixed")) {
             DatasetResult fixed = fixedResults.get(algorithm);
             DatasetResult hetero = heteroResults.get(algorithm);
 
@@ -317,7 +317,7 @@ public class CompleteComparisonTest {
         double cboFixed = fixedResults.get("CBO").avgMakespan;
         double cboHetero = heteroResults.get("CBO").avgMakespan;
 
-        for (String algorithm : Arrays.asList("CBO", "EDCBO", "EDCBO-Fixed")) {
+        for (String algorithm : Arrays.asList("CBO", "LSCBO", "LSCBO-Fixed")) {
             DatasetResult fixed = fixedResults.get(algorithm);
             DatasetResult hetero = heteroResults.get(algorithm);
 
@@ -334,20 +334,20 @@ public class CompleteComparisonTest {
 
         System.out.println("\n✅ 关键发现：");
 
-        DatasetResult edcboFixedFixed = fixedResults.get("EDCBO-Fixed");
-        DatasetResult edcboFixedHetero = heteroResults.get("EDCBO-Fixed");
+        DatasetResult edcboFixedFixed = fixedResults.get("LSCBO-Fixed");
+        DatasetResult edcboFixedHetero = heteroResults.get("LSCBO-Fixed");
 
         double improvementFixed = ((cboFixed - edcboFixedFixed.avgMakespan) / cboFixed) * 100;
         double improvementHetero = ((cboHetero - edcboFixedHetero.avgMakespan) / cboHetero) * 100;
 
         System.out.println("  1. 固定参数数据集：");
         System.out.printf("     - CBO基准: %.2f秒%n", cboFixed);
-        System.out.printf("     - EDCBO-Fixed: %.2f秒%n", edcboFixedFixed.avgMakespan);
+        System.out.printf("     - LSCBO-Fixed: %.2f秒%n", edcboFixedFixed.avgMakespan);
         System.out.printf("     - 改进率: %.2f%%%n", improvementFixed);
 
         System.out.println("\n  2. 异构参数数据集：");
         System.out.printf("     - CBO基准: %.2f秒%n", cboHetero);
-        System.out.printf("     - EDCBO-Fixed: %.2f秒%n", edcboFixedHetero.avgMakespan);
+        System.out.printf("     - LSCBO-Fixed: %.2f秒%n", edcboFixedHetero.avgMakespan);
         System.out.printf("     - 改进率: %.2f%%%n", improvementHetero);
 
         System.out.println("\n  3. 算法稳定性：");
@@ -355,9 +355,9 @@ public class CompleteComparisonTest {
         System.out.printf("     - 异构参数标准差: %.2f秒%n", edcboFixedHetero.stdMakespan);
 
         if (improvementFixed > 15.0 && improvementHetero > 15.0) {
-            System.out.println("\n🎉 优秀！EDCBO-Fixed在两个数据集上都实现了显著改进（>15%）！");
+            System.out.println("\n🎉 优秀！LSCBO-Fixed在两个数据集上都实现了显著改进（>15%）！");
         } else if (improvementFixed > 10.0 && improvementHetero > 10.0) {
-            System.out.println("\n✅ 良好！EDCBO-Fixed在两个数据集上都实现了可观改进（>10%）！");
+            System.out.println("\n✅ 良好！LSCBO-Fixed在两个数据集上都实现了可观改进（>10%）！");
         }
     }
 

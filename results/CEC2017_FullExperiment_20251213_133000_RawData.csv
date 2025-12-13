@@ -209,36 +209,36 @@ Sphere,ICBO-Enhanced,27,0.000000e+00
 Sphere,ICBO-Enhanced,28,0.000000e+00
 Sphere,ICBO-Enhanced,29,0.000000e+00
 Sphere,ICBO-Enhanced,30,0.000000e+00
-Sphere,EDCBO-Fixed,1,1.196204e-06
-Sphere,EDCBO-Fixed,2,7.738646e-07
-Sphere,EDCBO-Fixed,3,9.115141e-07
-Sphere,EDCBO-Fixed,4,8.384541e-07
-Sphere,EDCBO-Fixed,5,6.778124e-07
-Sphere,EDCBO-Fixed,6,5.465898e-07
-Sphere,EDCBO-Fixed,7,1.191173e-06
-Sphere,EDCBO-Fixed,8,3.724578e-07
-Sphere,EDCBO-Fixed,9,9.278094e-07
-Sphere,EDCBO-Fixed,10,9.940675e-07
-Sphere,EDCBO-Fixed,11,6.389089e-07
-Sphere,EDCBO-Fixed,12,6.565691e-07
-Sphere,EDCBO-Fixed,13,7.821185e-07
-Sphere,EDCBO-Fixed,14,9.663318e-07
-Sphere,EDCBO-Fixed,15,4.955198e-07
-Sphere,EDCBO-Fixed,16,8.449508e-07
-Sphere,EDCBO-Fixed,17,9.315815e-07
-Sphere,EDCBO-Fixed,18,9.243980e-07
-Sphere,EDCBO-Fixed,19,1.319138e-06
-Sphere,EDCBO-Fixed,20,7.987394e-07
-Sphere,EDCBO-Fixed,21,7.369330e-07
-Sphere,EDCBO-Fixed,22,4.970869e-07
-Sphere,EDCBO-Fixed,23,9.877909e-07
-Sphere,EDCBO-Fixed,24,5.093220e-07
-Sphere,EDCBO-Fixed,25,6.803526e-07
-Sphere,EDCBO-Fixed,26,1.076402e-06
-Sphere,EDCBO-Fixed,27,5.086336e-07
-Sphere,EDCBO-Fixed,28,5.173226e-07
-Sphere,EDCBO-Fixed,29,4.729296e-07
-Sphere,EDCBO-Fixed,30,1.008498e-06
+Sphere,LSCBO-Fixed,1,1.196204e-06
+Sphere,LSCBO-Fixed,2,7.738646e-07
+Sphere,LSCBO-Fixed,3,9.115141e-07
+Sphere,LSCBO-Fixed,4,8.384541e-07
+Sphere,LSCBO-Fixed,5,6.778124e-07
+Sphere,LSCBO-Fixed,6,5.465898e-07
+Sphere,LSCBO-Fixed,7,1.191173e-06
+Sphere,LSCBO-Fixed,8,3.724578e-07
+Sphere,LSCBO-Fixed,9,9.278094e-07
+Sphere,LSCBO-Fixed,10,9.940675e-07
+Sphere,LSCBO-Fixed,11,6.389089e-07
+Sphere,LSCBO-Fixed,12,6.565691e-07
+Sphere,LSCBO-Fixed,13,7.821185e-07
+Sphere,LSCBO-Fixed,14,9.663318e-07
+Sphere,LSCBO-Fixed,15,4.955198e-07
+Sphere,LSCBO-Fixed,16,8.449508e-07
+Sphere,LSCBO-Fixed,17,9.315815e-07
+Sphere,LSCBO-Fixed,18,9.243980e-07
+Sphere,LSCBO-Fixed,19,1.319138e-06
+Sphere,LSCBO-Fixed,20,7.987394e-07
+Sphere,LSCBO-Fixed,21,7.369330e-07
+Sphere,LSCBO-Fixed,22,4.970869e-07
+Sphere,LSCBO-Fixed,23,9.877909e-07
+Sphere,LSCBO-Fixed,24,5.093220e-07
+Sphere,LSCBO-Fixed,25,6.803526e-07
+Sphere,LSCBO-Fixed,26,1.076402e-06
+Sphere,LSCBO-Fixed,27,5.086336e-07
+Sphere,LSCBO-Fixed,28,5.173226e-07
+Sphere,LSCBO-Fixed,29,4.729296e-07
+Sphere,LSCBO-Fixed,30,1.008498e-06
 Sum Squares,Random,1,5.215829e+03
 Sum Squares,Random,2,6.137154e+03
 Sum Squares,Random,3,5.345256e+03
@@ -449,36 +449,36 @@ Sum Squares,ICBO-Enhanced,27,0.000000e+00
 Sum Squares,ICBO-Enhanced,28,0.000000e+00
 Sum Squares,ICBO-Enhanced,29,0.000000e+00
 Sum Squares,ICBO-Enhanced,30,0.000000e+00
-Sum Squares,EDCBO-Fixed,1,4.274709e-06
-Sum Squares,EDCBO-Fixed,2,1.222837e-05
-Sum Squares,EDCBO-Fixed,3,9.165305e-06
-Sum Squares,EDCBO-Fixed,4,8.249053e-06
-Sum Squares,EDCBO-Fixed,5,1.078493e-05
-Sum Squares,EDCBO-Fixed,6,7.760918e-06
-Sum Squares,EDCBO-Fixed,7,1.374046e-05
-Sum Squares,EDCBO-Fixed,8,1.009334e-05
-Sum Squares,EDCBO-Fixed,9,6.252779e-06
-Sum Squares,EDCBO-Fixed,10,9.913371e-06
-Sum Squares,EDCBO-Fixed,11,6.779609e-06
-Sum Squares,EDCBO-Fixed,12,6.235680e-06
-Sum Squares,EDCBO-Fixed,13,4.118991e-06
-Sum Squares,EDCBO-Fixed,14,9.289927e-06
-Sum Squares,EDCBO-Fixed,15,7.132790e-06
-Sum Squares,EDCBO-Fixed,16,1.422554e-05
-Sum Squares,EDCBO-Fixed,17,8.446918e-06
-Sum Squares,EDCBO-Fixed,18,8.727649e-06
-Sum Squares,EDCBO-Fixed,19,5.718911e-06
-Sum Squares,EDCBO-Fixed,20,1.560303e-05
-Sum Squares,EDCBO-Fixed,21,7.761074e-06
-Sum Squares,EDCBO-Fixed,22,8.861461e-06
-Sum Squares,EDCBO-Fixed,23,5.777661e-06
-Sum Squares,EDCBO-Fixed,24,1.461078e-05
-Sum Squares,EDCBO-Fixed,25,2.357178e-05
-Sum Squares,EDCBO-Fixed,26,1.111500e-05
-Sum Squares,EDCBO-Fixed,27,2.025823e-05
-Sum Squares,EDCBO-Fixed,28,7.690482e-06
-Sum Squares,EDCBO-Fixed,29,9.857376e-06
-Sum Squares,EDCBO-Fixed,30,1.104706e-05
+Sum Squares,LSCBO-Fixed,1,4.274709e-06
+Sum Squares,LSCBO-Fixed,2,1.222837e-05
+Sum Squares,LSCBO-Fixed,3,9.165305e-06
+Sum Squares,LSCBO-Fixed,4,8.249053e-06
+Sum Squares,LSCBO-Fixed,5,1.078493e-05
+Sum Squares,LSCBO-Fixed,6,7.760918e-06
+Sum Squares,LSCBO-Fixed,7,1.374046e-05
+Sum Squares,LSCBO-Fixed,8,1.009334e-05
+Sum Squares,LSCBO-Fixed,9,6.252779e-06
+Sum Squares,LSCBO-Fixed,10,9.913371e-06
+Sum Squares,LSCBO-Fixed,11,6.779609e-06
+Sum Squares,LSCBO-Fixed,12,6.235680e-06
+Sum Squares,LSCBO-Fixed,13,4.118991e-06
+Sum Squares,LSCBO-Fixed,14,9.289927e-06
+Sum Squares,LSCBO-Fixed,15,7.132790e-06
+Sum Squares,LSCBO-Fixed,16,1.422554e-05
+Sum Squares,LSCBO-Fixed,17,8.446918e-06
+Sum Squares,LSCBO-Fixed,18,8.727649e-06
+Sum Squares,LSCBO-Fixed,19,5.718911e-06
+Sum Squares,LSCBO-Fixed,20,1.560303e-05
+Sum Squares,LSCBO-Fixed,21,7.761074e-06
+Sum Squares,LSCBO-Fixed,22,8.861461e-06
+Sum Squares,LSCBO-Fixed,23,5.777661e-06
+Sum Squares,LSCBO-Fixed,24,1.461078e-05
+Sum Squares,LSCBO-Fixed,25,2.357178e-05
+Sum Squares,LSCBO-Fixed,26,1.111500e-05
+Sum Squares,LSCBO-Fixed,27,2.025823e-05
+Sum Squares,LSCBO-Fixed,28,7.690482e-06
+Sum Squares,LSCBO-Fixed,29,9.857376e-06
+Sum Squares,LSCBO-Fixed,30,1.104706e-05
 Zakharov,Random,1,4.571769e+02
 Zakharov,Random,2,4.050537e+02
 Zakharov,Random,3,3.991450e+02
@@ -689,36 +689,36 @@ Zakharov,ICBO-Enhanced,27,0.000000e+00
 Zakharov,ICBO-Enhanced,28,0.000000e+00
 Zakharov,ICBO-Enhanced,29,0.000000e+00
 Zakharov,ICBO-Enhanced,30,0.000000e+00
-Zakharov,EDCBO-Fixed,1,1.024768e-03
-Zakharov,EDCBO-Fixed,2,8.821211e-03
-Zakharov,EDCBO-Fixed,3,6.405795e-03
-Zakharov,EDCBO-Fixed,4,9.747683e-03
-Zakharov,EDCBO-Fixed,5,2.214266e-02
-Zakharov,EDCBO-Fixed,6,4.030666e-02
-Zakharov,EDCBO-Fixed,7,1.383109e-02
-Zakharov,EDCBO-Fixed,8,9.285316e-04
-Zakharov,EDCBO-Fixed,9,8.906470e-04
-Zakharov,EDCBO-Fixed,10,4.381483e-03
-Zakharov,EDCBO-Fixed,11,2.076745e-03
-Zakharov,EDCBO-Fixed,12,1.707605e-02
-Zakharov,EDCBO-Fixed,13,1.212387e-03
-Zakharov,EDCBO-Fixed,14,7.006026e-04
-Zakharov,EDCBO-Fixed,15,6.348673e-02
-Zakharov,EDCBO-Fixed,16,6.400622e-04
-Zakharov,EDCBO-Fixed,17,6.775067e-03
-Zakharov,EDCBO-Fixed,18,9.434170e-03
-Zakharov,EDCBO-Fixed,19,1.394010e-01
-Zakharov,EDCBO-Fixed,20,1.268808e-03
-Zakharov,EDCBO-Fixed,21,2.258428e-03
-Zakharov,EDCBO-Fixed,22,1.677805e-02
-Zakharov,EDCBO-Fixed,23,2.162941e-03
-Zakharov,EDCBO-Fixed,24,5.631660e-03
-Zakharov,EDCBO-Fixed,25,1.153395e-01
-Zakharov,EDCBO-Fixed,26,3.570149e-01
-Zakharov,EDCBO-Fixed,27,1.516273e-02
-Zakharov,EDCBO-Fixed,28,1.183634e-03
-Zakharov,EDCBO-Fixed,29,6.295714e-01
-Zakharov,EDCBO-Fixed,30,2.308129e-03
+Zakharov,LSCBO-Fixed,1,1.024768e-03
+Zakharov,LSCBO-Fixed,2,8.821211e-03
+Zakharov,LSCBO-Fixed,3,6.405795e-03
+Zakharov,LSCBO-Fixed,4,9.747683e-03
+Zakharov,LSCBO-Fixed,5,2.214266e-02
+Zakharov,LSCBO-Fixed,6,4.030666e-02
+Zakharov,LSCBO-Fixed,7,1.383109e-02
+Zakharov,LSCBO-Fixed,8,9.285316e-04
+Zakharov,LSCBO-Fixed,9,8.906470e-04
+Zakharov,LSCBO-Fixed,10,4.381483e-03
+Zakharov,LSCBO-Fixed,11,2.076745e-03
+Zakharov,LSCBO-Fixed,12,1.707605e-02
+Zakharov,LSCBO-Fixed,13,1.212387e-03
+Zakharov,LSCBO-Fixed,14,7.006026e-04
+Zakharov,LSCBO-Fixed,15,6.348673e-02
+Zakharov,LSCBO-Fixed,16,6.400622e-04
+Zakharov,LSCBO-Fixed,17,6.775067e-03
+Zakharov,LSCBO-Fixed,18,9.434170e-03
+Zakharov,LSCBO-Fixed,19,1.394010e-01
+Zakharov,LSCBO-Fixed,20,1.268808e-03
+Zakharov,LSCBO-Fixed,21,2.258428e-03
+Zakharov,LSCBO-Fixed,22,1.677805e-02
+Zakharov,LSCBO-Fixed,23,2.162941e-03
+Zakharov,LSCBO-Fixed,24,5.631660e-03
+Zakharov,LSCBO-Fixed,25,1.153395e-01
+Zakharov,LSCBO-Fixed,26,3.570149e-01
+Zakharov,LSCBO-Fixed,27,1.516273e-02
+Zakharov,LSCBO-Fixed,28,1.183634e-03
+Zakharov,LSCBO-Fixed,29,6.295714e-01
+Zakharov,LSCBO-Fixed,30,2.308129e-03
 Powell,Random,1,3.478749e+03
 Powell,Random,2,4.531200e+03
 Powell,Random,3,3.682905e+03
@@ -929,36 +929,36 @@ Powell,ICBO-Enhanced,27,0.000000e+00
 Powell,ICBO-Enhanced,28,0.000000e+00
 Powell,ICBO-Enhanced,29,0.000000e+00
 Powell,ICBO-Enhanced,30,0.000000e+00
-Powell,EDCBO-Fixed,1,4.006886e-03
-Powell,EDCBO-Fixed,2,3.264695e-03
-Powell,EDCBO-Fixed,3,4.429192e-03
-Powell,EDCBO-Fixed,4,3.164652e-03
-Powell,EDCBO-Fixed,5,3.214397e-03
-Powell,EDCBO-Fixed,6,3.574632e-03
-Powell,EDCBO-Fixed,7,3.190978e-03
-Powell,EDCBO-Fixed,8,2.655571e-03
-Powell,EDCBO-Fixed,9,2.673937e-03
-Powell,EDCBO-Fixed,10,4.810618e-03
-Powell,EDCBO-Fixed,11,3.577968e-03
-Powell,EDCBO-Fixed,12,4.863652e-03
-Powell,EDCBO-Fixed,13,3.043969e-03
-Powell,EDCBO-Fixed,14,2.895785e-03
-Powell,EDCBO-Fixed,15,2.999696e-03
-Powell,EDCBO-Fixed,16,3.139307e-03
-Powell,EDCBO-Fixed,17,2.053206e-03
-Powell,EDCBO-Fixed,18,1.404134e-03
-Powell,EDCBO-Fixed,19,3.278605e-03
-Powell,EDCBO-Fixed,20,2.913930e-03
-Powell,EDCBO-Fixed,21,3.056354e-03
-Powell,EDCBO-Fixed,22,3.402971e-03
-Powell,EDCBO-Fixed,23,3.480790e-03
-Powell,EDCBO-Fixed,24,2.731318e-03
-Powell,EDCBO-Fixed,25,3.665551e-03
-Powell,EDCBO-Fixed,26,3.499201e-03
-Powell,EDCBO-Fixed,27,3.307851e-03
-Powell,EDCBO-Fixed,28,3.320264e-03
-Powell,EDCBO-Fixed,29,3.516014e-03
-Powell,EDCBO-Fixed,30,2.461289e-03
+Powell,LSCBO-Fixed,1,4.006886e-03
+Powell,LSCBO-Fixed,2,3.264695e-03
+Powell,LSCBO-Fixed,3,4.429192e-03
+Powell,LSCBO-Fixed,4,3.164652e-03
+Powell,LSCBO-Fixed,5,3.214397e-03
+Powell,LSCBO-Fixed,6,3.574632e-03
+Powell,LSCBO-Fixed,7,3.190978e-03
+Powell,LSCBO-Fixed,8,2.655571e-03
+Powell,LSCBO-Fixed,9,2.673937e-03
+Powell,LSCBO-Fixed,10,4.810618e-03
+Powell,LSCBO-Fixed,11,3.577968e-03
+Powell,LSCBO-Fixed,12,4.863652e-03
+Powell,LSCBO-Fixed,13,3.043969e-03
+Powell,LSCBO-Fixed,14,2.895785e-03
+Powell,LSCBO-Fixed,15,2.999696e-03
+Powell,LSCBO-Fixed,16,3.139307e-03
+Powell,LSCBO-Fixed,17,2.053206e-03
+Powell,LSCBO-Fixed,18,1.404134e-03
+Powell,LSCBO-Fixed,19,3.278605e-03
+Powell,LSCBO-Fixed,20,2.913930e-03
+Powell,LSCBO-Fixed,21,3.056354e-03
+Powell,LSCBO-Fixed,22,3.402971e-03
+Powell,LSCBO-Fixed,23,3.480790e-03
+Powell,LSCBO-Fixed,24,2.731318e-03
+Powell,LSCBO-Fixed,25,3.665551e-03
+Powell,LSCBO-Fixed,26,3.499201e-03
+Powell,LSCBO-Fixed,27,3.307851e-03
+Powell,LSCBO-Fixed,28,3.320264e-03
+Powell,LSCBO-Fixed,29,3.516014e-03
+Powell,LSCBO-Fixed,30,2.461289e-03
 Quartic,Random,1,4.221642e+01
 Quartic,Random,2,4.331383e+01
 Quartic,Random,3,4.627334e+01
@@ -1169,36 +1169,36 @@ Quartic,ICBO-Enhanced,27,9.024888e-07
 Quartic,ICBO-Enhanced,28,8.799743e-07
 Quartic,ICBO-Enhanced,29,6.686970e-06
 Quartic,ICBO-Enhanced,30,1.961966e-05
-Quartic,EDCBO-Fixed,1,2.060329e-02
-Quartic,EDCBO-Fixed,2,1.922358e-02
-Quartic,EDCBO-Fixed,3,1.591189e-02
-Quartic,EDCBO-Fixed,4,7.176289e-03
-Quartic,EDCBO-Fixed,5,1.953020e-02
-Quartic,EDCBO-Fixed,6,3.424795e-02
-Quartic,EDCBO-Fixed,7,2.239721e-02
-Quartic,EDCBO-Fixed,8,2.711738e-02
-Quartic,EDCBO-Fixed,9,2.478218e-02
-Quartic,EDCBO-Fixed,10,2.066478e-02
-Quartic,EDCBO-Fixed,11,1.482111e-02
-Quartic,EDCBO-Fixed,12,2.288188e-02
-Quartic,EDCBO-Fixed,13,6.847651e-03
-Quartic,EDCBO-Fixed,14,1.356508e-02
-Quartic,EDCBO-Fixed,15,2.403615e-02
-Quartic,EDCBO-Fixed,16,1.359819e-02
-Quartic,EDCBO-Fixed,17,9.244480e-03
-Quartic,EDCBO-Fixed,18,1.321378e-02
-Quartic,EDCBO-Fixed,19,1.858742e-02
-Quartic,EDCBO-Fixed,20,2.317468e-02
-Quartic,EDCBO-Fixed,21,2.329217e-02
-Quartic,EDCBO-Fixed,22,1.341119e-02
-Quartic,EDCBO-Fixed,23,2.054119e-02
-Quartic,EDCBO-Fixed,24,1.776456e-02
-Quartic,EDCBO-Fixed,25,2.139212e-02
-Quartic,EDCBO-Fixed,26,1.756753e-02
-Quartic,EDCBO-Fixed,27,1.536195e-02
-Quartic,EDCBO-Fixed,28,1.934328e-02
-Quartic,EDCBO-Fixed,29,8.920684e-03
-Quartic,EDCBO-Fixed,30,1.096869e-02
+Quartic,LSCBO-Fixed,1,2.060329e-02
+Quartic,LSCBO-Fixed,2,1.922358e-02
+Quartic,LSCBO-Fixed,3,1.591189e-02
+Quartic,LSCBO-Fixed,4,7.176289e-03
+Quartic,LSCBO-Fixed,5,1.953020e-02
+Quartic,LSCBO-Fixed,6,3.424795e-02
+Quartic,LSCBO-Fixed,7,2.239721e-02
+Quartic,LSCBO-Fixed,8,2.711738e-02
+Quartic,LSCBO-Fixed,9,2.478218e-02
+Quartic,LSCBO-Fixed,10,2.066478e-02
+Quartic,LSCBO-Fixed,11,1.482111e-02
+Quartic,LSCBO-Fixed,12,2.288188e-02
+Quartic,LSCBO-Fixed,13,6.847651e-03
+Quartic,LSCBO-Fixed,14,1.356508e-02
+Quartic,LSCBO-Fixed,15,2.403615e-02
+Quartic,LSCBO-Fixed,16,1.359819e-02
+Quartic,LSCBO-Fixed,17,9.244480e-03
+Quartic,LSCBO-Fixed,18,1.321378e-02
+Quartic,LSCBO-Fixed,19,1.858742e-02
+Quartic,LSCBO-Fixed,20,2.317468e-02
+Quartic,LSCBO-Fixed,21,2.329217e-02
+Quartic,LSCBO-Fixed,22,1.341119e-02
+Quartic,LSCBO-Fixed,23,2.054119e-02
+Quartic,LSCBO-Fixed,24,1.776456e-02
+Quartic,LSCBO-Fixed,25,2.139212e-02
+Quartic,LSCBO-Fixed,26,1.756753e-02
+Quartic,LSCBO-Fixed,27,1.536195e-02
+Quartic,LSCBO-Fixed,28,1.934328e-02
+Quartic,LSCBO-Fixed,29,8.920684e-03
+Quartic,LSCBO-Fixed,30,1.096869e-02
 Rosenbrock,Random,1,7.658918e+07
 Rosenbrock,Random,2,9.474518e+07
 Rosenbrock,Random,3,8.230490e+07
@@ -1409,36 +1409,36 @@ Rosenbrock,ICBO-Enhanced,27,2.892302e+01
 Rosenbrock,ICBO-Enhanced,28,2.895931e+01
 Rosenbrock,ICBO-Enhanced,29,2.898621e+01
 Rosenbrock,ICBO-Enhanced,30,2.896168e+01
-Rosenbrock,EDCBO-Fixed,1,2.554395e+01
-Rosenbrock,EDCBO-Fixed,2,2.939475e+01
-Rosenbrock,EDCBO-Fixed,3,2.572168e+01
-Rosenbrock,EDCBO-Fixed,4,1.316829e+02
-Rosenbrock,EDCBO-Fixed,5,2.939327e+01
-Rosenbrock,EDCBO-Fixed,6,1.468969e+02
-Rosenbrock,EDCBO-Fixed,7,2.570708e+01
-Rosenbrock,EDCBO-Fixed,8,9.252691e+01
-Rosenbrock,EDCBO-Fixed,9,2.542270e+01
-Rosenbrock,EDCBO-Fixed,10,5.696812e+00
-Rosenbrock,EDCBO-Fixed,11,2.560803e+01
-Rosenbrock,EDCBO-Fixed,12,2.554226e+01
-Rosenbrock,EDCBO-Fixed,13,1.092254e+02
-Rosenbrock,EDCBO-Fixed,14,2.774074e+01
-Rosenbrock,EDCBO-Fixed,15,2.594736e+01
-Rosenbrock,EDCBO-Fixed,16,2.568248e+01
-Rosenbrock,EDCBO-Fixed,17,2.939413e+01
-Rosenbrock,EDCBO-Fixed,18,2.390565e+01
-Rosenbrock,EDCBO-Fixed,19,2.032704e+02
-Rosenbrock,EDCBO-Fixed,20,2.003271e+02
-Rosenbrock,EDCBO-Fixed,21,4.047772e+02
-Rosenbrock,EDCBO-Fixed,22,2.415705e+01
-Rosenbrock,EDCBO-Fixed,23,2.571400e+01
-Rosenbrock,EDCBO-Fixed,24,2.940000e+01
-Rosenbrock,EDCBO-Fixed,25,2.883296e+01
-Rosenbrock,EDCBO-Fixed,26,7.778072e+01
-Rosenbrock,EDCBO-Fixed,27,8.340731e-01
-Rosenbrock,EDCBO-Fixed,28,2.931166e+02
-Rosenbrock,EDCBO-Fixed,29,2.562509e+01
-Rosenbrock,EDCBO-Fixed,30,2.502121e+01
+Rosenbrock,LSCBO-Fixed,1,2.554395e+01
+Rosenbrock,LSCBO-Fixed,2,2.939475e+01
+Rosenbrock,LSCBO-Fixed,3,2.572168e+01
+Rosenbrock,LSCBO-Fixed,4,1.316829e+02
+Rosenbrock,LSCBO-Fixed,5,2.939327e+01
+Rosenbrock,LSCBO-Fixed,6,1.468969e+02
+Rosenbrock,LSCBO-Fixed,7,2.570708e+01
+Rosenbrock,LSCBO-Fixed,8,9.252691e+01
+Rosenbrock,LSCBO-Fixed,9,2.542270e+01
+Rosenbrock,LSCBO-Fixed,10,5.696812e+00
+Rosenbrock,LSCBO-Fixed,11,2.560803e+01
+Rosenbrock,LSCBO-Fixed,12,2.554226e+01
+Rosenbrock,LSCBO-Fixed,13,1.092254e+02
+Rosenbrock,LSCBO-Fixed,14,2.774074e+01
+Rosenbrock,LSCBO-Fixed,15,2.594736e+01
+Rosenbrock,LSCBO-Fixed,16,2.568248e+01
+Rosenbrock,LSCBO-Fixed,17,2.939413e+01
+Rosenbrock,LSCBO-Fixed,18,2.390565e+01
+Rosenbrock,LSCBO-Fixed,19,2.032704e+02
+Rosenbrock,LSCBO-Fixed,20,2.003271e+02
+Rosenbrock,LSCBO-Fixed,21,4.047772e+02
+Rosenbrock,LSCBO-Fixed,22,2.415705e+01
+Rosenbrock,LSCBO-Fixed,23,2.571400e+01
+Rosenbrock,LSCBO-Fixed,24,2.940000e+01
+Rosenbrock,LSCBO-Fixed,25,2.883296e+01
+Rosenbrock,LSCBO-Fixed,26,7.778072e+01
+Rosenbrock,LSCBO-Fixed,27,8.340731e-01
+Rosenbrock,LSCBO-Fixed,28,2.931166e+02
+Rosenbrock,LSCBO-Fixed,29,2.562509e+01
+Rosenbrock,LSCBO-Fixed,30,2.502121e+01
 Rastrigin,Random,1,3.547945e+02
 Rastrigin,Random,2,3.307676e+02
 Rastrigin,Random,3,3.205490e+02
@@ -1649,36 +1649,36 @@ Rastrigin,ICBO-Enhanced,27,0.000000e+00
 Rastrigin,ICBO-Enhanced,28,0.000000e+00
 Rastrigin,ICBO-Enhanced,29,0.000000e+00
 Rastrigin,ICBO-Enhanced,30,0.000000e+00
-Rastrigin,EDCBO-Fixed,1,2.168999e+02
-Rastrigin,EDCBO-Fixed,2,2.198848e+02
-Rastrigin,EDCBO-Fixed,3,1.562079e+02
-Rastrigin,EDCBO-Fixed,4,2.059557e+02
-Rastrigin,EDCBO-Fixed,5,1.144200e+02
-Rastrigin,EDCBO-Fixed,6,1.482483e+02
-Rastrigin,EDCBO-Fixed,7,1.681474e+02
-Rastrigin,EDCBO-Fixed,8,1.751122e+02
-Rastrigin,EDCBO-Fixed,9,1.482483e+02
-Rastrigin,EDCBO-Fixed,10,1.651624e+02
-Rastrigin,EDCBO-Fixed,11,2.109299e+02
-Rastrigin,EDCBO-Fixed,12,2.736122e+02
-Rastrigin,EDCBO-Fixed,13,1.283494e+02
-Rastrigin,EDCBO-Fixed,14,2.198848e+02
-Rastrigin,EDCBO-Fixed,15,2.258547e+02
-Rastrigin,EDCBO-Fixed,16,2.457536e+02
-Rastrigin,EDCBO-Fixed,17,2.129201e+02
-Rastrigin,EDCBO-Fixed,18,1.751121e+02
-Rastrigin,EDCBO-Fixed,19,8.954649e+01
-Rastrigin,EDCBO-Fixed,20,2.178952e+02
-Rastrigin,EDCBO-Fixed,21,1.253646e+02
-Rastrigin,EDCBO-Fixed,22,1.452637e+02
-Rastrigin,EDCBO-Fixed,23,1.343192e+02
-Rastrigin,EDCBO-Fixed,24,2.547079e+02
-Rastrigin,EDCBO-Fixed,25,1.771021e+02
-Rastrigin,EDCBO-Fixed,26,1.721273e+02
-Rastrigin,EDCBO-Fixed,27,1.104403e+02
-Rastrigin,EDCBO-Fixed,28,2.119251e+02
-Rastrigin,EDCBO-Fixed,29,2.178950e+02
-Rastrigin,EDCBO-Fixed,30,1.810819e+02
+Rastrigin,LSCBO-Fixed,1,2.168999e+02
+Rastrigin,LSCBO-Fixed,2,2.198848e+02
+Rastrigin,LSCBO-Fixed,3,1.562079e+02
+Rastrigin,LSCBO-Fixed,4,2.059557e+02
+Rastrigin,LSCBO-Fixed,5,1.144200e+02
+Rastrigin,LSCBO-Fixed,6,1.482483e+02
+Rastrigin,LSCBO-Fixed,7,1.681474e+02
+Rastrigin,LSCBO-Fixed,8,1.751122e+02
+Rastrigin,LSCBO-Fixed,9,1.482483e+02
+Rastrigin,LSCBO-Fixed,10,1.651624e+02
+Rastrigin,LSCBO-Fixed,11,2.109299e+02
+Rastrigin,LSCBO-Fixed,12,2.736122e+02
+Rastrigin,LSCBO-Fixed,13,1.283494e+02
+Rastrigin,LSCBO-Fixed,14,2.198848e+02
+Rastrigin,LSCBO-Fixed,15,2.258547e+02
+Rastrigin,LSCBO-Fixed,16,2.457536e+02
+Rastrigin,LSCBO-Fixed,17,2.129201e+02
+Rastrigin,LSCBO-Fixed,18,1.751121e+02
+Rastrigin,LSCBO-Fixed,19,8.954649e+01
+Rastrigin,LSCBO-Fixed,20,2.178952e+02
+Rastrigin,LSCBO-Fixed,21,1.253646e+02
+Rastrigin,LSCBO-Fixed,22,1.452637e+02
+Rastrigin,LSCBO-Fixed,23,1.343192e+02
+Rastrigin,LSCBO-Fixed,24,2.547079e+02
+Rastrigin,LSCBO-Fixed,25,1.771021e+02
+Rastrigin,LSCBO-Fixed,26,1.721273e+02
+Rastrigin,LSCBO-Fixed,27,1.104403e+02
+Rastrigin,LSCBO-Fixed,28,2.119251e+02
+Rastrigin,LSCBO-Fixed,29,2.178950e+02
+Rastrigin,LSCBO-Fixed,30,1.810819e+02
 Griewank,Random,1,3.364840e+02
 Griewank,Random,2,3.504024e+02
 Griewank,Random,3,3.425926e+02
@@ -1889,36 +1889,36 @@ Griewank,ICBO-Enhanced,27,0.000000e+00
 Griewank,ICBO-Enhanced,28,0.000000e+00
 Griewank,ICBO-Enhanced,29,0.000000e+00
 Griewank,ICBO-Enhanced,30,0.000000e+00
-Griewank,EDCBO-Fixed,1,4.969594e-08
-Griewank,EDCBO-Fixed,2,4.062554e-08
-Griewank,EDCBO-Fixed,3,4.180945e-02
-Griewank,EDCBO-Fixed,4,1.833438e-08
-Griewank,EDCBO-Fixed,5,8.562677e-08
-Griewank,EDCBO-Fixed,6,2.212678e-02
-Griewank,EDCBO-Fixed,7,1.477246e-02
-Griewank,EDCBO-Fixed,8,7.396064e-03
-Griewank,EDCBO-Fixed,9,6.263347e-08
-Griewank,EDCBO-Fixed,10,9.857337e-03
-Griewank,EDCBO-Fixed,11,3.256062e-08
-Griewank,EDCBO-Fixed,12,2.852847e-08
-Griewank,EDCBO-Fixed,13,2.898722e-08
-Griewank,EDCBO-Fixed,14,2.117278e-08
-Griewank,EDCBO-Fixed,15,9.857359e-03
-Griewank,EDCBO-Fixed,16,1.723614e-02
-Griewank,EDCBO-Fixed,17,2.832867e-08
-Griewank,EDCBO-Fixed,18,3.431485e-08
-Griewank,EDCBO-Fixed,19,5.127106e-08
-Griewank,EDCBO-Fixed,20,2.518303e-08
-Griewank,EDCBO-Fixed,21,3.040844e-08
-Griewank,EDCBO-Fixed,22,1.722632e-02
-Griewank,EDCBO-Fixed,23,7.396071e-03
-Griewank,EDCBO-Fixed,24,2.469207e-08
-Griewank,EDCBO-Fixed,25,2.215128e-02
-Griewank,EDCBO-Fixed,26,1.724104e-02
-Griewank,EDCBO-Fixed,27,9.857321e-03
-Griewank,EDCBO-Fixed,28,7.396073e-03
-Griewank,EDCBO-Fixed,29,7.396071e-03
-Griewank,EDCBO-Fixed,30,5.713167e-08
+Griewank,LSCBO-Fixed,1,4.969594e-08
+Griewank,LSCBO-Fixed,2,4.062554e-08
+Griewank,LSCBO-Fixed,3,4.180945e-02
+Griewank,LSCBO-Fixed,4,1.833438e-08
+Griewank,LSCBO-Fixed,5,8.562677e-08
+Griewank,LSCBO-Fixed,6,2.212678e-02
+Griewank,LSCBO-Fixed,7,1.477246e-02
+Griewank,LSCBO-Fixed,8,7.396064e-03
+Griewank,LSCBO-Fixed,9,6.263347e-08
+Griewank,LSCBO-Fixed,10,9.857337e-03
+Griewank,LSCBO-Fixed,11,3.256062e-08
+Griewank,LSCBO-Fixed,12,2.852847e-08
+Griewank,LSCBO-Fixed,13,2.898722e-08
+Griewank,LSCBO-Fixed,14,2.117278e-08
+Griewank,LSCBO-Fixed,15,9.857359e-03
+Griewank,LSCBO-Fixed,16,1.723614e-02
+Griewank,LSCBO-Fixed,17,2.832867e-08
+Griewank,LSCBO-Fixed,18,3.431485e-08
+Griewank,LSCBO-Fixed,19,5.127106e-08
+Griewank,LSCBO-Fixed,20,2.518303e-08
+Griewank,LSCBO-Fixed,21,3.040844e-08
+Griewank,LSCBO-Fixed,22,1.722632e-02
+Griewank,LSCBO-Fixed,23,7.396071e-03
+Griewank,LSCBO-Fixed,24,2.469207e-08
+Griewank,LSCBO-Fixed,25,2.215128e-02
+Griewank,LSCBO-Fixed,26,1.724104e-02
+Griewank,LSCBO-Fixed,27,9.857321e-03
+Griewank,LSCBO-Fixed,28,7.396073e-03
+Griewank,LSCBO-Fixed,29,7.396071e-03
+Griewank,LSCBO-Fixed,30,5.713167e-08
 Ackley,Random,1,1.975473e+01
 Ackley,Random,2,1.975600e+01
 Ackley,Random,3,1.970304e+01
@@ -2129,36 +2129,36 @@ Ackley,ICBO-Enhanced,27,4.440892e-16
 Ackley,ICBO-Enhanced,28,4.440892e-16
 Ackley,ICBO-Enhanced,29,4.440892e-16
 Ackley,ICBO-Enhanced,30,4.440892e-16
-Ackley,EDCBO-Fixed,1,1.929107e+01
-Ackley,EDCBO-Fixed,2,1.882152e+01
-Ackley,EDCBO-Fixed,3,1.867901e+01
-Ackley,EDCBO-Fixed,4,1.914284e+01
-Ackley,EDCBO-Fixed,5,1.853301e+01
-Ackley,EDCBO-Fixed,6,1.713454e+01
-Ackley,EDCBO-Fixed,7,1.936882e+01
-Ackley,EDCBO-Fixed,8,1.878670e+01
-Ackley,EDCBO-Fixed,9,1.919625e+01
-Ackley,EDCBO-Fixed,10,1.541072e+01
-Ackley,EDCBO-Fixed,11,1.793012e+01
-Ackley,EDCBO-Fixed,12,1.866300e+01
-Ackley,EDCBO-Fixed,13,1.880584e+01
-Ackley,EDCBO-Fixed,14,1.825708e+01
-Ackley,EDCBO-Fixed,15,1.942145e+01
-Ackley,EDCBO-Fixed,16,1.747699e+01
-Ackley,EDCBO-Fixed,17,1.727195e+01
-Ackley,EDCBO-Fixed,18,1.774009e+01
-Ackley,EDCBO-Fixed,19,1.914988e+01
-Ackley,EDCBO-Fixed,20,1.811189e+01
-Ackley,EDCBO-Fixed,21,1.928681e+01
-Ackley,EDCBO-Fixed,22,1.894494e+01
-Ackley,EDCBO-Fixed,23,1.796973e+01
-Ackley,EDCBO-Fixed,24,1.790928e+01
-Ackley,EDCBO-Fixed,25,1.769663e+01
-Ackley,EDCBO-Fixed,26,1.774077e+01
-Ackley,EDCBO-Fixed,27,1.647012e+01
-Ackley,EDCBO-Fixed,28,1.674644e+01
-Ackley,EDCBO-Fixed,29,1.826325e+01
-Ackley,EDCBO-Fixed,30,1.835846e+01
+Ackley,LSCBO-Fixed,1,1.929107e+01
+Ackley,LSCBO-Fixed,2,1.882152e+01
+Ackley,LSCBO-Fixed,3,1.867901e+01
+Ackley,LSCBO-Fixed,4,1.914284e+01
+Ackley,LSCBO-Fixed,5,1.853301e+01
+Ackley,LSCBO-Fixed,6,1.713454e+01
+Ackley,LSCBO-Fixed,7,1.936882e+01
+Ackley,LSCBO-Fixed,8,1.878670e+01
+Ackley,LSCBO-Fixed,9,1.919625e+01
+Ackley,LSCBO-Fixed,10,1.541072e+01
+Ackley,LSCBO-Fixed,11,1.793012e+01
+Ackley,LSCBO-Fixed,12,1.866300e+01
+Ackley,LSCBO-Fixed,13,1.880584e+01
+Ackley,LSCBO-Fixed,14,1.825708e+01
+Ackley,LSCBO-Fixed,15,1.942145e+01
+Ackley,LSCBO-Fixed,16,1.747699e+01
+Ackley,LSCBO-Fixed,17,1.727195e+01
+Ackley,LSCBO-Fixed,18,1.774009e+01
+Ackley,LSCBO-Fixed,19,1.914988e+01
+Ackley,LSCBO-Fixed,20,1.811189e+01
+Ackley,LSCBO-Fixed,21,1.928681e+01
+Ackley,LSCBO-Fixed,22,1.894494e+01
+Ackley,LSCBO-Fixed,23,1.796973e+01
+Ackley,LSCBO-Fixed,24,1.790928e+01
+Ackley,LSCBO-Fixed,25,1.769663e+01
+Ackley,LSCBO-Fixed,26,1.774077e+01
+Ackley,LSCBO-Fixed,27,1.647012e+01
+Ackley,LSCBO-Fixed,28,1.674644e+01
+Ackley,LSCBO-Fixed,29,1.826325e+01
+Ackley,LSCBO-Fixed,30,1.835846e+01
 Schwefel,Random,1,8.706129e+03
 Schwefel,Random,2,8.346643e+03
 Schwefel,Random,3,7.990242e+03
@@ -2369,36 +2369,36 @@ Schwefel,ICBO-Enhanced,27,6.653224e+03
 Schwefel,ICBO-Enhanced,28,9.687847e+03
 Schwefel,ICBO-Enhanced,29,6.471859e+03
 Schwefel,ICBO-Enhanced,30,9.043263e+03
-Schwefel,EDCBO-Fixed,1,5.233655e+03
-Schwefel,EDCBO-Fixed,2,1.697693e+03
-Schwefel,EDCBO-Fixed,3,3.869013e+03
-Schwefel,EDCBO-Fixed,4,4.421811e+03
-Schwefel,EDCBO-Fixed,5,4.954950e+03
-Schwefel,EDCBO-Fixed,6,5.389220e+03
-Schwefel,EDCBO-Fixed,7,3.553150e+03
-Schwefel,EDCBO-Fixed,8,3.888839e+03
-Schwefel,EDCBO-Fixed,9,3.829520e+03
-Schwefel,EDCBO-Fixed,10,4.264358e+03
-Schwefel,EDCBO-Fixed,11,4.856112e+03
-Schwefel,EDCBO-Fixed,12,4.362580e+03
-Schwefel,EDCBO-Fixed,13,1.144976e+03
-Schwefel,EDCBO-Fixed,14,4.481533e+03
-Schwefel,EDCBO-Fixed,15,4.244290e+03
-Schwefel,EDCBO-Fixed,16,4.165153e+03
-Schwefel,EDCBO-Fixed,17,4.658835e+03
-Schwefel,EDCBO-Fixed,18,4.836447e+03
-Schwefel,EDCBO-Fixed,19,3.434712e+03
-Schwefel,EDCBO-Fixed,20,4.422292e+03
-Schwefel,EDCBO-Fixed,21,3.158876e+03
-Schwefel,EDCBO-Fixed,22,4.660236e+03
-Schwefel,EDCBO-Fixed,23,4.225970e+03
-Schwefel,EDCBO-Fixed,24,5.033884e+03
-Schwefel,EDCBO-Fixed,25,3.730960e+03
-Schwefel,EDCBO-Fixed,26,4.602561e+03
-Schwefel,EDCBO-Fixed,27,4.166740e+03
-Schwefel,EDCBO-Fixed,28,4.917376e+03
-Schwefel,EDCBO-Fixed,29,4.958041e+03
-Schwefel,EDCBO-Fixed,30,4.481489e+03
+Schwefel,LSCBO-Fixed,1,5.233655e+03
+Schwefel,LSCBO-Fixed,2,1.697693e+03
+Schwefel,LSCBO-Fixed,3,3.869013e+03
+Schwefel,LSCBO-Fixed,4,4.421811e+03
+Schwefel,LSCBO-Fixed,5,4.954950e+03
+Schwefel,LSCBO-Fixed,6,5.389220e+03
+Schwefel,LSCBO-Fixed,7,3.553150e+03
+Schwefel,LSCBO-Fixed,8,3.888839e+03
+Schwefel,LSCBO-Fixed,9,3.829520e+03
+Schwefel,LSCBO-Fixed,10,4.264358e+03
+Schwefel,LSCBO-Fixed,11,4.856112e+03
+Schwefel,LSCBO-Fixed,12,4.362580e+03
+Schwefel,LSCBO-Fixed,13,1.144976e+03
+Schwefel,LSCBO-Fixed,14,4.481533e+03
+Schwefel,LSCBO-Fixed,15,4.244290e+03
+Schwefel,LSCBO-Fixed,16,4.165153e+03
+Schwefel,LSCBO-Fixed,17,4.658835e+03
+Schwefel,LSCBO-Fixed,18,4.836447e+03
+Schwefel,LSCBO-Fixed,19,3.434712e+03
+Schwefel,LSCBO-Fixed,20,4.422292e+03
+Schwefel,LSCBO-Fixed,21,3.158876e+03
+Schwefel,LSCBO-Fixed,22,4.660236e+03
+Schwefel,LSCBO-Fixed,23,4.225970e+03
+Schwefel,LSCBO-Fixed,24,5.033884e+03
+Schwefel,LSCBO-Fixed,25,3.730960e+03
+Schwefel,LSCBO-Fixed,26,4.602561e+03
+Schwefel,LSCBO-Fixed,27,4.166740e+03
+Schwefel,LSCBO-Fixed,28,4.917376e+03
+Schwefel,LSCBO-Fixed,29,4.958041e+03
+Schwefel,LSCBO-Fixed,30,4.481489e+03
 Six-Hump Camel,Random,1,-1.023549e+00
 Six-Hump Camel,Random,2,-1.030400e+00
 Six-Hump Camel,Random,3,-1.031299e+00
@@ -2609,36 +2609,36 @@ Six-Hump Camel,ICBO-Enhanced,27,-1.029994e+00
 Six-Hump Camel,ICBO-Enhanced,28,-1.031441e+00
 Six-Hump Camel,ICBO-Enhanced,29,-1.030252e+00
 Six-Hump Camel,ICBO-Enhanced,30,-1.030015e+00
-Six-Hump Camel,EDCBO-Fixed,1,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,2,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,3,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,4,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,5,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,6,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,7,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,8,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,9,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,10,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,11,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,12,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,13,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,14,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,15,-2.154638e-01
-Six-Hump Camel,EDCBO-Fixed,16,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,17,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,18,-2.154638e-01
-Six-Hump Camel,EDCBO-Fixed,19,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,20,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,21,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,22,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,23,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,24,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,25,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,26,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,27,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,28,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,29,-1.031628e+00
-Six-Hump Camel,EDCBO-Fixed,30,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,1,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,2,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,3,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,4,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,5,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,6,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,7,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,8,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,9,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,10,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,11,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,12,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,13,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,14,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,15,-2.154638e-01
+Six-Hump Camel,LSCBO-Fixed,16,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,17,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,18,-2.154638e-01
+Six-Hump Camel,LSCBO-Fixed,19,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,20,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,21,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,22,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,23,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,24,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,25,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,26,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,27,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,28,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,29,-1.031628e+00
+Six-Hump Camel,LSCBO-Fixed,30,-1.031628e+00
 Levy,Random,1,1.215622e+02
 Levy,Random,2,1.159367e+02
 Levy,Random,3,9.452759e+01
@@ -2849,36 +2849,36 @@ Levy,ICBO-Enhanced,27,3.151574e+00
 Levy,ICBO-Enhanced,28,3.152840e+00
 Levy,ICBO-Enhanced,29,3.238888e+00
 Levy,ICBO-Enhanced,30,3.203963e+00
-Levy,EDCBO-Fixed,1,6.368002e+01
-Levy,EDCBO-Fixed,2,3.952035e+01
-Levy,EDCBO-Fixed,3,2.834207e+01
-Levy,EDCBO-Fixed,4,1.588516e+01
-Levy,EDCBO-Fixed,5,3.458777e+01
-Levy,EDCBO-Fixed,6,5.696533e+01
-Levy,EDCBO-Fixed,7,4.725219e+01
-Levy,EDCBO-Fixed,8,4.329499e+01
-Levy,EDCBO-Fixed,9,4.295370e+01
-Levy,EDCBO-Fixed,10,3.845640e+01
-Levy,EDCBO-Fixed,11,4.795456e+01
-Levy,EDCBO-Fixed,12,5.365801e+01
-Levy,EDCBO-Fixed,13,4.691187e+01
-Levy,EDCBO-Fixed,14,7.299595e+01
-Levy,EDCBO-Fixed,15,4.353596e+01
-Levy,EDCBO-Fixed,16,5.487692e+01
-Levy,EDCBO-Fixed,17,3.206506e+01
-Levy,EDCBO-Fixed,18,4.270827e+01
-Levy,EDCBO-Fixed,19,5.150055e+01
-Levy,EDCBO-Fixed,20,2.037386e+01
-Levy,EDCBO-Fixed,21,4.977278e+01
-Levy,EDCBO-Fixed,22,3.635336e+01
-Levy,EDCBO-Fixed,23,5.494423e+01
-Levy,EDCBO-Fixed,24,4.969901e+01
-Levy,EDCBO-Fixed,25,4.010033e+01
-Levy,EDCBO-Fixed,26,3.206863e+01
-Levy,EDCBO-Fixed,27,4.553212e+01
-Levy,EDCBO-Fixed,28,6.170684e+01
-Levy,EDCBO-Fixed,29,2.347558e+01
-Levy,EDCBO-Fixed,30,2.063682e+01
+Levy,LSCBO-Fixed,1,6.368002e+01
+Levy,LSCBO-Fixed,2,3.952035e+01
+Levy,LSCBO-Fixed,3,2.834207e+01
+Levy,LSCBO-Fixed,4,1.588516e+01
+Levy,LSCBO-Fixed,5,3.458777e+01
+Levy,LSCBO-Fixed,6,5.696533e+01
+Levy,LSCBO-Fixed,7,4.725219e+01
+Levy,LSCBO-Fixed,8,4.329499e+01
+Levy,LSCBO-Fixed,9,4.295370e+01
+Levy,LSCBO-Fixed,10,3.845640e+01
+Levy,LSCBO-Fixed,11,4.795456e+01
+Levy,LSCBO-Fixed,12,5.365801e+01
+Levy,LSCBO-Fixed,13,4.691187e+01
+Levy,LSCBO-Fixed,14,7.299595e+01
+Levy,LSCBO-Fixed,15,4.353596e+01
+Levy,LSCBO-Fixed,16,5.487692e+01
+Levy,LSCBO-Fixed,17,3.206506e+01
+Levy,LSCBO-Fixed,18,4.270827e+01
+Levy,LSCBO-Fixed,19,5.150055e+01
+Levy,LSCBO-Fixed,20,2.037386e+01
+Levy,LSCBO-Fixed,21,4.977278e+01
+Levy,LSCBO-Fixed,22,3.635336e+01
+Levy,LSCBO-Fixed,23,5.494423e+01
+Levy,LSCBO-Fixed,24,4.969901e+01
+Levy,LSCBO-Fixed,25,4.010033e+01
+Levy,LSCBO-Fixed,26,3.206863e+01
+Levy,LSCBO-Fixed,27,4.553212e+01
+Levy,LSCBO-Fixed,28,6.170684e+01
+Levy,LSCBO-Fixed,29,2.347558e+01
+Levy,LSCBO-Fixed,30,2.063682e+01
 Dixon-Price,Random,1,6.473671e+05
 Dixon-Price,Random,2,4.461472e+05
 Dixon-Price,Random,3,8.388483e+05
@@ -3089,36 +3089,36 @@ Dixon-Price,ICBO-Enhanced,27,9.741423e-01
 Dixon-Price,ICBO-Enhanced,28,9.903166e-01
 Dixon-Price,ICBO-Enhanced,29,9.832897e-01
 Dixon-Price,ICBO-Enhanced,30,9.936839e-01
-Dixon-Price,EDCBO-Fixed,1,6.666763e-01
-Dixon-Price,EDCBO-Fixed,2,6.666825e-01
-Dixon-Price,EDCBO-Fixed,3,6.666796e-01
-Dixon-Price,EDCBO-Fixed,4,6.669045e-01
-Dixon-Price,EDCBO-Fixed,5,6.666727e-01
-Dixon-Price,EDCBO-Fixed,6,6.666786e-01
-Dixon-Price,EDCBO-Fixed,7,6.666788e-01
-Dixon-Price,EDCBO-Fixed,8,3.166073e-04
-Dixon-Price,EDCBO-Fixed,9,6.666787e-01
-Dixon-Price,EDCBO-Fixed,10,3.281289e-04
-Dixon-Price,EDCBO-Fixed,11,6.666768e-01
-Dixon-Price,EDCBO-Fixed,12,7.532504e-04
-Dixon-Price,EDCBO-Fixed,13,6.669001e-01
-Dixon-Price,EDCBO-Fixed,14,6.153380e-04
-Dixon-Price,EDCBO-Fixed,15,6.666744e-01
-Dixon-Price,EDCBO-Fixed,16,6.667577e-01
-Dixon-Price,EDCBO-Fixed,17,6.666836e-01
-Dixon-Price,EDCBO-Fixed,18,6.667010e-01
-Dixon-Price,EDCBO-Fixed,19,6.666912e-01
-Dixon-Price,EDCBO-Fixed,20,6.666698e-01
-Dixon-Price,EDCBO-Fixed,21,6.666746e-01
-Dixon-Price,EDCBO-Fixed,22,6.944746e-04
-Dixon-Price,EDCBO-Fixed,23,6.666864e-01
-Dixon-Price,EDCBO-Fixed,24,2.929508e-04
-Dixon-Price,EDCBO-Fixed,25,6.667153e-01
-Dixon-Price,EDCBO-Fixed,26,6.666740e-01
-Dixon-Price,EDCBO-Fixed,27,2.626885e-04
-Dixon-Price,EDCBO-Fixed,28,6.666902e-01
-Dixon-Price,EDCBO-Fixed,29,6.666844e-01
-Dixon-Price,EDCBO-Fixed,30,6.666735e-01
+Dixon-Price,LSCBO-Fixed,1,6.666763e-01
+Dixon-Price,LSCBO-Fixed,2,6.666825e-01
+Dixon-Price,LSCBO-Fixed,3,6.666796e-01
+Dixon-Price,LSCBO-Fixed,4,6.669045e-01
+Dixon-Price,LSCBO-Fixed,5,6.666727e-01
+Dixon-Price,LSCBO-Fixed,6,6.666786e-01
+Dixon-Price,LSCBO-Fixed,7,6.666788e-01
+Dixon-Price,LSCBO-Fixed,8,3.166073e-04
+Dixon-Price,LSCBO-Fixed,9,6.666787e-01
+Dixon-Price,LSCBO-Fixed,10,3.281289e-04
+Dixon-Price,LSCBO-Fixed,11,6.666768e-01
+Dixon-Price,LSCBO-Fixed,12,7.532504e-04
+Dixon-Price,LSCBO-Fixed,13,6.669001e-01
+Dixon-Price,LSCBO-Fixed,14,6.153380e-04
+Dixon-Price,LSCBO-Fixed,15,6.666744e-01
+Dixon-Price,LSCBO-Fixed,16,6.667577e-01
+Dixon-Price,LSCBO-Fixed,17,6.666836e-01
+Dixon-Price,LSCBO-Fixed,18,6.667010e-01
+Dixon-Price,LSCBO-Fixed,19,6.666912e-01
+Dixon-Price,LSCBO-Fixed,20,6.666698e-01
+Dixon-Price,LSCBO-Fixed,21,6.666746e-01
+Dixon-Price,LSCBO-Fixed,22,6.944746e-04
+Dixon-Price,LSCBO-Fixed,23,6.666864e-01
+Dixon-Price,LSCBO-Fixed,24,2.929508e-04
+Dixon-Price,LSCBO-Fixed,25,6.667153e-01
+Dixon-Price,LSCBO-Fixed,26,6.666740e-01
+Dixon-Price,LSCBO-Fixed,27,2.626885e-04
+Dixon-Price,LSCBO-Fixed,28,6.666902e-01
+Dixon-Price,LSCBO-Fixed,29,6.666844e-01
+Dixon-Price,LSCBO-Fixed,30,6.666735e-01
 Michalewicz,Random,1,-9.525179e+00
 Michalewicz,Random,2,-9.175412e+00
 Michalewicz,Random,3,-9.286531e+00
@@ -3329,36 +3329,36 @@ Michalewicz,ICBO-Enhanced,27,-9.943821e+00
 Michalewicz,ICBO-Enhanced,28,-8.780404e+00
 Michalewicz,ICBO-Enhanced,29,-8.964186e+00
 Michalewicz,ICBO-Enhanced,30,-8.649428e+00
-Michalewicz,EDCBO-Fixed,1,-2.288853e+01
-Michalewicz,EDCBO-Fixed,2,-2.178053e+01
-Michalewicz,EDCBO-Fixed,3,-2.320639e+01
-Michalewicz,EDCBO-Fixed,4,-2.457235e+01
-Michalewicz,EDCBO-Fixed,5,-2.118512e+01
-Michalewicz,EDCBO-Fixed,6,-2.222008e+01
-Michalewicz,EDCBO-Fixed,7,-2.279345e+01
-Michalewicz,EDCBO-Fixed,8,-2.365338e+01
-Michalewicz,EDCBO-Fixed,9,-2.240139e+01
-Michalewicz,EDCBO-Fixed,10,-2.203557e+01
-Michalewicz,EDCBO-Fixed,11,-2.297250e+01
-Michalewicz,EDCBO-Fixed,12,-2.402510e+01
-Michalewicz,EDCBO-Fixed,13,-2.282441e+01
-Michalewicz,EDCBO-Fixed,14,-2.128170e+01
-Michalewicz,EDCBO-Fixed,15,-2.337214e+01
-Michalewicz,EDCBO-Fixed,16,-2.135043e+01
-Michalewicz,EDCBO-Fixed,17,-2.208626e+01
-Michalewicz,EDCBO-Fixed,18,-2.225437e+01
-Michalewicz,EDCBO-Fixed,19,-2.238673e+01
-Michalewicz,EDCBO-Fixed,20,-2.227261e+01
-Michalewicz,EDCBO-Fixed,21,-2.318130e+01
-Michalewicz,EDCBO-Fixed,22,-2.381598e+01
-Michalewicz,EDCBO-Fixed,23,-2.235830e+01
-Michalewicz,EDCBO-Fixed,24,-2.407788e+01
-Michalewicz,EDCBO-Fixed,25,-2.393436e+01
-Michalewicz,EDCBO-Fixed,26,-2.384847e+01
-Michalewicz,EDCBO-Fixed,27,-2.290846e+01
-Michalewicz,EDCBO-Fixed,28,-2.257091e+01
-Michalewicz,EDCBO-Fixed,29,-2.249929e+01
-Michalewicz,EDCBO-Fixed,30,-2.583292e+01
+Michalewicz,LSCBO-Fixed,1,-2.288853e+01
+Michalewicz,LSCBO-Fixed,2,-2.178053e+01
+Michalewicz,LSCBO-Fixed,3,-2.320639e+01
+Michalewicz,LSCBO-Fixed,4,-2.457235e+01
+Michalewicz,LSCBO-Fixed,5,-2.118512e+01
+Michalewicz,LSCBO-Fixed,6,-2.222008e+01
+Michalewicz,LSCBO-Fixed,7,-2.279345e+01
+Michalewicz,LSCBO-Fixed,8,-2.365338e+01
+Michalewicz,LSCBO-Fixed,9,-2.240139e+01
+Michalewicz,LSCBO-Fixed,10,-2.203557e+01
+Michalewicz,LSCBO-Fixed,11,-2.297250e+01
+Michalewicz,LSCBO-Fixed,12,-2.402510e+01
+Michalewicz,LSCBO-Fixed,13,-2.282441e+01
+Michalewicz,LSCBO-Fixed,14,-2.128170e+01
+Michalewicz,LSCBO-Fixed,15,-2.337214e+01
+Michalewicz,LSCBO-Fixed,16,-2.135043e+01
+Michalewicz,LSCBO-Fixed,17,-2.208626e+01
+Michalewicz,LSCBO-Fixed,18,-2.225437e+01
+Michalewicz,LSCBO-Fixed,19,-2.238673e+01
+Michalewicz,LSCBO-Fixed,20,-2.227261e+01
+Michalewicz,LSCBO-Fixed,21,-2.318130e+01
+Michalewicz,LSCBO-Fixed,22,-2.381598e+01
+Michalewicz,LSCBO-Fixed,23,-2.235830e+01
+Michalewicz,LSCBO-Fixed,24,-2.407788e+01
+Michalewicz,LSCBO-Fixed,25,-2.393436e+01
+Michalewicz,LSCBO-Fixed,26,-2.384847e+01
+Michalewicz,LSCBO-Fixed,27,-2.290846e+01
+Michalewicz,LSCBO-Fixed,28,-2.257091e+01
+Michalewicz,LSCBO-Fixed,29,-2.249929e+01
+Michalewicz,LSCBO-Fixed,30,-2.583292e+01
 Styblinski-Tang,Random,1,-7.194078e+02
 Styblinski-Tang,Random,2,-7.075165e+02
 Styblinski-Tang,Random,3,-7.264307e+02
@@ -3569,36 +3569,36 @@ Styblinski-Tang,ICBO-Enhanced,27,-7.207262e+02
 Styblinski-Tang,ICBO-Enhanced,28,-7.739661e+02
 Styblinski-Tang,ICBO-Enhanced,29,-6.862540e+02
 Styblinski-Tang,ICBO-Enhanced,30,-7.457426e+02
-Styblinski-Tang,EDCBO-Fixed,1,-9.487974e+02
-Styblinski-Tang,EDCBO-Fixed,2,-1.005344e+03
-Styblinski-Tang,EDCBO-Fixed,3,-1.047754e+03
-Styblinski-Tang,EDCBO-Fixed,4,-1.005344e+03
-Styblinski-Tang,EDCBO-Fixed,5,-9.487975e+02
-Styblinski-Tang,EDCBO-Fixed,6,-9.629342e+02
-Styblinski-Tang,EDCBO-Fixed,7,-1.033618e+03
-Styblinski-Tang,EDCBO-Fixed,8,-9.770709e+02
-Styblinski-Tang,EDCBO-Fixed,9,-1.061891e+03
-Styblinski-Tang,EDCBO-Fixed,10,-9.912076e+02
-Styblinski-Tang,EDCBO-Fixed,11,-9.346607e+02
-Styblinski-Tang,EDCBO-Fixed,12,-1.019481e+03
-Styblinski-Tang,EDCBO-Fixed,13,-9.346607e+02
-Styblinski-Tang,EDCBO-Fixed,14,-9.205240e+02
-Styblinski-Tang,EDCBO-Fixed,15,-1.033618e+03
-Styblinski-Tang,EDCBO-Fixed,16,-1.005344e+03
-Styblinski-Tang,EDCBO-Fixed,17,-1.033618e+03
-Styblinski-Tang,EDCBO-Fixed,18,-1.033618e+03
-Styblinski-Tang,EDCBO-Fixed,19,-9.912076e+02
-Styblinski-Tang,EDCBO-Fixed,20,-1.090165e+03
-Styblinski-Tang,EDCBO-Fixed,21,-1.019481e+03
-Styblinski-Tang,EDCBO-Fixed,22,-9.912076e+02
-Styblinski-Tang,EDCBO-Fixed,23,-1.061891e+03
-Styblinski-Tang,EDCBO-Fixed,24,-1.033618e+03
-Styblinski-Tang,EDCBO-Fixed,25,-9.487975e+02
-Styblinski-Tang,EDCBO-Fixed,26,-9.629342e+02
-Styblinski-Tang,EDCBO-Fixed,27,-9.487975e+02
-Styblinski-Tang,EDCBO-Fixed,28,-1.146712e+03
-Styblinski-Tang,EDCBO-Fixed,29,-9.770709e+02
-Styblinski-Tang,EDCBO-Fixed,30,-1.061891e+03
+Styblinski-Tang,LSCBO-Fixed,1,-9.487974e+02
+Styblinski-Tang,LSCBO-Fixed,2,-1.005344e+03
+Styblinski-Tang,LSCBO-Fixed,3,-1.047754e+03
+Styblinski-Tang,LSCBO-Fixed,4,-1.005344e+03
+Styblinski-Tang,LSCBO-Fixed,5,-9.487975e+02
+Styblinski-Tang,LSCBO-Fixed,6,-9.629342e+02
+Styblinski-Tang,LSCBO-Fixed,7,-1.033618e+03
+Styblinski-Tang,LSCBO-Fixed,8,-9.770709e+02
+Styblinski-Tang,LSCBO-Fixed,9,-1.061891e+03
+Styblinski-Tang,LSCBO-Fixed,10,-9.912076e+02
+Styblinski-Tang,LSCBO-Fixed,11,-9.346607e+02
+Styblinski-Tang,LSCBO-Fixed,12,-1.019481e+03
+Styblinski-Tang,LSCBO-Fixed,13,-9.346607e+02
+Styblinski-Tang,LSCBO-Fixed,14,-9.205240e+02
+Styblinski-Tang,LSCBO-Fixed,15,-1.033618e+03
+Styblinski-Tang,LSCBO-Fixed,16,-1.005344e+03
+Styblinski-Tang,LSCBO-Fixed,17,-1.033618e+03
+Styblinski-Tang,LSCBO-Fixed,18,-1.033618e+03
+Styblinski-Tang,LSCBO-Fixed,19,-9.912076e+02
+Styblinski-Tang,LSCBO-Fixed,20,-1.090165e+03
+Styblinski-Tang,LSCBO-Fixed,21,-1.019481e+03
+Styblinski-Tang,LSCBO-Fixed,22,-9.912076e+02
+Styblinski-Tang,LSCBO-Fixed,23,-1.061891e+03
+Styblinski-Tang,LSCBO-Fixed,24,-1.033618e+03
+Styblinski-Tang,LSCBO-Fixed,25,-9.487975e+02
+Styblinski-Tang,LSCBO-Fixed,26,-9.629342e+02
+Styblinski-Tang,LSCBO-Fixed,27,-9.487975e+02
+Styblinski-Tang,LSCBO-Fixed,28,-1.146712e+03
+Styblinski-Tang,LSCBO-Fixed,29,-9.770709e+02
+Styblinski-Tang,LSCBO-Fixed,30,-1.061891e+03
 Alpine,Random,1,4.607836e+01
 Alpine,Random,2,4.253112e+01
 Alpine,Random,3,4.181160e+01
@@ -3809,36 +3809,36 @@ Alpine,ICBO-Enhanced,27,1.336953e-216
 Alpine,ICBO-Enhanced,28,2.990232e-220
 Alpine,ICBO-Enhanced,29,6.271199e-219
 Alpine,ICBO-Enhanced,30,7.949261e-219
-Alpine,EDCBO-Fixed,1,5.057039e-03
-Alpine,EDCBO-Fixed,2,2.663398e-03
-Alpine,EDCBO-Fixed,3,7.890454e-03
-Alpine,EDCBO-Fixed,4,4.512182e-03
-Alpine,EDCBO-Fixed,5,4.359878e-03
-Alpine,EDCBO-Fixed,6,2.511951e-03
-Alpine,EDCBO-Fixed,7,2.439797e-03
-Alpine,EDCBO-Fixed,8,3.939096e-03
-Alpine,EDCBO-Fixed,9,4.617188e-03
-Alpine,EDCBO-Fixed,10,4.707663e-03
-Alpine,EDCBO-Fixed,11,6.904289e-03
-Alpine,EDCBO-Fixed,12,3.646484e-03
-Alpine,EDCBO-Fixed,13,6.614044e-03
-Alpine,EDCBO-Fixed,14,6.027755e-03
-Alpine,EDCBO-Fixed,15,4.380962e-03
-Alpine,EDCBO-Fixed,16,3.555921e-03
-Alpine,EDCBO-Fixed,17,4.515033e-03
-Alpine,EDCBO-Fixed,18,2.950527e-03
-Alpine,EDCBO-Fixed,19,7.790360e-03
-Alpine,EDCBO-Fixed,20,2.368745e-03
-Alpine,EDCBO-Fixed,21,3.780652e-03
-Alpine,EDCBO-Fixed,22,4.674789e-03
-Alpine,EDCBO-Fixed,23,5.644498e-03
-Alpine,EDCBO-Fixed,24,7.542705e-03
-Alpine,EDCBO-Fixed,25,9.679303e-03
-Alpine,EDCBO-Fixed,26,4.463378e-03
-Alpine,EDCBO-Fixed,27,4.886275e-03
-Alpine,EDCBO-Fixed,28,4.025952e-03
-Alpine,EDCBO-Fixed,29,4.634651e-03
-Alpine,EDCBO-Fixed,30,3.219572e-03
+Alpine,LSCBO-Fixed,1,5.057039e-03
+Alpine,LSCBO-Fixed,2,2.663398e-03
+Alpine,LSCBO-Fixed,3,7.890454e-03
+Alpine,LSCBO-Fixed,4,4.512182e-03
+Alpine,LSCBO-Fixed,5,4.359878e-03
+Alpine,LSCBO-Fixed,6,2.511951e-03
+Alpine,LSCBO-Fixed,7,2.439797e-03
+Alpine,LSCBO-Fixed,8,3.939096e-03
+Alpine,LSCBO-Fixed,9,4.617188e-03
+Alpine,LSCBO-Fixed,10,4.707663e-03
+Alpine,LSCBO-Fixed,11,6.904289e-03
+Alpine,LSCBO-Fixed,12,3.646484e-03
+Alpine,LSCBO-Fixed,13,6.614044e-03
+Alpine,LSCBO-Fixed,14,6.027755e-03
+Alpine,LSCBO-Fixed,15,4.380962e-03
+Alpine,LSCBO-Fixed,16,3.555921e-03
+Alpine,LSCBO-Fixed,17,4.515033e-03
+Alpine,LSCBO-Fixed,18,2.950527e-03
+Alpine,LSCBO-Fixed,19,7.790360e-03
+Alpine,LSCBO-Fixed,20,2.368745e-03
+Alpine,LSCBO-Fixed,21,3.780652e-03
+Alpine,LSCBO-Fixed,22,4.674789e-03
+Alpine,LSCBO-Fixed,23,5.644498e-03
+Alpine,LSCBO-Fixed,24,7.542705e-03
+Alpine,LSCBO-Fixed,25,9.679303e-03
+Alpine,LSCBO-Fixed,26,4.463378e-03
+Alpine,LSCBO-Fixed,27,4.886275e-03
+Alpine,LSCBO-Fixed,28,4.025952e-03
+Alpine,LSCBO-Fixed,29,4.634651e-03
+Alpine,LSCBO-Fixed,30,3.219572e-03
 Salomon,Random,1,2.004573e+01
 Salomon,Random,2,2.039332e+01
 Salomon,Random,3,2.025079e+01
@@ -4049,36 +4049,36 @@ Salomon,ICBO-Enhanced,27,1.082395e-144
 Salomon,ICBO-Enhanced,28,8.535765e-154
 Salomon,ICBO-Enhanced,29,9.795711e-161
 Salomon,ICBO-Enhanced,30,7.226118e-121
-Salomon,EDCBO-Fixed,1,1.859987e+01
-Salomon,EDCBO-Fixed,2,1.719987e+01
-Salomon,EDCBO-Fixed,3,1.709987e+01
-Salomon,EDCBO-Fixed,4,2.059987e+01
-Salomon,EDCBO-Fixed,5,1.709987e+01
-Salomon,EDCBO-Fixed,6,1.749987e+01
-Salomon,EDCBO-Fixed,7,1.519987e+01
-Salomon,EDCBO-Fixed,8,1.989987e+01
-Salomon,EDCBO-Fixed,9,1.579987e+01
-Salomon,EDCBO-Fixed,10,1.929987e+01
-Salomon,EDCBO-Fixed,11,1.669987e+01
-Salomon,EDCBO-Fixed,12,1.909987e+01
-Salomon,EDCBO-Fixed,13,2.139987e+01
-Salomon,EDCBO-Fixed,14,2.069987e+01
-Salomon,EDCBO-Fixed,15,1.579987e+01
-Salomon,EDCBO-Fixed,16,1.919987e+01
-Salomon,EDCBO-Fixed,17,1.469987e+01
-Salomon,EDCBO-Fixed,18,2.009987e+01
-Salomon,EDCBO-Fixed,19,1.589987e+01
-Salomon,EDCBO-Fixed,20,1.539987e+01
-Salomon,EDCBO-Fixed,21,1.669987e+01
-Salomon,EDCBO-Fixed,22,2.509987e+01
-Salomon,EDCBO-Fixed,23,1.719987e+01
-Salomon,EDCBO-Fixed,24,1.509987e+01
-Salomon,EDCBO-Fixed,25,1.829987e+01
-Salomon,EDCBO-Fixed,26,1.339987e+01
-Salomon,EDCBO-Fixed,27,1.859987e+01
-Salomon,EDCBO-Fixed,28,1.629987e+01
-Salomon,EDCBO-Fixed,29,1.849987e+01
-Salomon,EDCBO-Fixed,30,1.809987e+01
+Salomon,LSCBO-Fixed,1,1.859987e+01
+Salomon,LSCBO-Fixed,2,1.719987e+01
+Salomon,LSCBO-Fixed,3,1.709987e+01
+Salomon,LSCBO-Fixed,4,2.059987e+01
+Salomon,LSCBO-Fixed,5,1.709987e+01
+Salomon,LSCBO-Fixed,6,1.749987e+01
+Salomon,LSCBO-Fixed,7,1.519987e+01
+Salomon,LSCBO-Fixed,8,1.989987e+01
+Salomon,LSCBO-Fixed,9,1.579987e+01
+Salomon,LSCBO-Fixed,10,1.929987e+01
+Salomon,LSCBO-Fixed,11,1.669987e+01
+Salomon,LSCBO-Fixed,12,1.909987e+01
+Salomon,LSCBO-Fixed,13,2.139987e+01
+Salomon,LSCBO-Fixed,14,2.069987e+01
+Salomon,LSCBO-Fixed,15,1.579987e+01
+Salomon,LSCBO-Fixed,16,1.919987e+01
+Salomon,LSCBO-Fixed,17,1.469987e+01
+Salomon,LSCBO-Fixed,18,2.009987e+01
+Salomon,LSCBO-Fixed,19,1.589987e+01
+Salomon,LSCBO-Fixed,20,1.539987e+01
+Salomon,LSCBO-Fixed,21,1.669987e+01
+Salomon,LSCBO-Fixed,22,2.509987e+01
+Salomon,LSCBO-Fixed,23,1.719987e+01
+Salomon,LSCBO-Fixed,24,1.509987e+01
+Salomon,LSCBO-Fixed,25,1.829987e+01
+Salomon,LSCBO-Fixed,26,1.339987e+01
+Salomon,LSCBO-Fixed,27,1.859987e+01
+Salomon,LSCBO-Fixed,28,1.629987e+01
+Salomon,LSCBO-Fixed,29,1.849987e+01
+Salomon,LSCBO-Fixed,30,1.809987e+01
 Xin-She Yang,Random,1,4.147215e-06
 Xin-She Yang,Random,2,2.261361e-06
 Xin-She Yang,Random,3,2.522560e-06
@@ -4289,36 +4289,36 @@ Xin-She Yang,ICBO-Enhanced,27,5.749364e-12
 Xin-She Yang,ICBO-Enhanced,28,5.432687e-12
 Xin-She Yang,ICBO-Enhanced,29,5.960993e-12
 Xin-She Yang,ICBO-Enhanced,30,6.646093e-12
-Xin-She Yang,EDCBO-Fixed,1,9.176061e-12
-Xin-She Yang,EDCBO-Fixed,2,5.416036e-12
-Xin-She Yang,EDCBO-Fixed,3,1.261199e-11
-Xin-She Yang,EDCBO-Fixed,4,8.383467e-12
-Xin-She Yang,EDCBO-Fixed,5,1.000952e-11
-Xin-She Yang,EDCBO-Fixed,6,5.747931e-12
-Xin-She Yang,EDCBO-Fixed,7,7.818676e-12
-Xin-She Yang,EDCBO-Fixed,8,8.733275e-12
-Xin-She Yang,EDCBO-Fixed,9,7.905667e-12
-Xin-She Yang,EDCBO-Fixed,10,8.008677e-12
-Xin-She Yang,EDCBO-Fixed,11,9.481263e-12
-Xin-She Yang,EDCBO-Fixed,12,5.688453e-12
-Xin-She Yang,EDCBO-Fixed,13,7.173098e-12
-Xin-She Yang,EDCBO-Fixed,14,7.815112e-12
-Xin-She Yang,EDCBO-Fixed,15,8.961052e-12
-Xin-She Yang,EDCBO-Fixed,16,1.278231e-11
-Xin-She Yang,EDCBO-Fixed,17,7.517794e-12
-Xin-She Yang,EDCBO-Fixed,18,7.648855e-12
-Xin-She Yang,EDCBO-Fixed,19,7.893712e-12
-Xin-She Yang,EDCBO-Fixed,20,9.882826e-12
-Xin-She Yang,EDCBO-Fixed,21,9.229810e-12
-Xin-She Yang,EDCBO-Fixed,22,8.682454e-12
-Xin-She Yang,EDCBO-Fixed,23,9.063034e-12
-Xin-She Yang,EDCBO-Fixed,24,9.497533e-12
-Xin-She Yang,EDCBO-Fixed,25,1.324087e-11
-Xin-She Yang,EDCBO-Fixed,26,8.505491e-12
-Xin-She Yang,EDCBO-Fixed,27,8.802898e-12
-Xin-She Yang,EDCBO-Fixed,28,7.323354e-12
-Xin-She Yang,EDCBO-Fixed,29,1.093917e-11
-Xin-She Yang,EDCBO-Fixed,30,4.764303e-12
+Xin-She Yang,LSCBO-Fixed,1,9.176061e-12
+Xin-She Yang,LSCBO-Fixed,2,5.416036e-12
+Xin-She Yang,LSCBO-Fixed,3,1.261199e-11
+Xin-She Yang,LSCBO-Fixed,4,8.383467e-12
+Xin-She Yang,LSCBO-Fixed,5,1.000952e-11
+Xin-She Yang,LSCBO-Fixed,6,5.747931e-12
+Xin-She Yang,LSCBO-Fixed,7,7.818676e-12
+Xin-She Yang,LSCBO-Fixed,8,8.733275e-12
+Xin-She Yang,LSCBO-Fixed,9,7.905667e-12
+Xin-She Yang,LSCBO-Fixed,10,8.008677e-12
+Xin-She Yang,LSCBO-Fixed,11,9.481263e-12
+Xin-She Yang,LSCBO-Fixed,12,5.688453e-12
+Xin-She Yang,LSCBO-Fixed,13,7.173098e-12
+Xin-She Yang,LSCBO-Fixed,14,7.815112e-12
+Xin-She Yang,LSCBO-Fixed,15,8.961052e-12
+Xin-She Yang,LSCBO-Fixed,16,1.278231e-11
+Xin-She Yang,LSCBO-Fixed,17,7.517794e-12
+Xin-She Yang,LSCBO-Fixed,18,7.648855e-12
+Xin-She Yang,LSCBO-Fixed,19,7.893712e-12
+Xin-She Yang,LSCBO-Fixed,20,9.882826e-12
+Xin-She Yang,LSCBO-Fixed,21,9.229810e-12
+Xin-She Yang,LSCBO-Fixed,22,8.682454e-12
+Xin-She Yang,LSCBO-Fixed,23,9.063034e-12
+Xin-She Yang,LSCBO-Fixed,24,9.497533e-12
+Xin-She Yang,LSCBO-Fixed,25,1.324087e-11
+Xin-She Yang,LSCBO-Fixed,26,8.505491e-12
+Xin-She Yang,LSCBO-Fixed,27,8.802898e-12
+Xin-She Yang,LSCBO-Fixed,28,7.323354e-12
+Xin-She Yang,LSCBO-Fixed,29,1.093917e-11
+Xin-She Yang,LSCBO-Fixed,30,4.764303e-12
 HappyCat,Random,1,1.202111e+00
 HappyCat,Random,2,1.043479e+00
 HappyCat,Random,3,1.197381e+00
@@ -4529,36 +4529,36 @@ HappyCat,ICBO-Enhanced,27,1.294252e+00
 HappyCat,ICBO-Enhanced,28,1.361201e+00
 HappyCat,ICBO-Enhanced,29,1.225254e+00
 HappyCat,ICBO-Enhanced,30,8.872813e-01
-HappyCat,EDCBO-Fixed,1,4.725629e-01
-HappyCat,EDCBO-Fixed,2,3.109201e-01
-HappyCat,EDCBO-Fixed,3,3.512357e-01
-HappyCat,EDCBO-Fixed,4,4.574062e-01
-HappyCat,EDCBO-Fixed,5,5.568195e-01
-HappyCat,EDCBO-Fixed,6,3.910010e-01
-HappyCat,EDCBO-Fixed,7,4.416772e-01
-HappyCat,EDCBO-Fixed,8,4.572621e-01
-HappyCat,EDCBO-Fixed,9,1.776949e-01
-HappyCat,EDCBO-Fixed,10,2.192563e-01
-HappyCat,EDCBO-Fixed,11,6.213111e-01
-HappyCat,EDCBO-Fixed,12,3.595075e-01
-HappyCat,EDCBO-Fixed,13,2.901707e-01
-HappyCat,EDCBO-Fixed,14,3.587802e-01
-HappyCat,EDCBO-Fixed,15,3.838834e-01
-HappyCat,EDCBO-Fixed,16,3.962366e-01
-HappyCat,EDCBO-Fixed,17,2.535624e-01
-HappyCat,EDCBO-Fixed,18,5.771786e-01
-HappyCat,EDCBO-Fixed,19,3.896918e-01
-HappyCat,EDCBO-Fixed,20,2.527081e-01
-HappyCat,EDCBO-Fixed,21,3.344310e-01
-HappyCat,EDCBO-Fixed,22,3.505664e-01
-HappyCat,EDCBO-Fixed,23,1.763438e-01
-HappyCat,EDCBO-Fixed,24,4.869807e-01
-HappyCat,EDCBO-Fixed,25,3.709591e-01
-HappyCat,EDCBO-Fixed,26,3.736344e-01
-HappyCat,EDCBO-Fixed,27,3.197523e-01
-HappyCat,EDCBO-Fixed,28,2.546977e-01
-HappyCat,EDCBO-Fixed,29,4.902121e-01
-HappyCat,EDCBO-Fixed,30,2.347535e-01
+HappyCat,LSCBO-Fixed,1,4.725629e-01
+HappyCat,LSCBO-Fixed,2,3.109201e-01
+HappyCat,LSCBO-Fixed,3,3.512357e-01
+HappyCat,LSCBO-Fixed,4,4.574062e-01
+HappyCat,LSCBO-Fixed,5,5.568195e-01
+HappyCat,LSCBO-Fixed,6,3.910010e-01
+HappyCat,LSCBO-Fixed,7,4.416772e-01
+HappyCat,LSCBO-Fixed,8,4.572621e-01
+HappyCat,LSCBO-Fixed,9,1.776949e-01
+HappyCat,LSCBO-Fixed,10,2.192563e-01
+HappyCat,LSCBO-Fixed,11,6.213111e-01
+HappyCat,LSCBO-Fixed,12,3.595075e-01
+HappyCat,LSCBO-Fixed,13,2.901707e-01
+HappyCat,LSCBO-Fixed,14,3.587802e-01
+HappyCat,LSCBO-Fixed,15,3.838834e-01
+HappyCat,LSCBO-Fixed,16,3.962366e-01
+HappyCat,LSCBO-Fixed,17,2.535624e-01
+HappyCat,LSCBO-Fixed,18,5.771786e-01
+HappyCat,LSCBO-Fixed,19,3.896918e-01
+HappyCat,LSCBO-Fixed,20,2.527081e-01
+HappyCat,LSCBO-Fixed,21,3.344310e-01
+HappyCat,LSCBO-Fixed,22,3.505664e-01
+HappyCat,LSCBO-Fixed,23,1.763438e-01
+HappyCat,LSCBO-Fixed,24,4.869807e-01
+HappyCat,LSCBO-Fixed,25,3.709591e-01
+HappyCat,LSCBO-Fixed,26,3.736344e-01
+HappyCat,LSCBO-Fixed,27,3.197523e-01
+HappyCat,LSCBO-Fixed,28,2.546977e-01
+HappyCat,LSCBO-Fixed,29,4.902121e-01
+HappyCat,LSCBO-Fixed,30,2.347535e-01
 Periodic,Random,1,8.023540e+00
 Periodic,Random,2,7.871841e+00
 Periodic,Random,3,7.413389e+00
@@ -4769,36 +4769,36 @@ Periodic,ICBO-Enhanced,27,9.000000e-01
 Periodic,ICBO-Enhanced,28,9.000000e-01
 Periodic,ICBO-Enhanced,29,9.000000e-01
 Periodic,ICBO-Enhanced,30,9.000000e-01
-Periodic,EDCBO-Fixed,1,1.000001e+00
-Periodic,EDCBO-Fixed,2,1.000001e+00
-Periodic,EDCBO-Fixed,3,1.000001e+00
-Periodic,EDCBO-Fixed,4,1.000001e+00
-Periodic,EDCBO-Fixed,5,1.000001e+00
-Periodic,EDCBO-Fixed,6,1.000000e+00
-Periodic,EDCBO-Fixed,7,1.000001e+00
-Periodic,EDCBO-Fixed,8,1.000001e+00
-Periodic,EDCBO-Fixed,9,1.000001e+00
-Periodic,EDCBO-Fixed,10,1.000001e+00
-Periodic,EDCBO-Fixed,11,1.000001e+00
-Periodic,EDCBO-Fixed,12,1.000000e+00
-Periodic,EDCBO-Fixed,13,1.000000e+00
-Periodic,EDCBO-Fixed,14,1.000000e+00
-Periodic,EDCBO-Fixed,15,1.000000e+00
-Periodic,EDCBO-Fixed,16,1.000000e+00
-Periodic,EDCBO-Fixed,17,1.000001e+00
-Periodic,EDCBO-Fixed,18,1.000001e+00
-Periodic,EDCBO-Fixed,19,1.000001e+00
-Periodic,EDCBO-Fixed,20,1.000000e+00
-Periodic,EDCBO-Fixed,21,1.000001e+00
-Periodic,EDCBO-Fixed,22,1.000001e+00
-Periodic,EDCBO-Fixed,23,1.000001e+00
-Periodic,EDCBO-Fixed,24,1.000001e+00
-Periodic,EDCBO-Fixed,25,1.000001e+00
-Periodic,EDCBO-Fixed,26,1.000001e+00
-Periodic,EDCBO-Fixed,27,1.000001e+00
-Periodic,EDCBO-Fixed,28,1.000001e+00
-Periodic,EDCBO-Fixed,29,1.000001e+00
-Periodic,EDCBO-Fixed,30,1.000000e+00
+Periodic,LSCBO-Fixed,1,1.000001e+00
+Periodic,LSCBO-Fixed,2,1.000001e+00
+Periodic,LSCBO-Fixed,3,1.000001e+00
+Periodic,LSCBO-Fixed,4,1.000001e+00
+Periodic,LSCBO-Fixed,5,1.000001e+00
+Periodic,LSCBO-Fixed,6,1.000000e+00
+Periodic,LSCBO-Fixed,7,1.000001e+00
+Periodic,LSCBO-Fixed,8,1.000001e+00
+Periodic,LSCBO-Fixed,9,1.000001e+00
+Periodic,LSCBO-Fixed,10,1.000001e+00
+Periodic,LSCBO-Fixed,11,1.000001e+00
+Periodic,LSCBO-Fixed,12,1.000000e+00
+Periodic,LSCBO-Fixed,13,1.000000e+00
+Periodic,LSCBO-Fixed,14,1.000000e+00
+Periodic,LSCBO-Fixed,15,1.000000e+00
+Periodic,LSCBO-Fixed,16,1.000000e+00
+Periodic,LSCBO-Fixed,17,1.000001e+00
+Periodic,LSCBO-Fixed,18,1.000001e+00
+Periodic,LSCBO-Fixed,19,1.000001e+00
+Periodic,LSCBO-Fixed,20,1.000000e+00
+Periodic,LSCBO-Fixed,21,1.000001e+00
+Periodic,LSCBO-Fixed,22,1.000001e+00
+Periodic,LSCBO-Fixed,23,1.000001e+00
+Periodic,LSCBO-Fixed,24,1.000001e+00
+Periodic,LSCBO-Fixed,25,1.000001e+00
+Periodic,LSCBO-Fixed,26,1.000001e+00
+Periodic,LSCBO-Fixed,27,1.000001e+00
+Periodic,LSCBO-Fixed,28,1.000001e+00
+Periodic,LSCBO-Fixed,29,1.000001e+00
+Periodic,LSCBO-Fixed,30,1.000000e+00
 Expanded Schaffer F6,Random,1,1.334920e+01
 Expanded Schaffer F6,Random,2,1.318924e+01
 Expanded Schaffer F6,Random,3,1.340350e+01
@@ -5009,36 +5009,36 @@ Expanded Schaffer F6,ICBO-Enhanced,27,0.000000e+00
 Expanded Schaffer F6,ICBO-Enhanced,28,0.000000e+00
 Expanded Schaffer F6,ICBO-Enhanced,29,0.000000e+00
 Expanded Schaffer F6,ICBO-Enhanced,30,0.000000e+00
-Expanded Schaffer F6,EDCBO-Fixed,1,1.290145e+01
-Expanded Schaffer F6,EDCBO-Fixed,2,1.295528e+01
-Expanded Schaffer F6,EDCBO-Fixed,3,1.368282e+01
-Expanded Schaffer F6,EDCBO-Fixed,4,1.171371e+01
-Expanded Schaffer F6,EDCBO-Fixed,5,1.310246e+01
-Expanded Schaffer F6,EDCBO-Fixed,6,1.319599e+01
-Expanded Schaffer F6,EDCBO-Fixed,7,1.333282e+01
-Expanded Schaffer F6,EDCBO-Fixed,8,1.269369e+01
-Expanded Schaffer F6,EDCBO-Fixed,9,1.184993e+01
-Expanded Schaffer F6,EDCBO-Fixed,10,1.236238e+01
-Expanded Schaffer F6,EDCBO-Fixed,11,1.281009e+01
-Expanded Schaffer F6,EDCBO-Fixed,12,1.343904e+01
-Expanded Schaffer F6,EDCBO-Fixed,13,1.184315e+01
-Expanded Schaffer F6,EDCBO-Fixed,14,1.278940e+01
-Expanded Schaffer F6,EDCBO-Fixed,15,1.075547e+01
-Expanded Schaffer F6,EDCBO-Fixed,16,1.346638e+01
-Expanded Schaffer F6,EDCBO-Fixed,17,1.269644e+01
-Expanded Schaffer F6,EDCBO-Fixed,18,1.273925e+01
-Expanded Schaffer F6,EDCBO-Fixed,19,1.264769e+01
-Expanded Schaffer F6,EDCBO-Fixed,20,1.332671e+01
-Expanded Schaffer F6,EDCBO-Fixed,21,1.224978e+01
-Expanded Schaffer F6,EDCBO-Fixed,22,1.288703e+01
-Expanded Schaffer F6,EDCBO-Fixed,23,1.247406e+01
-Expanded Schaffer F6,EDCBO-Fixed,24,1.356302e+01
-Expanded Schaffer F6,EDCBO-Fixed,25,1.278954e+01
-Expanded Schaffer F6,EDCBO-Fixed,26,1.204590e+01
-Expanded Schaffer F6,EDCBO-Fixed,27,1.098906e+01
-Expanded Schaffer F6,EDCBO-Fixed,28,1.239706e+01
-Expanded Schaffer F6,EDCBO-Fixed,29,1.175329e+01
-Expanded Schaffer F6,EDCBO-Fixed,30,1.186564e+01
+Expanded Schaffer F6,LSCBO-Fixed,1,1.290145e+01
+Expanded Schaffer F6,LSCBO-Fixed,2,1.295528e+01
+Expanded Schaffer F6,LSCBO-Fixed,3,1.368282e+01
+Expanded Schaffer F6,LSCBO-Fixed,4,1.171371e+01
+Expanded Schaffer F6,LSCBO-Fixed,5,1.310246e+01
+Expanded Schaffer F6,LSCBO-Fixed,6,1.319599e+01
+Expanded Schaffer F6,LSCBO-Fixed,7,1.333282e+01
+Expanded Schaffer F6,LSCBO-Fixed,8,1.269369e+01
+Expanded Schaffer F6,LSCBO-Fixed,9,1.184993e+01
+Expanded Schaffer F6,LSCBO-Fixed,10,1.236238e+01
+Expanded Schaffer F6,LSCBO-Fixed,11,1.281009e+01
+Expanded Schaffer F6,LSCBO-Fixed,12,1.343904e+01
+Expanded Schaffer F6,LSCBO-Fixed,13,1.184315e+01
+Expanded Schaffer F6,LSCBO-Fixed,14,1.278940e+01
+Expanded Schaffer F6,LSCBO-Fixed,15,1.075547e+01
+Expanded Schaffer F6,LSCBO-Fixed,16,1.346638e+01
+Expanded Schaffer F6,LSCBO-Fixed,17,1.269644e+01
+Expanded Schaffer F6,LSCBO-Fixed,18,1.273925e+01
+Expanded Schaffer F6,LSCBO-Fixed,19,1.264769e+01
+Expanded Schaffer F6,LSCBO-Fixed,20,1.332671e+01
+Expanded Schaffer F6,LSCBO-Fixed,21,1.224978e+01
+Expanded Schaffer F6,LSCBO-Fixed,22,1.288703e+01
+Expanded Schaffer F6,LSCBO-Fixed,23,1.247406e+01
+Expanded Schaffer F6,LSCBO-Fixed,24,1.356302e+01
+Expanded Schaffer F6,LSCBO-Fixed,25,1.278954e+01
+Expanded Schaffer F6,LSCBO-Fixed,26,1.204590e+01
+Expanded Schaffer F6,LSCBO-Fixed,27,1.098906e+01
+Expanded Schaffer F6,LSCBO-Fixed,28,1.239706e+01
+Expanded Schaffer F6,LSCBO-Fixed,29,1.175329e+01
+Expanded Schaffer F6,LSCBO-Fixed,30,1.186564e+01
 Weierstrass,Random,1,4.162955e+01
 Weierstrass,Random,2,4.017640e+01
 Weierstrass,Random,3,4.184093e+01
@@ -5249,36 +5249,36 @@ Weierstrass,ICBO-Enhanced,27,0.000000e+00
 Weierstrass,ICBO-Enhanced,28,0.000000e+00
 Weierstrass,ICBO-Enhanced,29,0.000000e+00
 Weierstrass,ICBO-Enhanced,30,0.000000e+00
-Weierstrass,EDCBO-Fixed,1,3.560814e-01
-Weierstrass,EDCBO-Fixed,2,4.893713e-01
-Weierstrass,EDCBO-Fixed,3,4.692568e-01
-Weierstrass,EDCBO-Fixed,4,3.926023e-01
-Weierstrass,EDCBO-Fixed,5,4.576539e-01
-Weierstrass,EDCBO-Fixed,6,3.548709e-01
-Weierstrass,EDCBO-Fixed,7,4.123946e-01
-Weierstrass,EDCBO-Fixed,8,3.964637e-01
-Weierstrass,EDCBO-Fixed,9,4.829635e-01
-Weierstrass,EDCBO-Fixed,10,4.590657e-01
-Weierstrass,EDCBO-Fixed,11,4.249931e-01
-Weierstrass,EDCBO-Fixed,12,3.483134e-01
-Weierstrass,EDCBO-Fixed,13,3.867170e-01
-Weierstrass,EDCBO-Fixed,14,5.768066e-01
-Weierstrass,EDCBO-Fixed,15,4.933041e-01
-Weierstrass,EDCBO-Fixed,16,3.720194e-01
-Weierstrass,EDCBO-Fixed,17,3.255386e-01
-Weierstrass,EDCBO-Fixed,18,4.182769e-01
-Weierstrass,EDCBO-Fixed,19,4.265400e-01
-Weierstrass,EDCBO-Fixed,20,3.742082e-01
-Weierstrass,EDCBO-Fixed,21,3.826688e-01
-Weierstrass,EDCBO-Fixed,22,3.876939e-01
-Weierstrass,EDCBO-Fixed,23,4.907585e-01
-Weierstrass,EDCBO-Fixed,24,4.610469e-01
-Weierstrass,EDCBO-Fixed,25,5.005591e-01
-Weierstrass,EDCBO-Fixed,26,4.940868e-01
-Weierstrass,EDCBO-Fixed,27,3.408735e-01
-Weierstrass,EDCBO-Fixed,28,4.803924e-01
-Weierstrass,EDCBO-Fixed,29,5.027232e-01
-Weierstrass,EDCBO-Fixed,30,5.054207e-01
+Weierstrass,LSCBO-Fixed,1,3.560814e-01
+Weierstrass,LSCBO-Fixed,2,4.893713e-01
+Weierstrass,LSCBO-Fixed,3,4.692568e-01
+Weierstrass,LSCBO-Fixed,4,3.926023e-01
+Weierstrass,LSCBO-Fixed,5,4.576539e-01
+Weierstrass,LSCBO-Fixed,6,3.548709e-01
+Weierstrass,LSCBO-Fixed,7,4.123946e-01
+Weierstrass,LSCBO-Fixed,8,3.964637e-01
+Weierstrass,LSCBO-Fixed,9,4.829635e-01
+Weierstrass,LSCBO-Fixed,10,4.590657e-01
+Weierstrass,LSCBO-Fixed,11,4.249931e-01
+Weierstrass,LSCBO-Fixed,12,3.483134e-01
+Weierstrass,LSCBO-Fixed,13,3.867170e-01
+Weierstrass,LSCBO-Fixed,14,5.768066e-01
+Weierstrass,LSCBO-Fixed,15,4.933041e-01
+Weierstrass,LSCBO-Fixed,16,3.720194e-01
+Weierstrass,LSCBO-Fixed,17,3.255386e-01
+Weierstrass,LSCBO-Fixed,18,4.182769e-01
+Weierstrass,LSCBO-Fixed,19,4.265400e-01
+Weierstrass,LSCBO-Fixed,20,3.742082e-01
+Weierstrass,LSCBO-Fixed,21,3.826688e-01
+Weierstrass,LSCBO-Fixed,22,3.876939e-01
+Weierstrass,LSCBO-Fixed,23,4.907585e-01
+Weierstrass,LSCBO-Fixed,24,4.610469e-01
+Weierstrass,LSCBO-Fixed,25,5.005591e-01
+Weierstrass,LSCBO-Fixed,26,4.940868e-01
+Weierstrass,LSCBO-Fixed,27,3.408735e-01
+Weierstrass,LSCBO-Fixed,28,4.803924e-01
+Weierstrass,LSCBO-Fixed,29,5.027232e-01
+Weierstrass,LSCBO-Fixed,30,5.054207e-01
 Pathological,Random,1,1.228969e+01
 Pathological,Random,2,1.236259e+01
 Pathological,Random,3,1.237531e+01
@@ -5489,36 +5489,36 @@ Pathological,ICBO-Enhanced,27,9.625005e-01
 Pathological,ICBO-Enhanced,28,1.157920e+00
 Pathological,ICBO-Enhanced,29,5.296887e-01
 Pathological,ICBO-Enhanced,30,9.816105e-01
-Pathological,EDCBO-Fixed,1,7.483391e+00
-Pathological,EDCBO-Fixed,2,5.106766e+00
-Pathological,EDCBO-Fixed,3,5.538512e+00
-Pathological,EDCBO-Fixed,4,1.633813e+00
-Pathological,EDCBO-Fixed,5,7.169878e+00
-Pathological,EDCBO-Fixed,6,8.206365e+00
-Pathological,EDCBO-Fixed,7,1.835628e-04
-Pathological,EDCBO-Fixed,8,5.771069e+00
-Pathological,EDCBO-Fixed,9,7.577750e+00
-Pathological,EDCBO-Fixed,10,1.390133e-04
-Pathological,EDCBO-Fixed,11,6.935923e+00
-Pathological,EDCBO-Fixed,12,4.666133e-05
-Pathological,EDCBO-Fixed,13,7.480964e+00
-Pathological,EDCBO-Fixed,14,9.109617e-01
-Pathological,EDCBO-Fixed,15,3.009169e+00
-Pathological,EDCBO-Fixed,16,9.079183e+00
-Pathological,EDCBO-Fixed,17,9.823181e-01
-Pathological,EDCBO-Fixed,18,2.104731e+00
-Pathological,EDCBO-Fixed,19,3.654315e+00
-Pathological,EDCBO-Fixed,20,3.906824e+00
-Pathological,EDCBO-Fixed,21,5.026435e+00
-Pathological,EDCBO-Fixed,22,8.170359e+00
-Pathological,EDCBO-Fixed,23,2.043072e+00
-Pathological,EDCBO-Fixed,24,1.027195e+01
-Pathological,EDCBO-Fixed,25,5.793610e+00
-Pathological,EDCBO-Fixed,26,3.653136e+00
-Pathological,EDCBO-Fixed,27,5.853244e+00
-Pathological,EDCBO-Fixed,28,1.269014e-04
-Pathological,EDCBO-Fixed,29,6.454582e+00
-Pathological,EDCBO-Fixed,30,3.933254e+00
+Pathological,LSCBO-Fixed,1,7.483391e+00
+Pathological,LSCBO-Fixed,2,5.106766e+00
+Pathological,LSCBO-Fixed,3,5.538512e+00
+Pathological,LSCBO-Fixed,4,1.633813e+00
+Pathological,LSCBO-Fixed,5,7.169878e+00
+Pathological,LSCBO-Fixed,6,8.206365e+00
+Pathological,LSCBO-Fixed,7,1.835628e-04
+Pathological,LSCBO-Fixed,8,5.771069e+00
+Pathological,LSCBO-Fixed,9,7.577750e+00
+Pathological,LSCBO-Fixed,10,1.390133e-04
+Pathological,LSCBO-Fixed,11,6.935923e+00
+Pathological,LSCBO-Fixed,12,4.666133e-05
+Pathological,LSCBO-Fixed,13,7.480964e+00
+Pathological,LSCBO-Fixed,14,9.109617e-01
+Pathological,LSCBO-Fixed,15,3.009169e+00
+Pathological,LSCBO-Fixed,16,9.079183e+00
+Pathological,LSCBO-Fixed,17,9.823181e-01
+Pathological,LSCBO-Fixed,18,2.104731e+00
+Pathological,LSCBO-Fixed,19,3.654315e+00
+Pathological,LSCBO-Fixed,20,3.906824e+00
+Pathological,LSCBO-Fixed,21,5.026435e+00
+Pathological,LSCBO-Fixed,22,8.170359e+00
+Pathological,LSCBO-Fixed,23,2.043072e+00
+Pathological,LSCBO-Fixed,24,1.027195e+01
+Pathological,LSCBO-Fixed,25,5.793610e+00
+Pathological,LSCBO-Fixed,26,3.653136e+00
+Pathological,LSCBO-Fixed,27,5.853244e+00
+Pathological,LSCBO-Fixed,28,1.269014e-04
+Pathological,LSCBO-Fixed,29,6.454582e+00
+Pathological,LSCBO-Fixed,30,3.933254e+00
 Exponential,Random,1,8.593145e-01
 Exponential,Random,2,8.478304e-01
 Exponential,Random,3,8.671430e-01
@@ -5729,36 +5729,36 @@ Exponential,ICBO-Enhanced,27,0.000000e+00
 Exponential,ICBO-Enhanced,28,0.000000e+00
 Exponential,ICBO-Enhanced,29,0.000000e+00
 Exponential,ICBO-Enhanced,30,0.000000e+00
-Exponential,EDCBO-Fixed,1,2.627207e-07
-Exponential,EDCBO-Fixed,2,8.481120e-07
-Exponential,EDCBO-Fixed,3,3.042819e-07
-Exponential,EDCBO-Fixed,4,2.070970e-07
-Exponential,EDCBO-Fixed,5,2.599258e-07
-Exponential,EDCBO-Fixed,6,3.636155e-07
-Exponential,EDCBO-Fixed,7,4.610237e-07
-Exponential,EDCBO-Fixed,8,4.408075e-07
-Exponential,EDCBO-Fixed,9,2.598156e-07
-Exponential,EDCBO-Fixed,10,3.102666e-07
-Exponential,EDCBO-Fixed,11,4.079652e-07
-Exponential,EDCBO-Fixed,12,5.905376e-07
-Exponential,EDCBO-Fixed,13,2.170276e-07
-Exponential,EDCBO-Fixed,14,5.330615e-07
-Exponential,EDCBO-Fixed,15,3.921266e-07
-Exponential,EDCBO-Fixed,16,3.025352e-07
-Exponential,EDCBO-Fixed,17,2.811976e-07
-Exponential,EDCBO-Fixed,18,3.424070e-07
-Exponential,EDCBO-Fixed,19,3.425228e-07
-Exponential,EDCBO-Fixed,20,4.599050e-07
-Exponential,EDCBO-Fixed,21,1.994335e-07
-Exponential,EDCBO-Fixed,22,5.307564e-07
-Exponential,EDCBO-Fixed,23,2.969102e-07
-Exponential,EDCBO-Fixed,24,7.347782e-07
-Exponential,EDCBO-Fixed,25,3.169752e-07
-Exponential,EDCBO-Fixed,26,6.354197e-07
-Exponential,EDCBO-Fixed,27,1.897530e-07
-Exponential,EDCBO-Fixed,28,4.838588e-07
-Exponential,EDCBO-Fixed,29,4.027390e-07
-Exponential,EDCBO-Fixed,30,2.922211e-07
+Exponential,LSCBO-Fixed,1,2.627207e-07
+Exponential,LSCBO-Fixed,2,8.481120e-07
+Exponential,LSCBO-Fixed,3,3.042819e-07
+Exponential,LSCBO-Fixed,4,2.070970e-07
+Exponential,LSCBO-Fixed,5,2.599258e-07
+Exponential,LSCBO-Fixed,6,3.636155e-07
+Exponential,LSCBO-Fixed,7,4.610237e-07
+Exponential,LSCBO-Fixed,8,4.408075e-07
+Exponential,LSCBO-Fixed,9,2.598156e-07
+Exponential,LSCBO-Fixed,10,3.102666e-07
+Exponential,LSCBO-Fixed,11,4.079652e-07
+Exponential,LSCBO-Fixed,12,5.905376e-07
+Exponential,LSCBO-Fixed,13,2.170276e-07
+Exponential,LSCBO-Fixed,14,5.330615e-07
+Exponential,LSCBO-Fixed,15,3.921266e-07
+Exponential,LSCBO-Fixed,16,3.025352e-07
+Exponential,LSCBO-Fixed,17,2.811976e-07
+Exponential,LSCBO-Fixed,18,3.424070e-07
+Exponential,LSCBO-Fixed,19,3.425228e-07
+Exponential,LSCBO-Fixed,20,4.599050e-07
+Exponential,LSCBO-Fixed,21,1.994335e-07
+Exponential,LSCBO-Fixed,22,5.307564e-07
+Exponential,LSCBO-Fixed,23,2.969102e-07
+Exponential,LSCBO-Fixed,24,7.347782e-07
+Exponential,LSCBO-Fixed,25,3.169752e-07
+Exponential,LSCBO-Fixed,26,6.354197e-07
+Exponential,LSCBO-Fixed,27,1.897530e-07
+Exponential,LSCBO-Fixed,28,4.838588e-07
+Exponential,LSCBO-Fixed,29,4.027390e-07
+Exponential,LSCBO-Fixed,30,2.922211e-07
 Step,Random,1,4.306100e+04
 Step,Random,2,3.378200e+04
 Step,Random,3,4.095300e+04
@@ -5969,36 +5969,36 @@ Step,ICBO-Enhanced,27,0.000000e+00
 Step,ICBO-Enhanced,28,0.000000e+00
 Step,ICBO-Enhanced,29,0.000000e+00
 Step,ICBO-Enhanced,30,0.000000e+00
-Step,EDCBO-Fixed,1,8.940000e+02
-Step,EDCBO-Fixed,2,2.210000e+03
-Step,EDCBO-Fixed,3,4.780000e+02
-Step,EDCBO-Fixed,4,9.570000e+02
-Step,EDCBO-Fixed,5,1.307000e+03
-Step,EDCBO-Fixed,6,1.464000e+03
-Step,EDCBO-Fixed,7,6.260000e+02
-Step,EDCBO-Fixed,8,1.037000e+03
-Step,EDCBO-Fixed,9,9.780000e+02
-Step,EDCBO-Fixed,10,2.567000e+03
-Step,EDCBO-Fixed,11,5.820000e+02
-Step,EDCBO-Fixed,12,3.146000e+03
-Step,EDCBO-Fixed,13,2.278000e+03
-Step,EDCBO-Fixed,14,2.156000e+03
-Step,EDCBO-Fixed,15,5.700000e+02
-Step,EDCBO-Fixed,16,1.401000e+03
-Step,EDCBO-Fixed,17,1.483000e+03
-Step,EDCBO-Fixed,18,2.905000e+03
-Step,EDCBO-Fixed,19,2.232000e+03
-Step,EDCBO-Fixed,20,5.040000e+02
-Step,EDCBO-Fixed,21,2.096000e+03
-Step,EDCBO-Fixed,22,2.737000e+03
-Step,EDCBO-Fixed,23,3.586000e+03
-Step,EDCBO-Fixed,24,1.315000e+03
-Step,EDCBO-Fixed,25,1.939000e+03
-Step,EDCBO-Fixed,26,2.959000e+03
-Step,EDCBO-Fixed,27,1.779000e+03
-Step,EDCBO-Fixed,28,5.470000e+02
-Step,EDCBO-Fixed,29,2.296000e+03
-Step,EDCBO-Fixed,30,4.941000e+03
+Step,LSCBO-Fixed,1,8.940000e+02
+Step,LSCBO-Fixed,2,2.210000e+03
+Step,LSCBO-Fixed,3,4.780000e+02
+Step,LSCBO-Fixed,4,9.570000e+02
+Step,LSCBO-Fixed,5,1.307000e+03
+Step,LSCBO-Fixed,6,1.464000e+03
+Step,LSCBO-Fixed,7,6.260000e+02
+Step,LSCBO-Fixed,8,1.037000e+03
+Step,LSCBO-Fixed,9,9.780000e+02
+Step,LSCBO-Fixed,10,2.567000e+03
+Step,LSCBO-Fixed,11,5.820000e+02
+Step,LSCBO-Fixed,12,3.146000e+03
+Step,LSCBO-Fixed,13,2.278000e+03
+Step,LSCBO-Fixed,14,2.156000e+03
+Step,LSCBO-Fixed,15,5.700000e+02
+Step,LSCBO-Fixed,16,1.401000e+03
+Step,LSCBO-Fixed,17,1.483000e+03
+Step,LSCBO-Fixed,18,2.905000e+03
+Step,LSCBO-Fixed,19,2.232000e+03
+Step,LSCBO-Fixed,20,5.040000e+02
+Step,LSCBO-Fixed,21,2.096000e+03
+Step,LSCBO-Fixed,22,2.737000e+03
+Step,LSCBO-Fixed,23,3.586000e+03
+Step,LSCBO-Fixed,24,1.315000e+03
+Step,LSCBO-Fixed,25,1.939000e+03
+Step,LSCBO-Fixed,26,2.959000e+03
+Step,LSCBO-Fixed,27,1.779000e+03
+Step,LSCBO-Fixed,28,5.470000e+02
+Step,LSCBO-Fixed,29,2.296000e+03
+Step,LSCBO-Fixed,30,4.941000e+03
 Bent Cigar,Random,1,3.322532e+10
 Bent Cigar,Random,2,3.514225e+10
 Bent Cigar,Random,3,3.524899e+10
@@ -6209,36 +6209,36 @@ Bent Cigar,ICBO-Enhanced,27,0.000000e+00
 Bent Cigar,ICBO-Enhanced,28,0.000000e+00
 Bent Cigar,ICBO-Enhanced,29,0.000000e+00
 Bent Cigar,ICBO-Enhanced,30,0.000000e+00
-Bent Cigar,EDCBO-Fixed,1,1.515021e+01
-Bent Cigar,EDCBO-Fixed,2,4.038366e+03
-Bent Cigar,EDCBO-Fixed,3,1.959286e+01
-Bent Cigar,EDCBO-Fixed,4,7.340108e+03
-Bent Cigar,EDCBO-Fixed,5,3.078650e+02
-Bent Cigar,EDCBO-Fixed,6,4.611621e+03
-Bent Cigar,EDCBO-Fixed,7,1.239973e+03
-Bent Cigar,EDCBO-Fixed,8,1.264352e+02
-Bent Cigar,EDCBO-Fixed,9,1.219513e+03
-Bent Cigar,EDCBO-Fixed,10,2.900237e+02
-Bent Cigar,EDCBO-Fixed,11,6.690245e+01
-Bent Cigar,EDCBO-Fixed,12,3.549154e+03
-Bent Cigar,EDCBO-Fixed,13,3.899408e+03
-Bent Cigar,EDCBO-Fixed,14,2.314664e+03
-Bent Cigar,EDCBO-Fixed,15,5.915102e+00
-Bent Cigar,EDCBO-Fixed,16,6.569257e+03
-Bent Cigar,EDCBO-Fixed,17,6.650327e+03
-Bent Cigar,EDCBO-Fixed,18,2.923690e+02
-Bent Cigar,EDCBO-Fixed,19,3.221963e+03
-Bent Cigar,EDCBO-Fixed,20,3.175446e+02
-Bent Cigar,EDCBO-Fixed,21,7.468731e+02
-Bent Cigar,EDCBO-Fixed,22,4.833008e+01
-Bent Cigar,EDCBO-Fixed,23,4.349214e+03
-Bent Cigar,EDCBO-Fixed,24,7.739088e+03
-Bent Cigar,EDCBO-Fixed,25,4.772432e+02
-Bent Cigar,EDCBO-Fixed,26,1.320035e+02
-Bent Cigar,EDCBO-Fixed,27,6.556927e+03
-Bent Cigar,EDCBO-Fixed,28,1.530514e+03
-Bent Cigar,EDCBO-Fixed,29,4.082317e+03
-Bent Cigar,EDCBO-Fixed,30,6.526375e+03
+Bent Cigar,LSCBO-Fixed,1,1.515021e+01
+Bent Cigar,LSCBO-Fixed,2,4.038366e+03
+Bent Cigar,LSCBO-Fixed,3,1.959286e+01
+Bent Cigar,LSCBO-Fixed,4,7.340108e+03
+Bent Cigar,LSCBO-Fixed,5,3.078650e+02
+Bent Cigar,LSCBO-Fixed,6,4.611621e+03
+Bent Cigar,LSCBO-Fixed,7,1.239973e+03
+Bent Cigar,LSCBO-Fixed,8,1.264352e+02
+Bent Cigar,LSCBO-Fixed,9,1.219513e+03
+Bent Cigar,LSCBO-Fixed,10,2.900237e+02
+Bent Cigar,LSCBO-Fixed,11,6.690245e+01
+Bent Cigar,LSCBO-Fixed,12,3.549154e+03
+Bent Cigar,LSCBO-Fixed,13,3.899408e+03
+Bent Cigar,LSCBO-Fixed,14,2.314664e+03
+Bent Cigar,LSCBO-Fixed,15,5.915102e+00
+Bent Cigar,LSCBO-Fixed,16,6.569257e+03
+Bent Cigar,LSCBO-Fixed,17,6.650327e+03
+Bent Cigar,LSCBO-Fixed,18,2.923690e+02
+Bent Cigar,LSCBO-Fixed,19,3.221963e+03
+Bent Cigar,LSCBO-Fixed,20,3.175446e+02
+Bent Cigar,LSCBO-Fixed,21,7.468731e+02
+Bent Cigar,LSCBO-Fixed,22,4.833008e+01
+Bent Cigar,LSCBO-Fixed,23,4.349214e+03
+Bent Cigar,LSCBO-Fixed,24,7.739088e+03
+Bent Cigar,LSCBO-Fixed,25,4.772432e+02
+Bent Cigar,LSCBO-Fixed,26,1.320035e+02
+Bent Cigar,LSCBO-Fixed,27,6.556927e+03
+Bent Cigar,LSCBO-Fixed,28,1.530514e+03
+Bent Cigar,LSCBO-Fixed,29,4.082317e+03
+Bent Cigar,LSCBO-Fixed,30,6.526375e+03
 Discus,Random,1,7.026406e+04
 Discus,Random,2,7.505648e+04
 Discus,Random,3,6.991159e+04
@@ -6449,36 +6449,36 @@ Discus,ICBO-Enhanced,27,2.900679e-261
 Discus,ICBO-Enhanced,28,4.444696e-106
 Discus,ICBO-Enhanced,29,0.000000e+00
 Discus,ICBO-Enhanced,30,0.000000e+00
-Discus,EDCBO-Fixed,1,2.392253e-04
-Discus,EDCBO-Fixed,2,2.585033e-05
-Discus,EDCBO-Fixed,3,5.285557e-06
-Discus,EDCBO-Fixed,4,3.784408e-06
-Discus,EDCBO-Fixed,5,2.909891e-05
-Discus,EDCBO-Fixed,6,1.531584e-06
-Discus,EDCBO-Fixed,7,1.319287e-06
-Discus,EDCBO-Fixed,8,2.538768e-04
-Discus,EDCBO-Fixed,9,2.568593e-06
-Discus,EDCBO-Fixed,10,2.103738e-06
-Discus,EDCBO-Fixed,11,3.710211e-04
-Discus,EDCBO-Fixed,12,8.036068e-06
-Discus,EDCBO-Fixed,13,1.487470e-06
-Discus,EDCBO-Fixed,14,1.113450e-05
-Discus,EDCBO-Fixed,15,2.087386e-06
-Discus,EDCBO-Fixed,16,2.699278e-06
-Discus,EDCBO-Fixed,17,2.429351e-06
-Discus,EDCBO-Fixed,18,1.875294e-04
-Discus,EDCBO-Fixed,19,7.996877e-05
-Discus,EDCBO-Fixed,20,6.543972e-06
-Discus,EDCBO-Fixed,21,1.119178e-05
-Discus,EDCBO-Fixed,22,4.505497e-06
-Discus,EDCBO-Fixed,23,1.228688e-06
-Discus,EDCBO-Fixed,24,1.103433e-05
-Discus,EDCBO-Fixed,25,3.029832e-04
-Discus,EDCBO-Fixed,26,2.989188e-04
-Discus,EDCBO-Fixed,27,2.590574e-06
-Discus,EDCBO-Fixed,28,1.918360e-06
-Discus,EDCBO-Fixed,29,3.444184e-06
-Discus,EDCBO-Fixed,30,3.563394e-06
+Discus,LSCBO-Fixed,1,2.392253e-04
+Discus,LSCBO-Fixed,2,2.585033e-05
+Discus,LSCBO-Fixed,3,5.285557e-06
+Discus,LSCBO-Fixed,4,3.784408e-06
+Discus,LSCBO-Fixed,5,2.909891e-05
+Discus,LSCBO-Fixed,6,1.531584e-06
+Discus,LSCBO-Fixed,7,1.319287e-06
+Discus,LSCBO-Fixed,8,2.538768e-04
+Discus,LSCBO-Fixed,9,2.568593e-06
+Discus,LSCBO-Fixed,10,2.103738e-06
+Discus,LSCBO-Fixed,11,3.710211e-04
+Discus,LSCBO-Fixed,12,8.036068e-06
+Discus,LSCBO-Fixed,13,1.487470e-06
+Discus,LSCBO-Fixed,14,1.113450e-05
+Discus,LSCBO-Fixed,15,2.087386e-06
+Discus,LSCBO-Fixed,16,2.699278e-06
+Discus,LSCBO-Fixed,17,2.429351e-06
+Discus,LSCBO-Fixed,18,1.875294e-04
+Discus,LSCBO-Fixed,19,7.996877e-05
+Discus,LSCBO-Fixed,20,6.543972e-06
+Discus,LSCBO-Fixed,21,1.119178e-05
+Discus,LSCBO-Fixed,22,4.505497e-06
+Discus,LSCBO-Fixed,23,1.228688e-06
+Discus,LSCBO-Fixed,24,1.103433e-05
+Discus,LSCBO-Fixed,25,3.029832e-04
+Discus,LSCBO-Fixed,26,2.989188e-04
+Discus,LSCBO-Fixed,27,2.590574e-06
+Discus,LSCBO-Fixed,28,1.918360e-06
+Discus,LSCBO-Fixed,29,3.444184e-06
+Discus,LSCBO-Fixed,30,3.563394e-06
 High Conditioned Elliptic,Random,1,6.032362e+08
 High Conditioned Elliptic,Random,2,4.571207e+08
 High Conditioned Elliptic,Random,3,4.808708e+08
@@ -6689,36 +6689,36 @@ High Conditioned Elliptic,ICBO-Enhanced,27,0.000000e+00
 High Conditioned Elliptic,ICBO-Enhanced,28,0.000000e+00
 High Conditioned Elliptic,ICBO-Enhanced,29,0.000000e+00
 High Conditioned Elliptic,ICBO-Enhanced,30,0.000000e+00
-High Conditioned Elliptic,EDCBO-Fixed,1,2.079264e+04
-High Conditioned Elliptic,EDCBO-Fixed,2,1.535713e+04
-High Conditioned Elliptic,EDCBO-Fixed,3,8.027209e+03
-High Conditioned Elliptic,EDCBO-Fixed,4,1.176263e+04
-High Conditioned Elliptic,EDCBO-Fixed,5,5.218184e+03
-High Conditioned Elliptic,EDCBO-Fixed,6,2.011808e+03
-High Conditioned Elliptic,EDCBO-Fixed,7,5.716728e+03
-High Conditioned Elliptic,EDCBO-Fixed,8,1.014927e+04
-High Conditioned Elliptic,EDCBO-Fixed,9,6.589732e+03
-High Conditioned Elliptic,EDCBO-Fixed,10,2.348543e+04
-High Conditioned Elliptic,EDCBO-Fixed,11,9.331462e+03
-High Conditioned Elliptic,EDCBO-Fixed,12,3.993532e+03
-High Conditioned Elliptic,EDCBO-Fixed,13,1.114877e+04
-High Conditioned Elliptic,EDCBO-Fixed,14,1.242070e+04
-High Conditioned Elliptic,EDCBO-Fixed,15,3.280979e+04
-High Conditioned Elliptic,EDCBO-Fixed,16,8.589530e+03
-High Conditioned Elliptic,EDCBO-Fixed,17,7.992992e+03
-High Conditioned Elliptic,EDCBO-Fixed,18,1.059866e+03
-High Conditioned Elliptic,EDCBO-Fixed,19,3.560340e+03
-High Conditioned Elliptic,EDCBO-Fixed,20,1.634603e+04
-High Conditioned Elliptic,EDCBO-Fixed,21,1.087691e+03
-High Conditioned Elliptic,EDCBO-Fixed,22,4.610969e+03
-High Conditioned Elliptic,EDCBO-Fixed,23,3.221839e+03
-High Conditioned Elliptic,EDCBO-Fixed,24,3.165211e+04
-High Conditioned Elliptic,EDCBO-Fixed,25,9.184777e+03
-High Conditioned Elliptic,EDCBO-Fixed,26,2.994580e+03
-High Conditioned Elliptic,EDCBO-Fixed,27,2.116291e+04
-High Conditioned Elliptic,EDCBO-Fixed,28,1.566075e+04
-High Conditioned Elliptic,EDCBO-Fixed,29,1.736817e+04
-High Conditioned Elliptic,EDCBO-Fixed,30,1.298319e+04
+High Conditioned Elliptic,LSCBO-Fixed,1,2.079264e+04
+High Conditioned Elliptic,LSCBO-Fixed,2,1.535713e+04
+High Conditioned Elliptic,LSCBO-Fixed,3,8.027209e+03
+High Conditioned Elliptic,LSCBO-Fixed,4,1.176263e+04
+High Conditioned Elliptic,LSCBO-Fixed,5,5.218184e+03
+High Conditioned Elliptic,LSCBO-Fixed,6,2.011808e+03
+High Conditioned Elliptic,LSCBO-Fixed,7,5.716728e+03
+High Conditioned Elliptic,LSCBO-Fixed,8,1.014927e+04
+High Conditioned Elliptic,LSCBO-Fixed,9,6.589732e+03
+High Conditioned Elliptic,LSCBO-Fixed,10,2.348543e+04
+High Conditioned Elliptic,LSCBO-Fixed,11,9.331462e+03
+High Conditioned Elliptic,LSCBO-Fixed,12,3.993532e+03
+High Conditioned Elliptic,LSCBO-Fixed,13,1.114877e+04
+High Conditioned Elliptic,LSCBO-Fixed,14,1.242070e+04
+High Conditioned Elliptic,LSCBO-Fixed,15,3.280979e+04
+High Conditioned Elliptic,LSCBO-Fixed,16,8.589530e+03
+High Conditioned Elliptic,LSCBO-Fixed,17,7.992992e+03
+High Conditioned Elliptic,LSCBO-Fixed,18,1.059866e+03
+High Conditioned Elliptic,LSCBO-Fixed,19,3.560340e+03
+High Conditioned Elliptic,LSCBO-Fixed,20,1.634603e+04
+High Conditioned Elliptic,LSCBO-Fixed,21,1.087691e+03
+High Conditioned Elliptic,LSCBO-Fixed,22,4.610969e+03
+High Conditioned Elliptic,LSCBO-Fixed,23,3.221839e+03
+High Conditioned Elliptic,LSCBO-Fixed,24,3.165211e+04
+High Conditioned Elliptic,LSCBO-Fixed,25,9.184777e+03
+High Conditioned Elliptic,LSCBO-Fixed,26,2.994580e+03
+High Conditioned Elliptic,LSCBO-Fixed,27,2.116291e+04
+High Conditioned Elliptic,LSCBO-Fixed,28,1.566075e+04
+High Conditioned Elliptic,LSCBO-Fixed,29,1.736817e+04
+High Conditioned Elliptic,LSCBO-Fixed,30,1.298319e+04
 Hybrid Function 1,Random,1,1.927974e+04
 Hybrid Function 1,Random,2,2.053155e+04
 Hybrid Function 1,Random,3,2.119761e+04
@@ -6929,36 +6929,36 @@ Hybrid Function 1,ICBO-Enhanced,27,0.000000e+00
 Hybrid Function 1,ICBO-Enhanced,28,0.000000e+00
 Hybrid Function 1,ICBO-Enhanced,29,0.000000e+00
 Hybrid Function 1,ICBO-Enhanced,30,0.000000e+00
-Hybrid Function 1,EDCBO-Fixed,1,2.328152e+02
-Hybrid Function 1,EDCBO-Fixed,2,2.531120e+02
-Hybrid Function 1,EDCBO-Fixed,3,3.933836e+02
-Hybrid Function 1,EDCBO-Fixed,4,3.402648e+02
-Hybrid Function 1,EDCBO-Fixed,5,2.543031e+02
-Hybrid Function 1,EDCBO-Fixed,6,2.644519e+02
-Hybrid Function 1,EDCBO-Fixed,7,3.963651e+02
-Hybrid Function 1,EDCBO-Fixed,8,2.041612e+02
-Hybrid Function 1,EDCBO-Fixed,9,4.274090e+02
-Hybrid Function 1,EDCBO-Fixed,10,3.904077e+02
-Hybrid Function 1,EDCBO-Fixed,11,2.847464e+02
-Hybrid Function 1,EDCBO-Fixed,12,3.587563e+02
-Hybrid Function 1,EDCBO-Fixed,13,4.166747e+02
-Hybrid Function 1,EDCBO-Fixed,14,2.357990e+02
-Hybrid Function 1,EDCBO-Fixed,15,2.346061e+02
-Hybrid Function 1,EDCBO-Fixed,16,3.480197e+02
-Hybrid Function 1,EDCBO-Fixed,17,3.008665e+02
-Hybrid Function 1,EDCBO-Fixed,18,1.134235e+02
-Hybrid Function 1,EDCBO-Fixed,19,3.163869e+02
-Hybrid Function 1,EDCBO-Fixed,20,5.461954e+02
-Hybrid Function 1,EDCBO-Fixed,21,1.802839e+02
-Hybrid Function 1,EDCBO-Fixed,22,4.274175e+02
-Hybrid Function 1,EDCBO-Fixed,23,1.892379e+02
-Hybrid Function 1,EDCBO-Fixed,24,1.552108e+02
-Hybrid Function 1,EDCBO-Fixed,25,3.575764e+02
-Hybrid Function 1,EDCBO-Fixed,26,4.017471e+02
-Hybrid Function 1,EDCBO-Fixed,27,4.763632e+02
-Hybrid Function 1,EDCBO-Fixed,28,2.698250e+02
-Hybrid Function 1,EDCBO-Fixed,29,4.859067e+02
-Hybrid Function 1,EDCBO-Fixed,30,1.653602e+02
+Hybrid Function 1,LSCBO-Fixed,1,2.328152e+02
+Hybrid Function 1,LSCBO-Fixed,2,2.531120e+02
+Hybrid Function 1,LSCBO-Fixed,3,3.933836e+02
+Hybrid Function 1,LSCBO-Fixed,4,3.402648e+02
+Hybrid Function 1,LSCBO-Fixed,5,2.543031e+02
+Hybrid Function 1,LSCBO-Fixed,6,2.644519e+02
+Hybrid Function 1,LSCBO-Fixed,7,3.963651e+02
+Hybrid Function 1,LSCBO-Fixed,8,2.041612e+02
+Hybrid Function 1,LSCBO-Fixed,9,4.274090e+02
+Hybrid Function 1,LSCBO-Fixed,10,3.904077e+02
+Hybrid Function 1,LSCBO-Fixed,11,2.847464e+02
+Hybrid Function 1,LSCBO-Fixed,12,3.587563e+02
+Hybrid Function 1,LSCBO-Fixed,13,4.166747e+02
+Hybrid Function 1,LSCBO-Fixed,14,2.357990e+02
+Hybrid Function 1,LSCBO-Fixed,15,2.346061e+02
+Hybrid Function 1,LSCBO-Fixed,16,3.480197e+02
+Hybrid Function 1,LSCBO-Fixed,17,3.008665e+02
+Hybrid Function 1,LSCBO-Fixed,18,1.134235e+02
+Hybrid Function 1,LSCBO-Fixed,19,3.163869e+02
+Hybrid Function 1,LSCBO-Fixed,20,5.461954e+02
+Hybrid Function 1,LSCBO-Fixed,21,1.802839e+02
+Hybrid Function 1,LSCBO-Fixed,22,4.274175e+02
+Hybrid Function 1,LSCBO-Fixed,23,1.892379e+02
+Hybrid Function 1,LSCBO-Fixed,24,1.552108e+02
+Hybrid Function 1,LSCBO-Fixed,25,3.575764e+02
+Hybrid Function 1,LSCBO-Fixed,26,4.017471e+02
+Hybrid Function 1,LSCBO-Fixed,27,4.763632e+02
+Hybrid Function 1,LSCBO-Fixed,28,2.698250e+02
+Hybrid Function 1,LSCBO-Fixed,29,4.859067e+02
+Hybrid Function 1,LSCBO-Fixed,30,1.653602e+02
 Hybrid Function 2,Random,1,2.334490e+06
 Hybrid Function 2,Random,2,3.854024e+06
 Hybrid Function 2,Random,3,6.018206e+06
@@ -7169,33 +7169,33 @@ Hybrid Function 2,ICBO-Enhanced,27,6.999937e+00
 Hybrid Function 2,ICBO-Enhanced,28,6.999993e+00
 Hybrid Function 2,ICBO-Enhanced,29,6.999586e+00
 Hybrid Function 2,ICBO-Enhanced,30,6.999724e+00
-Hybrid Function 2,EDCBO-Fixed,1,5.172476e+01
-Hybrid Function 2,EDCBO-Fixed,2,1.466526e+01
-Hybrid Function 2,EDCBO-Fixed,3,8.939653e+01
-Hybrid Function 2,EDCBO-Fixed,4,1.117398e+01
-Hybrid Function 2,EDCBO-Fixed,5,9.821192e+00
-Hybrid Function 2,EDCBO-Fixed,6,1.615920e+01
-Hybrid Function 2,EDCBO-Fixed,7,1.419019e+01
-Hybrid Function 2,EDCBO-Fixed,8,1.711352e+01
-Hybrid Function 2,EDCBO-Fixed,9,1.436798e+01
-Hybrid Function 2,EDCBO-Fixed,10,9.816481e+00
-Hybrid Function 2,EDCBO-Fixed,11,1.452402e+01
-Hybrid Function 2,EDCBO-Fixed,12,1.411390e+01
-Hybrid Function 2,EDCBO-Fixed,13,8.183219e+01
-Hybrid Function 2,EDCBO-Fixed,14,9.634809e+00
-Hybrid Function 2,EDCBO-Fixed,15,1.166293e+01
-Hybrid Function 2,EDCBO-Fixed,16,1.416087e+01
-Hybrid Function 2,EDCBO-Fixed,17,1.265923e+01
-Hybrid Function 2,EDCBO-Fixed,18,1.363708e+01
-Hybrid Function 2,EDCBO-Fixed,19,1.682453e+01
-Hybrid Function 2,EDCBO-Fixed,20,9.862878e+00
-Hybrid Function 2,EDCBO-Fixed,21,1.467380e+01
-Hybrid Function 2,EDCBO-Fixed,22,9.647644e+00
-Hybrid Function 2,EDCBO-Fixed,23,4.352029e+01
-Hybrid Function 2,EDCBO-Fixed,24,4.270886e+01
-Hybrid Function 2,EDCBO-Fixed,25,1.385158e+01
-Hybrid Function 2,EDCBO-Fixed,26,1.372352e+01
-Hybrid Function 2,EDCBO-Fixed,27,1.431683e+01
-Hybrid Function 2,EDCBO-Fixed,28,1.449353e+01
-Hybrid Function 2,EDCBO-Fixed,29,1.360894e+01
-Hybrid Function 2,EDCBO-Fixed,30,1.294223e+01
+Hybrid Function 2,LSCBO-Fixed,1,5.172476e+01
+Hybrid Function 2,LSCBO-Fixed,2,1.466526e+01
+Hybrid Function 2,LSCBO-Fixed,3,8.939653e+01
+Hybrid Function 2,LSCBO-Fixed,4,1.117398e+01
+Hybrid Function 2,LSCBO-Fixed,5,9.821192e+00
+Hybrid Function 2,LSCBO-Fixed,6,1.615920e+01
+Hybrid Function 2,LSCBO-Fixed,7,1.419019e+01
+Hybrid Function 2,LSCBO-Fixed,8,1.711352e+01
+Hybrid Function 2,LSCBO-Fixed,9,1.436798e+01
+Hybrid Function 2,LSCBO-Fixed,10,9.816481e+00
+Hybrid Function 2,LSCBO-Fixed,11,1.452402e+01
+Hybrid Function 2,LSCBO-Fixed,12,1.411390e+01
+Hybrid Function 2,LSCBO-Fixed,13,8.183219e+01
+Hybrid Function 2,LSCBO-Fixed,14,9.634809e+00
+Hybrid Function 2,LSCBO-Fixed,15,1.166293e+01
+Hybrid Function 2,LSCBO-Fixed,16,1.416087e+01
+Hybrid Function 2,LSCBO-Fixed,17,1.265923e+01
+Hybrid Function 2,LSCBO-Fixed,18,1.363708e+01
+Hybrid Function 2,LSCBO-Fixed,19,1.682453e+01
+Hybrid Function 2,LSCBO-Fixed,20,9.862878e+00
+Hybrid Function 2,LSCBO-Fixed,21,1.467380e+01
+Hybrid Function 2,LSCBO-Fixed,22,9.647644e+00
+Hybrid Function 2,LSCBO-Fixed,23,4.352029e+01
+Hybrid Function 2,LSCBO-Fixed,24,4.270886e+01
+Hybrid Function 2,LSCBO-Fixed,25,1.385158e+01
+Hybrid Function 2,LSCBO-Fixed,26,1.372352e+01
+Hybrid Function 2,LSCBO-Fixed,27,1.431683e+01
+Hybrid Function 2,LSCBO-Fixed,28,1.449353e+01
+Hybrid Function 2,LSCBO-Fixed,29,1.360894e+01
+Hybrid Function 2,LSCBO-Fixed,30,1.294223e+01

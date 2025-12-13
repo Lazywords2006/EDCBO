@@ -8,7 +8,7 @@ import java.util.List;
  * CEC2017基准测试批量对比实验
  *
  * 测试配置：
- * - 8个算法：Random, PSO, GWO, WOA, CBO, ICBO, ICBO-Enhanced, EDCBO-Fixed
+ * - 8个算法：Random, PSO, GWO, WOA, CBO, ICBO, ICBO-Enhanced, LSCBO-Fixed
  * - 30个函数：F1-F30（完整CEC2017函数集）
  * - 30次独立运行（CEC2017标准配置）
  *
@@ -22,7 +22,7 @@ import java.util.List;
  * - 对比报告MD：Markdown格式的结果表格
  *
  * @author ICBO Research Team
- * @version 3.1 (添加EDCBO-Fixed)
+ * @version 3.1 (添加LSCBO-Fixed)
  * @date 2025-12-13
  */
 public class BenchmarkCompareExample {
@@ -57,7 +57,7 @@ public class BenchmarkCompareExample {
     public static void runQuickTest() {
         System.out.println("【快速验证模式】\n");
         System.out.println("测试配置：");
-        System.out.println("  - 算法：Random, PSO, GWO, WOA, CBO, ICBO, ICBO-Enhanced, EDCBO-Fixed");
+        System.out.println("  - 算法：Random, PSO, GWO, WOA, CBO, ICBO, ICBO-Enhanced, LSCBO-Fixed");
         System.out.println("  - 函数：Sphere, Rastrigin, Ackley（代表性函数）");
         System.out.println("  - 运行次数：" + QUICK_NUM_RUNS);
         System.out.println("  - 迭代次数：" + MAX_ITERATIONS);
@@ -72,7 +72,7 @@ public class BenchmarkCompareExample {
         algorithms.add(new CBO_Lite());        // 基准CBO
         algorithms.add(new ICBO_Lite());       // ICBO改进
         algorithms.add(new ICBO_E_Lite());     // ICBO增强版
-        algorithms.add(new EDCBO_Fixed_Lite()); // EDCBO-Fixed（CloudSim验证22.42%改进）
+        algorithms.add(new LSCBO_Fixed_Lite()); // LSCBO-Fixed（CloudSim验证22.42%改进）
 
         // 获取快速测试函数（3个代表性函数）
         List<BenchmarkFunction> functions = BenchmarkRunner.getQuickTestFunctions();
@@ -116,7 +116,7 @@ public class BenchmarkCompareExample {
     public static void runFullExperiment() {
         System.out.println("【完整实验模式】\n");
         System.out.println("测试配置：");
-        System.out.println("  - 算法：Random, PSO, GWO, WOA, CBO, ICBO, ICBO-Enhanced, EDCBO-Fixed");
+        System.out.println("  - 算法：Random, PSO, GWO, WOA, CBO, ICBO, ICBO-Enhanced, LSCBO-Fixed");
         System.out.println("  - 函数：F1-F30（全部30个CEC2017函数）");
         System.out.println("  - 运行次数：" + NUM_RUNS);
         System.out.println("  - 迭代次数：" + MAX_ITERATIONS);
@@ -133,7 +133,7 @@ public class BenchmarkCompareExample {
         algorithms.add(new CBO_Lite());        // 基准CBO
         algorithms.add(new ICBO_Lite());       // ICBO改进
         algorithms.add(new ICBO_E_Lite());     // ICBO增强版
-        algorithms.add(new EDCBO_Fixed_Lite()); // EDCBO-Fixed（CloudSim验证22.42%改进）
+        algorithms.add(new LSCBO_Fixed_Lite()); // LSCBO-Fixed（CloudSim验证22.42%改进）
 
         // 获取全部CEC2017函数
         List<BenchmarkFunction> functions = BenchmarkRunner.getAllFunctions();
@@ -206,8 +206,8 @@ public class BenchmarkCompareExample {
         System.out.println("║              算法排名概览                                       ║");
         System.out.println("╚════════════════════════════════════════════════════════════════╝\n");
 
-        int[] algorithmWins = new int[8];  // Random, PSO, GWO, WOA, CBO, ICBO, ICBO-E, EDCBO-Fixed
-        String[] algorithmNames = {"Random", "PSO", "GWO", "WOA", "CBO", "ICBO", "ICBO-Enhanced", "EDCBO-Fixed"};
+        int[] algorithmWins = new int[8];  // Random, PSO, GWO, WOA, CBO, ICBO, ICBO-E, LSCBO-Fixed
+        String[] algorithmNames = {"Random", "PSO", "GWO", "WOA", "CBO", "ICBO", "ICBO-Enhanced", "LSCBO-Fixed"};
 
         for (BenchmarkFunction function : functions) {
             double[] bestFitness = new double[8];

@@ -9,7 +9,7 @@ import com.edcbo.research.utils.ConvergenceRecord;
 import java.util.*;
 
 /**
- * EDCBO (Enhanced Dynamic Coyote and Badger Optimization) Broker - Fixed Version
+ * LSCBO (Enhanced Dynamic Coyote and Badger Optimization) Broker - Fixed Version
  *
  * 核心改进（基于参数调优验证的最优算法）：
  * 1. Lévy飞行搜索（Phase 1，向全局最优靠拢）
@@ -25,13 +25,13 @@ import java.util.*;
  *
  * 性能基准（M=100, N=20，异构环境）：
  * - CBO基准: 925.64秒
- * - 优化EDCBO: 718.14秒（改进22.42%）🏆
+ * - 优化LSCBO: 718.14秒（改进22.42%）🏆
  *
  * @author ICBO Research Team
  * @date 2025-12-13
  * @version 3.0-fixed
  */
-public class EDCBO_Broker_Fixed extends DatacenterBrokerSimple {
+public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
 
     // ==================== 算法参数 ====================
     protected static final int POPULATION_SIZE = 30;      // 种群大小
@@ -66,31 +66,31 @@ public class EDCBO_Broker_Fixed extends DatacenterBrokerSimple {
 
     // ==================== 构造函数 ====================
 
-    public EDCBO_Broker_Fixed(CloudSimPlus simulation) {
+    public LSCBO_Broker_Fixed(CloudSimPlus simulation) {
         super(simulation);
         this.random = new Random();
-        this.convergenceRecord = new ConvergenceRecord("EDCBO-Fixed", "unknown", System.currentTimeMillis());
+        this.convergenceRecord = new ConvergenceRecord("LSCBO-Fixed", "unknown", System.currentTimeMillis());
         this.cloudletVmMapping = new HashMap<>();
         calculateLevySigmaU();
     }
 
-    public EDCBO_Broker_Fixed(CloudSimPlus simulation, long seed) {
+    public LSCBO_Broker_Fixed(CloudSimPlus simulation, long seed) {
         super(simulation);
         this.random = new Random(seed);
-        this.convergenceRecord = new ConvergenceRecord("EDCBO-Fixed", "unknown", seed);
+        this.convergenceRecord = new ConvergenceRecord("LSCBO-Fixed", "unknown", seed);
         this.cloudletVmMapping = new HashMap<>();
         calculateLevySigmaU();
     }
 
-    public EDCBO_Broker_Fixed(CloudSimPlus simulation, long seed, String scale) {
+    public LSCBO_Broker_Fixed(CloudSimPlus simulation, long seed, String scale) {
         super(simulation);
         this.random = new Random(seed);
-        this.convergenceRecord = new ConvergenceRecord("EDCBO-Fixed", scale, seed);
+        this.convergenceRecord = new ConvergenceRecord("LSCBO-Fixed", scale, seed);
         this.cloudletVmMapping = new HashMap<>();
         calculateLevySigmaU();
     }
 
-    public EDCBO_Broker_Fixed(CloudSimPlus simulation, long seed, ConvergenceRecord record) {
+    public LSCBO_Broker_Fixed(CloudSimPlus simulation, long seed, ConvergenceRecord record) {
         super(simulation);
         this.random = new Random(seed);
         this.convergenceRecord = record;
@@ -103,20 +103,20 @@ public class EDCBO_Broker_Fixed extends DatacenterBrokerSimple {
     @Override
     protected Vm defaultVmMapper(Cloudlet cloudlet) {
         if (!schedulingDone) {
-            runEDCBO();
+            runLSCBO();
             schedulingDone = true;
         }
         return cloudletVmMapping.getOrDefault(cloudlet.getId(), super.defaultVmMapper(cloudlet));
     }
 
-    private void runEDCBO() {
+    private void runLSCBO() {
         List<Cloudlet> cloudletList = new ArrayList<>(getCloudletWaitingList());
         List<Vm> vmList = new ArrayList<>(getVmCreatedList());
 
         int M = cloudletList.size();
         int N = vmList.size();
 
-        System.out.println("\n========== EDCBO-Fixed调度算法启动 ==========");
+        System.out.println("\n========== LSCBO-Fixed调度算法启动 ==========");
         System.out.println("等待任务数: " + M);
         System.out.println("已创建VM数: " + N);
         System.out.println("种群大小: " + POPULATION_SIZE);
@@ -210,7 +210,7 @@ public class EDCBO_Broker_Fixed extends DatacenterBrokerSimple {
         // 应用最优解
         applySchedule(bestSolution, M, N, cloudletList, vmList);
 
-        System.out.println("\n========== EDCBO-Fixed调度算法完成 ==========");
+        System.out.println("\n========== LSCBO-Fixed调度算法完成 ==========");
         System.out.println("最优Makespan: " + String.format("%.4f", bestFitness));
         System.out.println("映射条目数: " + cloudletVmMapping.size());
         System.out.println("=====================================\n");
@@ -325,6 +325,6 @@ public class EDCBO_Broker_Fixed extends DatacenterBrokerSimple {
     }
 
     public String getAlgorithmName() {
-        return "EDCBO-Fixed";
+        return "LSCBO-Fixed";
     }
 }

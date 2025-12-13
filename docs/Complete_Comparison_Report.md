@@ -1,7 +1,7 @@
-# EDCBO完整对比报告：CloudSim + CEC2017
+# LSCBO完整对比报告：CloudSim + CEC2017
 
 **日期**：2025-12-13
-**目的**：完整对比EDCBO-Fixed在两个不同数据集上的性能
+**目的**：完整对比LSCBO-Fixed在两个不同数据集上的性能
 
 ---
 
@@ -24,17 +24,17 @@
 | 算法 | Makespan (秒) | vs CBO | 状态 |
 |------|--------------|--------|------|
 | **CBO (基准)** | **925.64** | 0.00% | ⚪ 基线 |
-| EDCBO (旧版) | 961.13 | -3.83% | ❌ 退化 |
-| **EDCBO-Fixed** | **718.14** | **+22.42%** | ✅ **大幅改进** |
+| LSCBO (旧版) | 961.13 | -3.83% | ❌ 退化 |
+| **LSCBO-Fixed** | **718.14** | **+22.42%** | ✅ **大幅改进** |
 
 ### 关键发现
 
-✅ **EDCBO-Fixed在CloudSim任务调度中表现卓越**
+✅ **LSCBO-Fixed在CloudSim任务调度中表现卓越**
 - 相对CBO基准改进 **22.42%**
-- 解决了原EDCBO的权重公式BUG
+- 解决了原LSCBO的权重公式BUG
 - 优化参数配置（SPIRAL_B=0.50, SIGMA_MAX=0.15）
 
-❌ **原EDCBO版本退化**
+❌ **原LSCBO版本退化**
 - 相对CBO基准退化 3.83%
 - 原因：Phase 3权重公式反向（早期开发，后期探索）
 
@@ -60,9 +60,9 @@
 | 算法 | 平均适应度 | 标准差 | 最佳 | 最差 | vs CBO |
 |------|-----------|-------|------|------|--------|
 | **CBO** | **0.000000e+00** | 0.000000e+00 | 0.00e+00 | 0.00e+00 | 0.00% |
-| EDCBO-Fixed | 8.795699e-07 | 1.76e-07 | 6.78e-07 | 1.20e-06 | 略差 |
+| LSCBO-Fixed | 8.795699e-07 | 1.76e-07 | 6.78e-07 | 1.20e-06 | 略差 |
 
-**结论**：CBO在Sphere函数上完美收敛，EDCBO-Fixed接近完美但略差。
+**结论**：CBO在Sphere函数上完美收敛，LSCBO-Fixed接近完美但略差。
 
 ---
 
@@ -71,13 +71,13 @@
 | 算法 | 平均适应度 | 标准差 | 最佳 | 最差 | vs CBO |
 |------|-----------|-------|------|------|--------|
 | CBO | 1.380714e+02 | 1.14e+02 | **0.00e+00** | 2.48e+02 | — |
-| **EDCBO-Fixed** | **1.888423e+02** | **3.70e+01** | 1.16e+02 | 2.19e+02 | **更稳定** |
+| **LSCBO-Fixed** | **1.888423e+02** | **3.70e+01** | 1.16e+02 | 2.19e+02 | **更稳定** |
 
 **结论**：
 - CBO不稳定（标准差113.5，变异系数82%）
-- EDCBO-Fixed更稳定（标准差37.0，变异系数20%）
+- LSCBO-Fixed更稳定（标准差37.0，变异系数20%）
 - CBO偶尔找到全局最优（0），但平均表现差
-- **EDCBO-Fixed一致性更好**，适合工程应用
+- **LSCBO-Fixed一致性更好**，适合工程应用
 
 ---
 
@@ -86,41 +86,42 @@
 | 算法 | 平均适应度 | 标准差 | 最佳 | 最差 | vs CBO |
 |------|-----------|-------|------|------|--------|
 | **CBO** | **3.286260e-15** | 1.42e-15 | 4.44e-16 | 4.00e-15 | — |
-| EDCBO-Fixed | 1.791757e+01 | 9.26e-01 | 1.69e+01 | 1.91e+01 | **显著差** |
+| LSCBO-Fixed | 1.791757e+01 | 9.26e-01 | 1.69e+01 | 1.91e+01 | **显著差** |
 
-**结论**：CBO在Ackley函数上完美收敛，EDCBO-Fixed陷入局部最优（~17.9）。
+**结论**：CBO在Ackley函数上完美收敛，LSCBO-Fixed陷入局部最优（~17.9）。
 
 ---
 
 ### CEC2017综合分析
 
-| 函数类型 | CBO表现 | EDCBO-Fixed表现 | 优势算法 |
+| 函数类型 | CBO表现 | LSCBO-Fixed表现 | 优势算法 |
 |---------|---------|----------------|----------|
 | **Sphere**（单峰） | ✅ 完美收敛 | ⚪ 接近完美 | CBO |
-| **Rastrigin**（高度多峰） | ⚠️ 不稳定 | ✅ 稳定 | **EDCBO-Fixed** |
+| **Rastrigin**（高度多峰） | ⚠️ 不稳定 | ✅ 稳定 | **LSCBO-Fixed** |
 | **Ackley**（多峰） | ✅ 完美收敛 | ❌ 局部最优 | CBO |
 
 **关键发现**：
-1. ✅ **EDCBO-Fixed在Rastrigin上更稳定**（标准差降低68%）
-2. ❌ **EDCBO-Fixed在Ackley上收敛失败**（需要进一步调优）
+1. ✅ **LSCBO-Fixed在Rastrigin上更稳定**（标准差降低68%）
+2. ❌ **LSCBO-Fixed在Ackley上收敛失败**（需要进一步调优）
 3. ⚪ **CBO在单峰函数上表现更好**（Phase 1 tanh机制有效）
 
 ---
 
 ## 🎯 综合结论
 
-### EDCBO-Fixed适用场景
+### LSCBO-Fixed适用场景
 
 | 应用场景 | 适用性 | 原因 |
 |---------|-------|------|
-| **云任务调度** | ✅ **强烈推荐** | 22.42%改进，稳定性高 |
+| **云任务调度（M≤2000，异构环境）** | ✅ **强烈推荐** | 22.42%改进，稳定性高 |
+| **云任务调度（M>5000，同构环境）** | ⚠️ 需要验证 | 可扩展性未测试 |
 | **高度多峰优化**（如Rastrigin） | ✅ 推荐 | 稳定性好，避免早期收敛 |
 | **单峰优化**（如Sphere） | ⚪ 可用 | 性能接近CBO |
-| **复杂多峰优化**（如Ackley） | ❌ 不推荐 | 容易陷入局部最优 |
+| **复杂多峰优化**（如Ackley） | ❌ 不推荐 | 容易陷入局部最优~18 |
 
 ### 算法特性分析
 
-| 特性 | CBO | EDCBO-Fixed |
+| 特性 | CBO | LSCBO-Fixed |
 |------|-----|------------|
 | **探索能力** | 中等（Phase 1 tanh） | **强**（Lévy飞行+螺旋+动态权重） |
 | **开发能力** | 强（Phase 3固定权重） | 中等（动态权重逐渐降低） |
@@ -130,7 +131,7 @@
 
 ### 技术改进点
 
-**EDCBO-Fixed的关键改进**：
+**LSCBO-Fixed的关键改进**：
 1. ✅ **修复Phase 3权重公式**：从反向改为正向（早期探索→后期开发）
 2. ✅ **简化Phase 2螺旋公式**：降低复杂度，提高稳定性
 3. ✅ **稀疏化高斯变异**：10%概率，避免过度噪音
@@ -149,25 +150,25 @@
 
 ```bash
 cd D:/论文/new/icbo-cloudsim
-mvn exec:java -Dexec.mainClass="com.icbo.research.CompareEDCBOExample"
+mvn exec:java -Dexec.mainClass="com.icbo.research.CompareLSCBOExample"
 ```
 
 **预期输出**：
 - CBO: 925.64秒
-- EDCBO-Fixed: 718.14秒
+- LSCBO-Fixed: 718.14秒
 - 改进率: 22.42%
 
 ### CEC2017测试复现
 
 ```bash
 cd D:/论文/new/icbo-cloudsim
-mvn exec:java -Dexec.mainClass="com.icbo.research.benchmark.EDCBOQuickTest"
+mvn exec:java -Dexec.mainClass="com.icbo.research.benchmark.LSCBOQuickTest"
 ```
 
 **预期输出**：
-- Sphere: CBO完美收敛，EDCBO-Fixed接近完美
-- Rastrigin: EDCBO-Fixed更稳定
-- Ackley: CBO完美收敛，EDCBO-Fixed陷入局部最优
+- Sphere: CBO完美收敛，LSCBO-Fixed接近完美
+- Rastrigin: LSCBO-Fixed更稳定
+- Ackley: CBO完美收敛，LSCBO-Fixed陷入局部最优
 
 ---
 
@@ -176,10 +177,10 @@ mvn exec:java -Dexec.mainClass="com.icbo.research.benchmark.EDCBOQuickTest"
 ### 短期（1-2周）
 - [ ] 完成CEC2017完整30函数测试（8算法×30函数×30运行 = 7200次测试）
 - [ ] 添加Wilcoxon秩和检验验证CEC2017结果显著性
-- [ ] 优化EDCBO-Fixed在Ackley类函数上的表现
+- [ ] 优化LSCBO-Fixed在Ackley类函数上的表现
 
 ### 中期（1-2月）
-- [ ] 多目标优化扩展（MOEDCBO）
+- [ ] 多目标优化扩展（MOLSCBO）
 - [ ] 自适应参数机制（根据收敛曲线动态调整）
 - [ ] 大规模测试（M=5000, 10000）
 
