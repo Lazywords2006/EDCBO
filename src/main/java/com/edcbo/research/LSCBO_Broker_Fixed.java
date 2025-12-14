@@ -5,6 +5,8 @@ import org.cloudsimplus.cloudlets.Cloudlet;
 import org.cloudsimplus.core.CloudSimPlus;
 import org.cloudsimplus.vms.Vm;
 import com.edcbo.research.utils.ConvergenceRecord;
+import com.edcbo.research.utils.EnergyCalculator;
+import com.edcbo.research.utils.CostCalculator;
 
 import java.util.*;
 
@@ -51,6 +53,20 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
     // 高斯变异参数
     private static final double SIGMA_MAX = 0.15;         // 最大方差（优化后）
     private static final double GAUSSIAN_PROB = 0.1;      // 高斯变异概率
+
+    // ==================== 多目标优化参数 ====================
+    // 多目标优化开关（默认关闭，保持向后兼容）
+    private static final boolean USE_MULTI_OBJECTIVE = false;
+
+    // 多目标权重配置（Fitness = α×Makespan + β×Energy + γ×Cost）
+    private static final double ALPHA = 0.6;              // Makespan权重（最高优先级）
+    private static final double BETA = 0.3;               // Energy权重（绿色云计算）
+    private static final double GAMMA = 0.1;              // Cost权重（经济性）
+
+    // 归一化参数（基于历史经验值）
+    private static final double MAX_MAKESPAN = 2000.0;    // 假设最大Makespan约2000秒
+    private static final double MAX_ENERGY = 2.0;         // 假设最大能耗约2.0kWh
+    private static final double MAX_COST = 0.2;           // 假设最大成本约0.2USD
 
     // ==================== 内部状态 ====================
     private double[][] population;                        // 种群（连续空间[0,1]）
@@ -275,12 +291,23 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
     }
 
     /**
-     * 计算适应度（Makespan）
+     * 计算适应度（支持单目标和多目标优化）
+     *
+     * 单目标模式（默认）：
+     *   Fitness = Makespan
+     *
+     * 多目标模式（USE_MULTI_OBJECTIVE=true）：
+     *   Fitness = α×Makespan_norm + β×Energy_norm + γ×Cost_norm
+     *   其中：
+     *   - α=0.6 (Makespan权重，最高优先级)
+     *   - β=0.3 (Energy权重，绿色云计算)
+     *   - γ=0.1 (Cost权重，经济性)
      */
     private double calculateFitness(double[] individual, int M, int N,
                                    List<Cloudlet> cloudletList, List<Vm> vmList) {
         int[] schedule = continuousToDiscrete(individual, N);
 
+        // 步骤1：计算Makespan（单目标基础指标）
         double[] vmLoads = new double[N];
         for (int i = 0; i < M; i++) {
             int vmIdx = schedule[i];
@@ -288,8 +315,31 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
             double vmMips = vmList.get(vmIdx).getMips();
             vmLoads[vmIdx] += taskLength / vmMips;
         }
+        double makespan = Arrays.stream(vmLoads).max().getAsDouble();
 
-        return Arrays.stream(vmLoads).max().getAsDouble();
+        // 步骤2：如果开启多目标优化，计算能耗和成本
+        if (USE_MULTI_OBJECTIVE) {
+            // 计算能耗（kWh）
+            double energy = EnergyCalculator.calculateEnergy(schedule, M, N, cloudletList, vmList);
+
+            // 计算成本（USD）
+            double cost = CostCalculator.calculateCost(schedule, M, N, cloudletList, vmList);
+
+            // 归一化处理（将不同维度映射到相同尺度）
+            double normalizedMakespan = makespan / MAX_MAKESPAN;
+            double normalizedEnergy = energy / MAX_ENERGY;
+            double normalizedCost = cost / MAX_COST;
+
+            // 加权求和（多目标适应度函数）
+            double multiFitness = ALPHA * normalizedMakespan +
+                                 BETA * normalizedEnergy +
+                                 GAMMA * normalizedCost;
+
+            return multiFitness;
+        }
+
+        // 单目标模式（默认）：仅返回Makespan
+        return makespan;
     }
 
     /**

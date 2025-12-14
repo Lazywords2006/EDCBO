@@ -1,0 +1,31 @@
+\begin{table}[htbp]
+\centering
+\caption{Experimental Configuration in CloudSim Plus 8.0.0}
+\label{tab:experimental_config}
+\begin{tabular}{lll}
+\hline
+\textbf{Component} & \textbf{Parameter} & \textbf{Value} \\
+\hline
+\multirow{4}{*}{\textbf{VM Configuration}}
+& MIPS (Processing Power) & Random [100, 500] \\
+& RAM (Memory) & 2048 MB \\
+& Bandwidth & 1000 Mbps \\
+& Storage & 10000 MB \\
+\hline
+\multirow{3}{*}{\textbf{Task Configuration}}
+& Length (MI) & Random [10000, 50000] \\
+& File Size (Input) & 300 MB \\
+& Output Size & 300 MB \\
+\hline
+\multirow{3}{*}{\textbf{Datacenter Configuration}}
+& Number of Hosts & 40 \\
+& PEs per Host & 8 \\
+& MIPS per PE & 2000 \\
+\hline
+\multirow{3}{*}{\textbf{Experimental Setup}}
+& Number of Tasks (M) & 50, 100, 200, 300, 500, 1000, 2000 \\
+& Number of VMs (N) & 20 (fixed) \\
+& Random Seeds & 42, 123, 456, 789, 1024 \\
+\hline
+\end{tabular}
+\end{table}

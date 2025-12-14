@@ -1,0 +1,32 @@
+\begin{table}[htbp]
+\centering
+\caption{Algorithm Parameters}
+\label{tab:algorithm_parameters}
+\begin{tabular}{lll}
+\hline
+\textbf{Algorithm} & \textbf{Parameter} & \textbf{Value} \\
+\hline
+\multirow{2}{*}{\textbf{Common Parameters}}
+& Population Size & 30 \\
+& Max Iterations & 100 \\
+\hline
+\multirow{3}{*}{\textbf{LSCBO-Fixed (Ours)}}
+& $\omega_{\max}$ (Max Inertia Weight) & 0.80 \\
+& $\omega_{\min}$ (Min Inertia Weight) & 0.10 \\
+& $k$ (Decay Exponent) & 3 \\
+\hline
+\textbf{HHO} & Levy Flight $\beta$ & 1.5 \\
+\hline
+\multirow{3}{*}{\textbf{AOA}}
+& $\text{MOA}_{\min}$ & 0.2 \\
+& $\text{MOA}_{\max}$ & 1.0 \\
+& $\alpha$ (Sensitivity) & 5.0 \\
+\hline
+\multirow{2}{*}{\textbf{GTO}}
+& $\beta$ (Initial) & 3.0 \\
+& $W$ (Inertia Weight) & 0.8 \\
+\hline
+\textbf{CBO} & No additional parameters & - \\
+\hline
+\end{tabular}
+\end{table}
