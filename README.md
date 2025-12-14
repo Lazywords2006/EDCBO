@@ -83,18 +83,20 @@
 
 **Configuration**: 30 functions, D=30 dimensions, 30 independent runs
 
+**Note**: ICBO and ICBO-Enhanced are included as comparison baselines from prior research to demonstrate LSCBO-Fixed's competitive performance against state-of-the-art variants.
+
 #### Overall Ranking (8 Algorithms)
 
-| Rank | Algorithm | Wins (out of 30) | Win Rate | Performance |
-|------|-----------|-----------------|----------|-------------|
-| 🥇 1 | WOA | 8/30 | 26.7% | Co-champion |
-| 🥇 1 | CBO | 8/30 | 26.7% | Co-champion |
-| 🥈 2 | ICBO-Enhanced | 6/30 | 20.0% | Runner-up |
-| 🥉 3 | GWO | 3/30 | 10.0% | Third place |
-| **4** | **PSO** | **2/30** | **6.7%** | Tied |
-| **4** | **LSCBO-Fixed** | **2/30** | **6.7%** | ✅ **Tied 4th** |
-| 6 | ICBO | 1/30 | 3.3% | — |
-| 7 | Random | 0/30 | 0.0% | Baseline |
+| Rank | Algorithm | Wins (out of 30) | Win Rate | Status |
+|------|-----------|-----------------|----------|--------|
+| 🥇 1 | WOA | 8/30 | 26.7% | Comparison baseline |
+| 🥇 1 | CBO | 8/30 | 26.7% | Original algorithm |
+| 🥈 2 | ICBO-Enhanced* | 6/30 | 20.0% | *Prior research baseline |
+| 🥉 3 | GWO | 3/30 | 10.0% | Comparison baseline |
+| **4** | **PSO** | **2/30** | **6.7%** | Comparison baseline |
+| **4** | **LSCBO-Fixed** | **2/30** | **6.7%** | ✅ **This work** |
+| 6 | ICBO* | 1/30 | 3.3% | *Prior research baseline |
+| 7 | Random | 0/30 | 0.0% | Random baseline |
 
 #### LSCBO-Fixed Winning Functions
 
@@ -167,15 +169,21 @@ Generated figures will be saved to `paper_figures/edcbo_cec2017/`.
 ```
 edcbo-cloudsim/
 ├── src/main/java/com/edcbo/research/
-│   ├── LSCBO_Broker_Fixed.java        # CloudSim implementation
-│   ├── CompareLSCBOExample.java       # CloudSim comparison test
-│   ├── CompleteComparisonTest.java    # Dual-dataset test
+│   ├── LSCBO_Broker_Fixed.java        # Main algorithm: CloudSim implementation
+│   ├── CBO_Broker.java                # Baseline: Original CBO
+│   ├── HHO_Broker.java                # Comparison: Harris Hawks Optimization
+│   ├── AOA_Broker.java                # Comparison: Arithmetic Optimization
+│   ├── GTO_Broker.java                # Comparison: Gorilla Troops Optimizer
+│   ├── FiveAlgorithmComparisonTest.java      # 5-algorithm CloudSim comparison
+│   ├── MultiObjectiveScalabilityTest.java    # Multi-objective experiments
 │   │
 │   └── benchmark/
 │       ├── LSCBO_Fixed_Lite.java      # CEC2017 implementation
-│       ├── LSCBOQuickTest.java        # CEC2017 quick test
+│       ├── ICBO_*.java                # CEC2017 comparison baselines*
 │       ├── BenchmarkRunner.java       # Benchmark framework
 │       └── functions/                 # 30 CEC2017 functions
+│
+│   *Note: ICBO variants included for comprehensive CEC2017 comparison
 │
 ├── scripts/
 │   └── plot_edcbo_cec2017_analysis.py # Visualization script
@@ -241,6 +249,18 @@ if rand() < 0.10:
 - **LSCBO-Fixed**: `w = W_MIN + (W_MAX - W_MIN) * (1 - t/T)^2` ✅ (Explores early, exploits late)
 
 **Result**: 22.42% improvement in CloudSim task scheduling!
+
+### LSCBO vs ICBO: Algorithm Lineage
+
+**Algorithm Evolution**:
+- **CBO** (2025): Original Coyote and Badger Optimization
+- **ICBO** (Prior work): Improved CBO with dynamic inertia weight
+- **LSCBO-Fixed** (This work): Enhanced Dynamic CBO with Lévy flight + simplified spiral
+
+**Key Differences**:
+- **ICBO**: Focuses on inertia weight optimization (k=3 polynomial decay)
+- **LSCBO-Fixed**: Adds Lévy flight exploration + logarithmic spiral encircling
+- **CEC2017 Comparison**: Both ICBO and LSCBO-Fixed included to demonstrate comprehensive algorithm family performance
 
 ---
 
