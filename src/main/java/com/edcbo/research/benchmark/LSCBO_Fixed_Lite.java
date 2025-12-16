@@ -14,13 +14,18 @@ import java.util.Random;
  * 2. 简化对数螺旋包围（Phase 2，围绕全局最优）
  * 3. 自适应权重+稀疏高斯变异（Phase 3，10%概率）
  *
- * 最优参数配置（CEC2017基准优化v2）：
- * - SPIRAL_B = 0.80（螺旋形状参数，优化：0.50→0.80）
- * - SIGMA_MAX = 0.20（高斯变异标准差，优化：0.15→0.20）
+ * 最优参数配置（CEC2017基准优化v3 - 激进版）：
+ * - SPIRAL_B = 1.0（螺旋形状参数，v3: 0.80→1.0）
+ * - SIGMA_MAX = 0.25（高斯变异标准差，v3: 0.20→0.25）
  * - LEVY_LAMBDA = 1.50（Lévy飞行分布参数）
- * - W_MAX/W_MIN = 0.85/0.10（惯性权重范围，优化：0.80→0.85）
- * - LEVY_ALPHA_COEF = 0.12（自适应步长系数，优化：0.05→0.12）
- * - GAUSSIAN_PROB = 0.15（高斯变异概率，优化：0.10→0.15）
+ * - W_MAX/W_MIN = 0.90/0.10（惯性权重范围，v3: 0.85→0.90）
+ * - LEVY_ALPHA_COEF = 0.20（自适应步长系数，v3: 0.12→0.20）
+ * - GAUSSIAN_PROB = 0.20（高斯变异概率，v3: 0.15→0.20）
+ *
+ * 优化历程：
+ * - v1 (CloudSim优化): LEVY_ALPHA=0.05, SPIRAL_B=0.50, W_MAX=0.80
+ * - v2 (CEC2017初步): LEVY_ALPHA=0.12, SPIRAL_B=0.80, W_MAX=0.85
+ * - v3 (CEC2017激进): LEVY_ALPHA=0.20, SPIRAL_B=1.0, W_MAX=0.90
  *
  * 性能基准（CloudSim M=100, N=20，异构环境）：
  * - CBO基准: 925.64秒
@@ -35,20 +40,20 @@ public class LSCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
     // ==================== 算法参数 ====================
     private static final int POPULATION_SIZE = 30;      // 种群大小
 
-    // Lévy飞行参数（CEC2017优化）
+    // Lévy飞行参数（CEC2017优化v3 - 激进版）
     private static final double LEVY_LAMBDA = 1.5;        // Lévy分布参数
-    private static final double LEVY_ALPHA_COEF = 0.12;   // 自适应步长系数（优化：0.05→0.12）
+    private static final double LEVY_ALPHA_COEF = 0.20;   // 自适应步长系数（v3: 0.12→0.20, +67%）
 
     // 对数螺旋参数
-    private static final double SPIRAL_B = 0.80;          // 螺旋形状常数（优化：0.50→0.80）
+    private static final double SPIRAL_B = 1.0;           // 螺旋形状常数（v3: 0.80→1.0, +25%）
 
     // 自适应惯性权重参数
-    private static final double W_MAX = 0.85;             // 最大权重（优化：0.80→0.85）
+    private static final double W_MAX = 0.90;             // 最大权重（v3: 0.85→0.90, +6%）
     private static final double W_MIN = 0.10;             // 最小权重
 
     // 高斯变异参数
-    private static final double SIGMA_MAX = 0.20;         // 最大方差（优化：0.15→0.20）
-    private static final double GAUSSIAN_PROB = 0.15;     // 高斯变异概率（优化：0.1→0.15）
+    private static final double SIGMA_MAX = 0.25;         // 最大方差（v3: 0.20→0.25, +25%）
+    private static final double GAUSSIAN_PROB = 0.20;     // 高斯变异概率（v3: 0.15→0.20, +33%）
 
     // ==================== 内部状态 ====================
     private double[][] population;                        // 种群

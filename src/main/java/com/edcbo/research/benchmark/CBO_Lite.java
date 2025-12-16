@@ -22,6 +22,7 @@ public class CBO_Lite implements BenchmarkRunner.BenchmarkOptimizer {
     // 算法参数
     private static final int POPULATION_SIZE = 30;
     private static final int DEFAULT_MAX_ITERATIONS = 1000;
+    private static final double ATTACK_WEIGHT = 0.6;  // Phase 3攻击权重（平衡版：0.5→0.6）
     protected final Random random;  // 改为protected，允许子类访问
     protected final long seed;  // 改为protected，允许子类访问
 
@@ -212,15 +213,17 @@ public class CBO_Lite implements BenchmarkRunner.BenchmarkOptimizer {
     /**
      * Phase 3: Attacking Phase（攻击阶段）- Stage 5: Dynamic Attacking
      * 向领导者位置收敛（Leader Following）
-     * 标准CBO公式：x^{i+1} = (x^i + x_leader) / 2
+     * 平衡版公式：x^{i+1} = w * x^i + (1-w) * x_leader，其中w=0.6
+     * 注：原始CBO使用w=0.5，此处调整为0.6以平衡探索-开发
      */
     private void attackingPhase(BenchmarkFunction function) {
         int dimensions = function.getDimensions();
 
         for (int i = 0; i < POPULATION_SIZE; i++) {
             for (int j = 0; j < dimensions; j++) {
-                // 使用静态权重0.5计算算术平均
-                population[i][j] = (population[i][j] + bestSolution[j]) / 2.0;
+                // 使用平衡权重：保留更多当前位置信息
+                population[i][j] = ATTACK_WEIGHT * population[i][j] +
+                                  (1.0 - ATTACK_WEIGHT) * bestSolution[j];
 
                 // 边界检查
                 if (population[i][j] < function.getLowerBound()) {
