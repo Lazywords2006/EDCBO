@@ -25,13 +25,13 @@ import java.util.Random;
  */
 public class PSO_Lite implements BenchmarkRunner.BenchmarkOptimizer {
 
-    // PSO参数
+    // PSO参数（标准配置）
     private static final int POPULATION_SIZE = 30;
-    private static final double W_MAX = 0.9;        // 最大惯性权重
+    private static final double W_MAX = 0.7;        // 最大惯性权重（调整：0.9→0.7）
     private static final double W_MIN = 0.4;        // 最小惯性权重
-    private static final double C1 = 1.5;           // 认知学习率
-    private static final double C2 = 1.5;           // 社会学习率
-    private static final double V_MAX = 0.2;        // 最大速度
+    private static final double C1 = 2.0;           // 认知学习率（标准：1.5→2.0）
+    private static final double C2 = 2.0;           // 社会学习率（标准：1.5→2.0）
+    private static final double V_MAX = 0.15;       // 最大速度（调整：0.2→0.15）
 
     protected final Random random;
     protected final long seed;

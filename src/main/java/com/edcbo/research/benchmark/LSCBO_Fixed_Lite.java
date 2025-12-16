@@ -14,12 +14,13 @@ import java.util.Random;
  * 2. 简化对数螺旋包围（Phase 2，围绕全局最优）
  * 3. 自适应权重+稀疏高斯变异（Phase 3，10%概率）
  *
- * 最优参数配置（基于48组网格搜索验证）：
- * - SPIRAL_B = 0.50（螺旋形状参数）
- * - SIGMA_MAX = 0.15（高斯变异标准差）
+ * 最优参数配置（CEC2017基准优化v2）：
+ * - SPIRAL_B = 0.80（螺旋形状参数，优化：0.50→0.80）
+ * - SIGMA_MAX = 0.20（高斯变异标准差，优化：0.15→0.20）
  * - LEVY_LAMBDA = 1.50（Lévy飞行分布参数）
- * - W_MAX/W_MIN = 0.80/0.10（惯性权重范围）
- * - LEVY_ALPHA_COEF = 0.05（自适应步长系数）
+ * - W_MAX/W_MIN = 0.85/0.10（惯性权重范围，优化：0.80→0.85）
+ * - LEVY_ALPHA_COEF = 0.12（自适应步长系数，优化：0.05→0.12）
+ * - GAUSSIAN_PROB = 0.15（高斯变异概率，优化：0.10→0.15）
  *
  * 性能基准（CloudSim M=100, N=20，异构环境）：
  * - CBO基准: 925.64秒
@@ -34,20 +35,20 @@ public class LSCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
     // ==================== 算法参数 ====================
     private static final int POPULATION_SIZE = 30;      // 种群大小
 
-    // Lévy飞行参数
+    // Lévy飞行参数（CEC2017优化）
     private static final double LEVY_LAMBDA = 1.5;        // Lévy分布参数
-    private static final double LEVY_ALPHA_COEF = 0.05;   // 自适应步长系数
+    private static final double LEVY_ALPHA_COEF = 0.12;   // 自适应步长系数（优化：0.05→0.12）
 
     // 对数螺旋参数
-    private static final double SPIRAL_B = 0.50;          // 螺旋形状常数（优化后）
+    private static final double SPIRAL_B = 0.80;          // 螺旋形状常数（优化：0.50→0.80）
 
     // 自适应惯性权重参数
-    private static final double W_MAX = 0.80;             // 最大权重
+    private static final double W_MAX = 0.85;             // 最大权重（优化：0.80→0.85）
     private static final double W_MIN = 0.10;             // 最小权重
 
     // 高斯变异参数
-    private static final double SIGMA_MAX = 0.15;         // 最大方差（优化后）
-    private static final double GAUSSIAN_PROB = 0.1;      // 高斯变异概率
+    private static final double SIGMA_MAX = 0.20;         // 最大方差（优化：0.15→0.20）
+    private static final double GAUSSIAN_PROB = 0.15;     // 高斯变异概率（优化：0.1→0.15）
 
     // ==================== 内部状态 ====================
     private double[][] population;                        // 种群
