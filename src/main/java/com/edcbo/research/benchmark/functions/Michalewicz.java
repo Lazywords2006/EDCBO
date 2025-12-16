@@ -20,7 +20,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  *
  * 参考文献: Michalewicz, Z. (1996)
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class Michalewicz extends BenchmarkFunction {
 

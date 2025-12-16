@@ -23,7 +23,7 @@ import java.util.List;
  */
 public class ConvergenceRecord {
 
-    private final String algorithm;     // 算法名称（如"CBO", "ICBO-Enhanced"）
+    private final String algorithm;     // 算法名称（如"CBO", "LSCBO-Fixed"）
     private final String scale;         // 规模标识（如"100-20"表示M=100, N=20）
     private final long seed;            // 随机种子
     private final List<Double> iterationBestFitness;  // 每次迭代的最优适应度

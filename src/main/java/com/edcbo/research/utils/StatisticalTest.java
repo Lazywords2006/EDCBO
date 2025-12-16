@@ -15,7 +15,7 @@ import java.util.List;
  * 2. Cohen's d效应量 - 衡量差异大小
  *
  * 使用场景：
- * - 验证ICBO-Enhanced相对CBO的改进是否统计显著
+ * - 验证LSCBO-Fixed相对CBO的改进是否统计显著
  * - 计算效应量以评估改进的实际意义
  *
  * 参考标准：
@@ -32,7 +32,7 @@ public class StatisticalTest {
      * 非参数检验，不假设数据分布，适合云调度实验数据
      *
      * @param baseline 基准算法结果（如CBO）
-     * @param improved 改进算法结果（如ICBO-Enhanced）
+     * @param improved 改进算法结果（如LSCBO-Fixed）
      * @return p-value（<0.05表示显著差异）
      */
     public static double wilcoxonTest(List<Double> baseline, List<Double> improved) {
@@ -61,7 +61,7 @@ public class StatisticalTest {
      * - d >= 0.8: 大效应
      *
      * @param baseline 基准算法结果（如CBO）
-     * @param improved 改进算法结果（如ICBO-Enhanced）
+     * @param improved 改进算法结果（如LSCBO-Fixed）
      * @return Cohen's d值（>0表示改进算法更好）
      */
     public static double cohensD(List<Double> baseline, List<Double> improved) {
@@ -411,5 +411,100 @@ public class StatisticalTest {
      */
     public static FriedmanTestResult friedmanTestFull(double[][] data) {
         return friedmanTestFull(data, 0.05);
+    }
+
+    // ==================== 多重比较校正 ====================
+
+    /**
+     * Bonferroni多重比较校正
+     *
+     * 用于校正多次成对比较导致的Type I错误累积。
+     * Bonferroni校正是最保守的方法，适合少量比较（<10次）。
+     *
+     * 公式：p_adjusted = min(p_original × m, 1.0)
+     * 其中 m 是比较次数
+     *
+     * 使用场景：
+     * - LSCBO-Fixed与其他7个算法进行成对Wilcoxon检验（7次比较）
+     * - 校正后仍然p < 0.05，则证明改进非常稳健
+     *
+     * 参考文献：
+     * Bonferroni, C. E. (1936). Teoria statistica delle classi e calcolo delle probabilita.
+     *
+     * @param pValue 原始p值
+     * @param numComparisons 比较次数（必须>0）
+     * @return 校正后的p值（范围[0, 1]）
+     * @throws IllegalArgumentException 如果numComparisons <= 0
+     */
+    public static double bonferroniCorrection(double pValue, int numComparisons) {
+        if (numComparisons <= 0) {
+            throw new IllegalArgumentException("numComparisons must be positive, got: " + numComparisons);
+        }
+        return Math.min(pValue * numComparisons, 1.0);
+    }
+
+    /**
+     * Holm多重比较校正（逐步拒绝方法）
+     *
+     * Holm校正比Bonferroni更强大，在保持相同Type I错误率的同时
+     * 提供更高的统计功效（power）。
+     *
+     * 算法：
+     * 1. 将p值从小到大排序：p(1) <= p(2) <= ... <= p(m)
+     * 2. 对于第i个p值，校正因子为 (m - i + 1)
+     * 3. p_adjusted(i) = min(p(i) × (m - i + 1), 1.0)
+     *
+     * 注意：输入的pValues数组必须已经排序（从小到大）
+     *
+     * 使用场景：
+     * - 多个算法与LSCBO-Fixed的成对比较
+     * - 比Bonferroni更推荐使用
+     *
+     * 参考文献：
+     * Holm, S. (1979). A simple sequentially rejective multiple test procedure.
+     * Scandinavian Journal of Statistics, 6(2), 65-70.
+     *
+     * @param pValues 原始p值数组（必须已排序，从小到大）
+     * @return 校正后的p值数组
+     * @throws IllegalArgumentException 如果pValues为null或长度为0
+     */
+    public static double[] holmCorrection(double[] pValues) {
+        if (pValues == null || pValues.length == 0) {
+            throw new IllegalArgumentException("pValues array cannot be null or empty");
+        }
+
+        int m = pValues.length;
+        double[] corrected = new double[m];
+
+        for (int i = 0; i < m; i++) {
+            // Holm校正：p_adj = p × (m - i)
+            double adjustedP = pValues[i] * (m - i);
+            corrected[i] = Math.min(adjustedP, 1.0);
+        }
+
+        return corrected;
+    }
+
+    /**
+     * 批量Bonferroni校正
+     *
+     * 对多个p值进行Bonferroni校正的便捷方法
+     *
+     * @param pValues 原始p值数组
+     * @return 校正后的p值数组
+     */
+    public static double[] bonferroniCorrectionBatch(double[] pValues) {
+        if (pValues == null || pValues.length == 0) {
+            throw new IllegalArgumentException("pValues array cannot be null or empty");
+        }
+
+        int m = pValues.length;
+        double[] corrected = new double[m];
+
+        for (int i = 0; i < m; i++) {
+            corrected[i] = bonferroniCorrection(pValues[i], m);
+        }
+
+        return corrected;
     }
 }

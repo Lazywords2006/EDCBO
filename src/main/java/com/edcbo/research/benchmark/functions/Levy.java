@@ -16,7 +16,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  *
  * 参考文献: Levy, A. V., & Montalvo, A. (1985)
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class Levy extends BenchmarkFunction {
 

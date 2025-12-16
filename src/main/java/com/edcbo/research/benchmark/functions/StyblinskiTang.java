@@ -15,7 +15,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  *
  * 参考文献: Styblinski, M., & Tang, T. (1990)
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class StyblinskiTang extends BenchmarkFunction {
 

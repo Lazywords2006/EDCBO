@@ -13,7 +13,7 @@ import java.util.Random;
  * - Phase 2: Encircling（包围） - 旋转矩阵收敛
  * - Phase 3: Attacking（攻击） - 向领导者收敛
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  * @version 1.0
  * @date 2025-12-10
  */

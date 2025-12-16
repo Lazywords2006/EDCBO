@@ -16,7 +16,7 @@ import java.util.List;
  * 2. 统计数据（平均值、标准差等）
  * 3. 对比表格（算法排名对比）
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  * @version 1.0
  * @date 2025-12-10
  */

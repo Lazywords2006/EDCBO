@@ -1,5 +1,6 @@
 package com.edcbo.research.benchmark;
 
+import org.apache.commons.math3.special.Gamma;
 import java.util.Random;
 
 /**
@@ -24,9 +25,9 @@ import java.util.Random;
  * - CBO基准: 925.64秒
  * - 优化LSCBO: 718.14秒（改进22.42%）🏆
  *
- * @author ICBO Research Team
- * @date 2025-12-13
- * @version 3.0-fixed
+ * @author LSCBO Research Team
+ * @date 2025-12-16
+ * @version 1.0-stable
  */
 public class LSCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
 
@@ -208,24 +209,23 @@ public class LSCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
     }
 
     /**
-     * 预计算Lévy分布的σ_u参数（Mantegna算法）
+     * 计算Lévy飞行分布的σ_u参数（Mantegna方法）
+     *
+     * 理论基础：
+     * - Mantegna, R. N. (1994). Fast, accurate algorithm for numerical
+     *   simulation of Lévy stable stochastic processes.
+     *   Physical Review E, 49(5), 4677-4683.
+     *
+     * 公式：σ_u = [Γ(1+λ)sin(πλ/2) / (Γ((1+λ)/2) × λ × 2^((λ-1)/2))]^(1/λ)
+     *
+     * 使用Apache Commons Math 3.6.1的Gamma函数替代Stirling近似，
+     * 提供更高的数值精度。
      */
     private void calculateLevySigmaU() {
         double lambda = LEVY_LAMBDA;
-        double numerator = gamma(1 + lambda) * Math.sin(Math.PI * lambda / 2.0);
-        double denominator = gamma((1 + lambda) / 2.0) * lambda * Math.pow(2, (lambda - 1) / 2.0);
+        double numerator = Gamma.gamma(1 + lambda) * Math.sin(Math.PI * lambda / 2.0);
+        double denominator = Gamma.gamma((1 + lambda) / 2.0) * lambda * Math.pow(2, (lambda - 1) / 2.0);
         this.levySigmaU = Math.pow(numerator / denominator, 1.0 / lambda);
-    }
-
-    /**
-     * Gamma函数近似
-     */
-    private double gamma(double x) {
-        if (x == 1.0) return 1.0;
-        if (x == 0.5) return Math.sqrt(Math.PI);
-        if (x == 1.5) return 0.5 * Math.sqrt(Math.PI);
-        if (x == 2.0) return 1.0;
-        return Math.sqrt(2 * Math.PI / x) * Math.pow(x / Math.E, x);
     }
 
     /**
@@ -234,7 +234,7 @@ public class LSCBO_Fixed_Lite implements BenchmarkRunner.BenchmarkOptimizer {
     private double generateLevyStep() {
         double u = random.nextGaussian() * levySigmaU;
         double v = random.nextGaussian();
-        return u / Math.pow(Math.abs(v), 1.0 / LEVY_LAMBDA);
+        return u / Math.pow(Math.abs(v) + 1e-10, 1.0 / LEVY_LAMBDA);
     }
 
     /**

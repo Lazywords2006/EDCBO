@@ -15,7 +15,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  *
  * 参考文献: Dixon, L. C. W., & Price, R. C. (1977)
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class DixonPrice extends BenchmarkFunction {
 

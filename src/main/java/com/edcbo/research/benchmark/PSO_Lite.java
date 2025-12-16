@@ -19,7 +19,7 @@ import java.util.Random;
  * - Cognitive Learning Rate (C1) = 1.5
  * - Social Learning Rate (C2) = 1.5
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  * @version 1.0
  * @date 2025-12-11
  */

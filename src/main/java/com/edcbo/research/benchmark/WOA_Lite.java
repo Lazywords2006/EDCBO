@@ -23,7 +23,7 @@ import java.util.Random;
  * 经典参考：
  * - Mirjalili & Lewis (2016): "The Whale Optimization Algorithm"
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  * @version 1.0
  * @date 2025-12-11
  */

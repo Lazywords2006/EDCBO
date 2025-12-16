@@ -324,7 +324,7 @@ public class CBO_Broker extends DatacenterBrokerSimple {
      * 实现方式：使用静态权重0.5计算当前位置和领导者位置的算术平均
      * 这里领导者就是全局最优解(bestSolution)
      *
-     * 注意：ICBO会重写此方法，使用动态惯性权重替代静态0.5权重
+     * 注意：LSCBO会重写此方法，使用动态惯性权重替代静态0.5权重
      */
     protected void attackingPhase(int M, int N, List<Cloudlet> cloudletList, List<Vm> vmList) {
         for (int i = 0; i < POPULATION_SIZE; i++) {
@@ -410,5 +410,15 @@ public class CBO_Broker extends DatacenterBrokerSimple {
      */
     public ConvergenceRecord getConvergenceRecord() {
         return convergenceRecord;
+    }
+
+    /**
+     * 获取算法内部计算的最优Makespan
+     * 此值绕过CloudSim Plus 8.0.0的buggy getFinishTime()方法
+     *
+     * @return 内部最优适应度（Makespan，单位：秒）
+     */
+    public double getInternalMakespan() {
+        return bestFitness;
     }
 }

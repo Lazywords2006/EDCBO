@@ -12,7 +12,7 @@ import java.util.Random;
  * 使用简单的随机搜索算法测试框架是否正常工作
  * 如果Sphere函数能正常运行，说明框架基础功能OK
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  * @version 1.0
  * @date 2025-12-10
  */

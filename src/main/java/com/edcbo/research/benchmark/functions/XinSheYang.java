@@ -15,7 +15,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  *
  * 参考文献: Yang, X. S. (2010)
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class XinSheYang extends BenchmarkFunction {
 

@@ -12,7 +12,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  * 搜索空间: [-500, 500]^n
  * 全局最优: f(420.9687,...,420.9687) = 0
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class Schwefel extends BenchmarkFunction {
 

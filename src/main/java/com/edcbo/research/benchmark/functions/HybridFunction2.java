@@ -14,7 +14,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  * 搜索空间: [-30, 30]^n
  * 全局最优: x[0:n/2]=(1,1,...), x[n/2:n]=(0,0,...), f ≈ 0
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class HybridFunction2 extends BenchmarkFunction {
 

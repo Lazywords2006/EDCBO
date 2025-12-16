@@ -12,7 +12,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  * 搜索空间: [-30, 30]^n
  * 全局最优: f(1,1,...,1) = 0
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class Rosenbrock extends BenchmarkFunction {
 

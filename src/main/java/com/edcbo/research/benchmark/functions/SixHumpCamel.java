@@ -12,7 +12,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  * 搜索空间: x∈[-5,5], y∈[-5,5]
  * 全局最优: f(0.0898, -0.7126) = f(-0.0898, 0.7126) = -1.0316
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class SixHumpCamel extends BenchmarkFunction {
 

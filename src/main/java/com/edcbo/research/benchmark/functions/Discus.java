@@ -15,7 +15,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  *
  * 参考文献: CEC2017 Test Suite
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class Discus extends BenchmarkFunction {
 

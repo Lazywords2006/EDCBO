@@ -20,7 +20,7 @@ import java.util.Random;
  * 经典参考：
  * - Mirjalili et al. (2014): "Grey Wolf Optimizer"
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  * @version 1.0
  * @date 2025-12-11
  */

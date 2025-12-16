@@ -16,7 +16,7 @@ import java.util.Random;
  * 参数配置：
  * - Sample Size = 30 × 100 = 3000（与元启发式算法相同的函数评估次数）
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  * @version 1.0
  * @date 2025-12-11
  */

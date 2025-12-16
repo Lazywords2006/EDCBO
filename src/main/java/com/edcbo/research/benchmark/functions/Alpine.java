@@ -13,7 +13,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  * 搜索空间: [-10, 10]^n
  * 全局最优: f(0,0,...,0) = 0
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class Alpine extends BenchmarkFunction {
 

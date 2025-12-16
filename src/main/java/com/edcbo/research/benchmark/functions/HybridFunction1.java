@@ -14,7 +14,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  * 搜索空间: [-100, 100]^n
  * 全局最优: f(0,0,...,0) = 0
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class HybridFunction1 extends BenchmarkFunction {
 

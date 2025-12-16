@@ -15,7 +15,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  *
  * 参考文献: Salomon, R. (1996)
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class Salomon extends BenchmarkFunction {
 

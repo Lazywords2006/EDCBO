@@ -14,7 +14,7 @@ import java.util.List;
  * - 多次独立运行
  * - 统计结果记录
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  * @version 1.0
  * @date 2025-12-10
  */

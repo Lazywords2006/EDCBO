@@ -16,7 +16,7 @@ import com.edcbo.research.benchmark.BenchmarkFunction;
  *
  * 参考文献: Weierstrass, K. (1872) / CEC2017
  *
- * @author ICBO Research Team
+ * @author LSCBO Research Team
  */
 public class Weierstrass extends BenchmarkFunction {
 
