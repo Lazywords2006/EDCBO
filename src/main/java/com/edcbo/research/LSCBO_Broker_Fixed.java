@@ -7,85 +7,57 @@ import org.cloudsimplus.vms.Vm;
 import com.edcbo.research.utils.ConvergenceRecord;
 import com.edcbo.research.utils.EnergyCalculator;
 import com.edcbo.research.utils.CostCalculator;
+import org.apache.commons.math3.special.Gamma;
 
 import java.util.*;
 
 /**
- * LSCBO (Enhanced Dynamic Coyote and Badger Optimization) Broker - Fixed Version
+ * LSCBO (Lévy-flight CBO) Broker - 随机初始化测试版
  *
- * 核心改进（基于参数调优验证的最优算法）：
- * 1. Lévy飞行搜索（Phase 1，向全局最优靠拢）
- * 2. 简化对数螺旋包围（Phase 2，围绕全局最优）
- * 3. 自适应权重+稀疏高斯变异（Phase 3，10%概率）
+ * 算法配置（测试版本v6.1）：
+ * - Stage 0：CBO标准随机初始化（测试Tent混沌的影响）
+ * - Phase 1：Lévy飞行搜索
+ * - Phase 2：CBO旋转矩阵包围
+ * - Phase 3：CBO动态攻击
  *
- * 最优参数配置（基于48组网格搜索验证）：
- * - SPIRAL_B = 0.50（螺旋形状参数）
- * - SIGMA_MAX = 0.15（高斯变异标准差）
- * - LEVY_LAMBDA = 1.50（Lévy飞行分布参数）
- * - W_MAX/W_MIN = 0.80/0.10（惯性权重范围）
- * - LEVY_ALPHA_COEF = 0.05（自适应步长系数）
+ * 测试目的：验证Lévy飞行配合随机初始化的性能
  *
- * 性能基准（M=100, N=20，异构环境）：
- * - CBO基准: 925.64秒
- * - 优化LSCBO: 718.14秒（改进22.42%）🏆
- *
- * @author ICBO Research Team
- * @date 2025-12-13
- * @version 3.0-fixed
+ * @version 6.1-LSCBO (Lévy + Random Init)
  */
 public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
 
     // ==================== 算法参数 ====================
-    protected static final int POPULATION_SIZE = 30;      // 种群大小
-    protected static final int MAX_ITERATIONS = 100;      // 最大迭代次数
+    protected static final int POPULATION_SIZE = 30;
+    protected static final int MAX_ITERATIONS = 100;
 
     // Lévy飞行参数
-    private static final double LEVY_LAMBDA = 1.5;        // Lévy分布参数
-    private static final double LEVY_ALPHA_COEF = 0.05;   // 自适应步长系数
+    private static final double LEVY_LAMBDA = 1.5;
+    private static final double LEVY_ALPHA_COEF = 0.05;
 
-    // 对数螺旋参数
-    private static final double SPIRAL_B = 0.50;          // 螺旋形状常数（优化后）
-
-    // 自适应惯性权重参数
-    private static final double W_MAX = 0.80;             // 最大权重
-    private static final double W_MIN = 0.10;             // 最小权重
-
-    // 高斯变异参数
-    private static final double SIGMA_MAX = 0.15;         // 最大方差（优化后）
-    private static final double GAUSSIAN_PROB = 0.1;      // 高斯变异概率
-
-    // ==================== 多目标优化参数 ====================
-    // 多目标优化开关（默认关闭，保持向后兼容）
-    private static final boolean USE_MULTI_OBJECTIVE = false;
-
-    // 多目标权重配置（Fitness = α×Makespan + β×Energy + γ×Cost）
-    private static final double ALPHA = 0.6;              // Makespan权重（最高优先级）
-    private static final double BETA = 0.3;               // Energy权重（绿色云计算）
-    private static final double GAMMA = 0.1;              // Cost权重（经济性）
-
-    // 归一化参数（基于历史经验值）
-    private static final double MAX_MAKESPAN = 2000.0;    // 假设最大Makespan约2000秒
-    private static final double MAX_ENERGY = 2.0;         // 假设最大能耗约2.0kWh
-    private static final double MAX_COST = 0.2;           // 假设最大成本约0.2USD
+    // CBO阶段参数
+    private static final double PREY_SELECTION_PROB = 0.5;    // Phase 1: 最优个体选择概率
+    private static final double CONVERGENCE_COEF = 2.0;       // Phase 2: 线性收敛系数
+    private static final double ATTACK_WEIGHT = 0.5;          // Phase 3: 攻击权重（CBO原始参数）
 
     // ==================== 内部状态 ====================
-    private double[][] population;                        // 种群（连续空间[0,1]）
-    private double[] bestSolution;                        // 全局最优解
-    private double bestFitness;                           // 全局最优适应度
-    private Random random;                                // 随机数生成器
-    private ConvergenceRecord convergenceRecord;          // 收敛记录器
-    private Map<Long, Vm> cloudletVmMapping;              // Cloudlet到VM的映射
-    private boolean schedulingDone = false;               // 调度是否完成
+    private double[][] population;
+    private double[] fitness;
+    private double[] bestSolution;
+    private double bestFitness;
+    private Random random;
+    private ConvergenceRecord convergenceRecord;
+    private Map<Long, Vm> cloudletVmMapping;
+    private boolean schedulingDone = false;
 
     // Lévy飞行相关
-    private double levySigmaU;                            // σ_u 计算值
+    private double levySigmaU;
 
     // ==================== 构造函数 ====================
 
     public LSCBO_Broker_Fixed(CloudSimPlus simulation) {
         super(simulation);
         this.random = new Random();
-        this.convergenceRecord = new ConvergenceRecord("LSCBO-Fixed", "unknown", System.currentTimeMillis());
+        this.convergenceRecord = new ConvergenceRecord("LSCBO-Levy-Random", "unknown", System.currentTimeMillis());
         this.cloudletVmMapping = new HashMap<>();
         calculateLevySigmaU();
     }
@@ -93,7 +65,7 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
     public LSCBO_Broker_Fixed(CloudSimPlus simulation, long seed) {
         super(simulation);
         this.random = new Random(seed);
-        this.convergenceRecord = new ConvergenceRecord("LSCBO-Fixed", "unknown", seed);
+        this.convergenceRecord = new ConvergenceRecord("LSCBO-Levy-Random", "unknown", seed);
         this.cloudletVmMapping = new HashMap<>();
         calculateLevySigmaU();
     }
@@ -101,7 +73,7 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
     public LSCBO_Broker_Fixed(CloudSimPlus simulation, long seed, String scale) {
         super(simulation);
         this.random = new Random(seed);
-        this.convergenceRecord = new ConvergenceRecord("LSCBO-Fixed", scale, seed);
+        this.convergenceRecord = new ConvergenceRecord("LSCBO-Levy-Random", scale, seed);
         this.cloudletVmMapping = new HashMap<>();
         calculateLevySigmaU();
     }
@@ -132,35 +104,39 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
         int M = cloudletList.size();
         int N = vmList.size();
 
-        System.out.println("\n========== LSCBO-Fixed调度算法启动 ==========");
+        System.out.println("\n========== LSCBO-Levy-Random调度算法启动 ==========");
         System.out.println("等待任务数: " + M);
         System.out.println("已创建VM数: " + N);
         System.out.println("种群大小: " + POPULATION_SIZE);
         System.out.println("最大迭代: " + MAX_ITERATIONS);
-        System.out.println(String.format("优化参数: SPIRAL_B=%.2f, SIGMA_MAX=%.2f, LEVY_LAMBDA=%.2f",
-                SPIRAL_B, SIGMA_MAX, LEVY_LAMBDA));
-        System.out.println("=====================================\n");
+        System.out.println(String.format("Lévy参数: LAMBDA=%.2f, ALPHA_COEF=%.2f",
+                LEVY_LAMBDA, LEVY_ALPHA_COEF));
+        System.out.println("初始化策略: 标准随机初始化（测试版）");
+        System.out.println("算法策略: Phase1=Lévy飞行, Phase2-3=CBO原版");
+        System.out.println("===========================================\n");
 
         if (M == 0 || N == 0) {
             System.out.println("⚠️ 任务或VM数量为0，算法退出");
             return;
         }
 
-        // 初始化种群（随机）
+        // 初始化种群（标准随机初始化）
         population = new double[POPULATION_SIZE][M];
         for (int i = 0; i < POPULATION_SIZE; i++) {
-            for (int d = 0; d < M; d++) {
-                population[i][d] = random.nextDouble();
+            // 使用标准随机初始化（与CBO一致）
+            for (int j = 0; j < M; j++) {
+                population[i][j] = random.nextDouble();
             }
         }
 
-        // 评估初始种群
+        // 评估初始种群并初始化fitness数组
+        fitness = new double[POPULATION_SIZE];
         bestFitness = Double.MAX_VALUE;
         bestSolution = new double[M];
         for (int i = 0; i < POPULATION_SIZE; i++) {
-            double fitness = calculateFitness(population[i], M, N, cloudletList, vmList);
-            if (fitness < bestFitness) {
-                bestFitness = fitness;
+            fitness[i] = calculateFitness(population[i], M, N, cloudletList, vmList);
+            if (fitness[i] < bestFitness) {
+                bestFitness = fitness[i];
                 System.arraycopy(population[i], 0, bestSolution, 0, M);
             }
         }
@@ -169,49 +145,66 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
 
         // 主循环
         for (int t = 1; t <= MAX_ITERATIONS; t++) {
-            double w = calculateAdaptiveWeight(t);
-            double sigma = calculateSigma(t);
-
             for (int i = 0; i < POPULATION_SIZE; i++) {
                 double[] newPosition = new double[M];
 
-                // Phase 1: Lévy飞行搜索（向全局最优）
+                // ========== Phase 1: Lévy飞行全局搜索 ==========
+                int preyIdx = random.nextDouble() < PREY_SELECTION_PROB ?
+                              findBestIndividualIndex() :
+                              random.nextInt(POPULATION_SIZE);
+
                 for (int d = 0; d < M; d++) {
                     double levyStep = generateLevyStep();
-                    double alpha = LEVY_ALPHA_COEF * Math.abs(bestSolution[d] - population[i][d]);
-                    newPosition[d] = population[i][d] + alpha * levyStep;
+                    double alpha = LEVY_ALPHA_COEF * (1.0 - (double) t / MAX_ITERATIONS);
+
+                    newPosition[d] = population[i][d]
+                        + alpha * levyStep * (population[preyIdx][d] - population[i][d]);
+
                     newPosition[d] = clamp(newPosition[d], 0, 1);
                 }
 
-                // Phase 2: 简化对数螺旋包围（围绕全局最优）
-                double r1 = random.nextDouble();
-                double theta = 2 * Math.PI * random.nextDouble();
-                for (int d = 0; d < M; d++) {
-                    double spiralRadius = Math.exp(SPIRAL_B * theta);
-                    newPosition[d] = r1 * spiralRadius * Math.cos(theta) *
-                                   Math.abs(bestSolution[d] - newPosition[d]) + bestSolution[d];
+                // ========== Phase 2: CBO旋转矩阵包围 ==========
+                double theta = 2.0 * Math.PI * t / MAX_ITERATIONS;
+                double cosTheta = Math.cos(theta);
+                double sinTheta = Math.sin(theta);
+
+                for (int d = 0; d < M - 1; d += 2) {
+                    double dx = newPosition[d] - bestSolution[d];
+                    double dy = newPosition[d + 1] - bestSolution[d + 1];
+
+                    double rotatedX = dx * cosTheta - dy * sinTheta;
+                    double rotatedY = dx * sinTheta + dy * cosTheta;
+
+                    newPosition[d] = bestSolution[d] + rotatedX;
+                    newPosition[d + 1] = bestSolution[d + 1] + rotatedY;
+
                     newPosition[d] = clamp(newPosition[d], 0, 1);
+                    newPosition[d + 1] = clamp(newPosition[d + 1], 0, 1);
                 }
 
-                // Phase 3: 自适应权重攻击 + 稀疏高斯变异
-                for (int d = 0; d < M; d++) {
-                    // 正确的权重公式：w * current + (1-w) * best
-                    // w从0.80降到0.10，前期探索，后期开发
-                    newPosition[d] = w * newPosition[d] + (1 - w) * bestSolution[d];
+                if (M % 2 == 1) {
+                    int lastDim = M - 1;
+                    double A = CONVERGENCE_COEF - CONVERGENCE_COEF * t / MAX_ITERATIONS;
+                    double C = A * (2 * random.nextDouble() - 1);
+                    newPosition[lastDim] = newPosition[lastDim]
+                                         + C * (bestSolution[lastDim] - newPosition[lastDim]);
+                    newPosition[lastDim] = clamp(newPosition[lastDim], 0, 1);
+                }
 
-                    // 10%概率应用高斯变异（稀疏化策略）
-                    if (random.nextDouble() < GAUSSIAN_PROB) {
-                        newPosition[d] += random.nextGaussian() * sigma;
-                    }
+                // ========== Phase 3: CBO动态攻击 ==========
+                for (int d = 0; d < M; d++) {
+                    newPosition[d] = ATTACK_WEIGHT * newPosition[d] +
+                                    (1 - ATTACK_WEIGHT) * bestSolution[d];
                     newPosition[d] = clamp(newPosition[d], 0, 1);
                 }
 
                 // 评估新解
                 double newFitness = calculateFitness(newPosition, M, N, cloudletList, vmList);
-                double oldFitness = calculateFitness(population[i], M, N, cloudletList, vmList);
+                double oldFitness = fitness[i];
 
                 if (newFitness < oldFitness) {
                     System.arraycopy(newPosition, 0, population[i], 0, M);
+                    fitness[i] = newFitness;
 
                     if (newFitness < bestFitness) {
                         bestFitness = newFitness;
@@ -226,88 +219,62 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
         // 应用最优解
         applySchedule(bestSolution, M, N, cloudletList, vmList);
 
-        System.out.println("\n========== LSCBO-Fixed调度算法完成 ==========");
+        System.out.println("\n========== LSCBO-Levy-Random调度算法完成 ==========");
         System.out.println("最优Makespan: " + String.format("%.4f", bestFitness));
         System.out.println("映射条目数: " + cloudletVmMapping.size());
-        System.out.println("=====================================\n");
+        System.out.println("=============================================\n");
     }
 
     // ==================== 辅助方法 ====================
 
-    /**
-     * 计算自适应惯性权重（二次衰减，正确版本）
-     * w = w_min + (w_max - w_min) * (1 - t/T_max)^2
-     * t=0 → w=0.80 (高探索)
-     * t=100 → w=0.10 (高开发)
-     */
-    private double calculateAdaptiveWeight(int t) {
-        double ratio = (double) t / MAX_ITERATIONS;
-        return W_MIN + (W_MAX - W_MIN) * Math.pow(1.0 - ratio, 2);
+    private int findBestIndividualIndex() {
+        int bestIdx = 0;
+        double bestFit = Double.MAX_VALUE;
+
+        for (int i = 0; i < POPULATION_SIZE; i++) {
+            if (fitness[i] < bestFit) {
+                bestFit = fitness[i];
+                bestIdx = i;
+            }
+        }
+        return bestIdx;
     }
 
     /**
-     * 计算高斯标准差（线性衰减）
-     * σ = σ_max * (1 - t/T_max)
-     */
-    private double calculateSigma(int t) {
-        return SIGMA_MAX * (1.0 - (double) t / MAX_ITERATIONS);
-    }
-
-    /**
-     * 预计算Lévy分布的σ_u参数（Mantegna算法）
+     * 计算Lévy飞行分布的σ_u参数（Mantegna方法）
+     *
+     * 理论基础：
+     * - Mantegna, R. N. (1994). Fast, accurate algorithm for numerical
+     *   simulation of Lévy stable stochastic processes.
+     *   Physical Review E, 49(5), 4677-4683.
+     *
+     * 公式：σ_u = [Γ(1+λ)sin(πλ/2) / (Γ((1+λ)/2) × λ × 2^((λ-1)/2))]^(1/λ)
+     *
+     * 使用Apache Commons Math 3.6.1的Gamma函数替代Stirling近似，
+     * 提供更高的数值精度。
      */
     private void calculateLevySigmaU() {
         double lambda = LEVY_LAMBDA;
-        double numerator = gamma(1 + lambda) * Math.sin(Math.PI * lambda / 2.0);
-        double denominator = gamma((1 + lambda) / 2.0) * lambda * Math.pow(2, (lambda - 1) / 2.0);
+        double numerator = Gamma.gamma(1 + lambda) * Math.sin(Math.PI * lambda / 2.0);
+        double denominator = Gamma.gamma((1 + lambda) / 2.0) * lambda * Math.pow(2, (lambda - 1) / 2.0);
         this.levySigmaU = Math.pow(numerator / denominator, 1.0 / lambda);
     }
 
-    /**
-     * Gamma函数近似
-     */
-    private double gamma(double x) {
-        if (x == 1.0) return 1.0;
-        if (x == 0.5) return Math.sqrt(Math.PI);
-        if (x == 1.5) return 0.5 * Math.sqrt(Math.PI);
-        if (x == 2.0) return 1.0;
-        return Math.sqrt(2 * Math.PI / x) * Math.pow(x / Math.E, x);
-    }
-
-    /**
-     * 生成Lévy飞行步长（Mantegna算法）
-     */
     private double generateLevyStep() {
         double u = random.nextGaussian() * levySigmaU;
         double v = random.nextGaussian();
-        return u / Math.pow(Math.abs(v), 1.0 / LEVY_LAMBDA);
+        double step = u / Math.pow(Math.abs(v) + 1e-10, 1.0 / LEVY_LAMBDA);
+        return Math.max(-1.0, Math.min(1.0, step));
     }
 
-    /**
-     * 边界约束
-     */
     private double clamp(double value, double min, double max) {
         return Math.max(min, Math.min(max, value));
     }
 
-    /**
-     * 计算适应度（支持单目标和多目标优化）
-     *
-     * 单目标模式（默认）：
-     *   Fitness = Makespan
-     *
-     * 多目标模式（USE_MULTI_OBJECTIVE=true）：
-     *   Fitness = α×Makespan_norm + β×Energy_norm + γ×Cost_norm
-     *   其中：
-     *   - α=0.6 (Makespan权重，最高优先级)
-     *   - β=0.3 (Energy权重，绿色云计算)
-     *   - γ=0.1 (Cost权重，经济性)
-     */
     private double calculateFitness(double[] individual, int M, int N,
                                    List<Cloudlet> cloudletList, List<Vm> vmList) {
         int[] schedule = continuousToDiscrete(individual, N);
 
-        // 步骤1：计算Makespan（单目标基础指标）
         double[] vmLoads = new double[N];
         for (int i = 0; i < M; i++) {
             int vmIdx = schedule[i];
@@ -317,48 +284,36 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
         }
         double makespan = Arrays.stream(vmLoads).max().getAsDouble();
 
-        // 步骤2：如果开启多目标优化，计算能耗和成本
-        if (USE_MULTI_OBJECTIVE) {
-            // 计算能耗（kWh）
-            double energy = EnergyCalculator.calculateEnergy(schedule, M, N, cloudletList, vmList);
-
-            // 计算成本（USD）
-            double cost = CostCalculator.calculateCost(schedule, M, N, cloudletList, vmList);
-
-            // 归一化处理（将不同维度映射到相同尺度）
-            double normalizedMakespan = makespan / MAX_MAKESPAN;
-            double normalizedEnergy = energy / MAX_ENERGY;
-            double normalizedCost = cost / MAX_COST;
-
-            // 加权求和（多目标适应度函数）
-            double multiFitness = ALPHA * normalizedMakespan +
-                                 BETA * normalizedEnergy +
-                                 GAMMA * normalizedCost;
-
-            return multiFitness;
-        }
-
-        // 单目标模式（默认）：仅返回Makespan
         return makespan;
     }
 
-    /**
-     * 连续空间到离散空间的映射
-     */
     private int[] continuousToDiscrete(double[] continuous, int N) {
+        // 输入验证
+        if (N <= 0) {
+            throw new IllegalArgumentException("N must be positive, got: " + N);
+        }
+        if (continuous == null) {
+            throw new NullPointerException("continuous array cannot be null");
+        }
+
         int[] discrete = new int[continuous.length];
         for (int i = 0; i < continuous.length; i++) {
-            discrete[i] = (int) (continuous[i] * N);
+            // 确保值在[0,1]范围内
+            double value = Math.max(0.0, Math.min(1.0, continuous[i]));
+            discrete[i] = (int) (value * N);
+
+            // 边界保护
             if (discrete[i] >= N) {
                 discrete[i] = N - 1;
+            }
+            // 负数保护（防御性编程）
+            if (discrete[i] < 0) {
+                discrete[i] = 0;
             }
         }
         return discrete;
     }
 
-    /**
-     * 应用调度方案
-     */
     private void applySchedule(double[] solution, int M, int N,
                               List<Cloudlet> cloudletList, List<Vm> vmList) {
         int[] schedule = continuousToDiscrete(solution, N);
@@ -375,6 +330,10 @@ public class LSCBO_Broker_Fixed extends DatacenterBrokerSimple {
     }
 
     public String getAlgorithmName() {
-        return "LSCBO-Fixed";
+        return "LSCBO-Levy-Random";
+    }
+
+    public double getInternalMakespan() {
+        return bestFitness;
     }
 }

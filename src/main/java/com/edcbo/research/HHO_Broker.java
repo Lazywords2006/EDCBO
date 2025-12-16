@@ -5,6 +5,7 @@ import org.cloudsimplus.cloudlets.Cloudlet;
 import org.cloudsimplus.core.CloudSimPlus;
 import org.cloudsimplus.vms.Vm;
 import com.edcbo.research.utils.ConvergenceRecord;
+import org.apache.commons.math3.special.Gamma;
 
 import java.util.*;
 
@@ -56,6 +57,9 @@ public class HHO_Broker extends DatacenterBrokerSimple {
     private Map<Long, Vm> cloudletVmMapping;              // Cloudlet到VM的映射
     private boolean schedulingDone = false;               // 调度是否完成
 
+    // Lévy飞行相关
+    private double levySigmaU;                            // σ_u 预计算值
+
     // ==================== 构造函数 ====================
 
     public HHO_Broker(CloudSimPlus simulation) {
@@ -63,6 +67,7 @@ public class HHO_Broker extends DatacenterBrokerSimple {
         this.random = new Random();
         this.convergenceRecord = new ConvergenceRecord("HHO", "unknown", System.currentTimeMillis());
         this.cloudletVmMapping = new HashMap<>();
+        calculateLevySigmaU();
     }
 
     public HHO_Broker(CloudSimPlus simulation, long seed) {
@@ -70,6 +75,7 @@ public class HHO_Broker extends DatacenterBrokerSimple {
         this.random = new Random(seed);
         this.convergenceRecord = new ConvergenceRecord("HHO", "unknown", seed);
         this.cloudletVmMapping = new HashMap<>();
+        calculateLevySigmaU();
     }
 
     public HHO_Broker(CloudSimPlus simulation, long seed, String scale) {
@@ -77,6 +83,7 @@ public class HHO_Broker extends DatacenterBrokerSimple {
         this.random = new Random(seed);
         this.convergenceRecord = new ConvergenceRecord("HHO", scale, seed);
         this.cloudletVmMapping = new HashMap<>();
+        calculateLevySigmaU();
     }
 
     public HHO_Broker(CloudSimPlus simulation, long seed, ConvergenceRecord record) {
@@ -84,6 +91,7 @@ public class HHO_Broker extends DatacenterBrokerSimple {
         this.random = new Random(seed);
         this.convergenceRecord = record;
         this.cloudletVmMapping = new HashMap<>();
+        calculateLevySigmaU();
     }
 
     // ==================== 主算法流程 ====================
@@ -310,35 +318,38 @@ public class HHO_Broker extends DatacenterBrokerSimple {
     }
 
     /**
+     * 计算Lévy飞行分布的σ_u参数（Mantegna方法）
+     *
+     * 理论基础：
+     * - Mantegna, R. N. (1994). Fast, accurate algorithm for numerical
+     *   simulation of Lévy stable stochastic processes.
+     *   Physical Review E, 49(5), 4677-4683.
+     *
+     * 公式：σ_u = [Γ(1+λ)sin(πλ/2) / (Γ((1+λ)/2) × λ × 2^((λ-1)/2))]^(1/λ)
+     *
+     * 使用Apache Commons Math 3.6.1的Gamma函数替代Stirling近似，
+     * 提供更高的数值精度。
+     */
+    private void calculateLevySigmaU() {
+        double lambda = LEVY_BETA;
+        double numerator = Gamma.gamma(1 + lambda) * Math.sin(Math.PI * lambda / 2.0);
+        double denominator = Gamma.gamma((1 + lambda) / 2.0) * lambda * Math.pow(2, (lambda - 1) / 2.0);
+        this.levySigmaU = Math.pow(numerator / denominator, 1.0 / lambda);
+    }
+
+    /**
      * 生成Lévy飞行步长向量（Mantegna算法）
      */
     private double[] generateLevyFlight(int dim) {
         double[] levy = new double[dim];
 
-        double sigma = Math.pow(
-            (gamma(1 + LEVY_BETA) * Math.sin(Math.PI * LEVY_BETA / 2.0)) /
-            (gamma((1 + LEVY_BETA) / 2.0) * LEVY_BETA * Math.pow(2, (LEVY_BETA - 1) / 2.0)),
-            1.0 / LEVY_BETA
-        );
-
         for (int d = 0; d < dim; d++) {
-            double u = random.nextGaussian() * sigma;
+            double u = random.nextGaussian() * levySigmaU;
             double v = random.nextGaussian();
-            levy[d] = u / Math.pow(Math.abs(v), 1.0 / LEVY_BETA);
+            levy[d] = u / Math.pow(Math.abs(v) + 1e-10, 1.0 / LEVY_BETA);
         }
 
         return levy;
-    }
-
-    /**
-     * Gamma函数近似
-     */
-    private double gamma(double x) {
-        if (x == 1.0) return 1.0;
-        if (x == 0.5) return Math.sqrt(Math.PI);
-        if (x == 1.5) return 0.5 * Math.sqrt(Math.PI);
-        if (x == 2.0) return 1.0;
-        return Math.sqrt(2 * Math.PI / x) * Math.pow(x / Math.E, x);
     }
 
     /**
@@ -400,5 +411,15 @@ public class HHO_Broker extends DatacenterBrokerSimple {
 
     public String getAlgorithmName() {
         return "HHO";
+    }
+
+    /**
+     * 获取算法内部计算的最优Makespan
+     * 此值绕过CloudSim Plus 8.0.0的buggy getFinishTime()方法
+     *
+     * @return 内部最优适应度（Makespan，单位：秒）
+     */
+    public double getInternalMakespan() {
+        return bestFitness;
     }
 }
